@@ -2,6 +2,8 @@
 
 ## About this Document
 
+### Purpose
+
 This document is a standard for a generic technical document outline. 
 
 This standard is the root node of a hierarchy of interconnected standards. Each standard within this hierarchy specifies requirements for a certain aspect of technical writing such as narrative structure, document logic, terminology usage, and so on. Each standard at further levels may redefine the requirements that are specified here. 
@@ -11,27 +13,46 @@ The aim of this standard is to help authors follow the most important rules appl
 Each requirement in this standard has a unique identifier. A document at a further layer redefines a requirement by introducing a replacement requirement with the same identifier. 
 
 
+### Identification
+
+Standard ID: GRTD.
+
+Level: 1.
+
+
 ## Terms
+
+*Aspect:* An angle from which a text presents its subject to readers.
 
 *Concept:* A fact or an idea that readers completely understand or that can be explained to the readers through the relations among concepts they already understand.
 
 *Descriptive phrase:* A phrase that identifies a phenomenon through a generic term and additional descriptive properties.
 
-*Document:* A stable body of information that has attributes allowing it to be identified.
+*Document:* A stable body of text that has attributes allowing it to be identified.
 
-*Genre of a document:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
+*Genre:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
 
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
 
 *Parallel enumeration:* A text snippet that describes two or more comparable items by presenting the same set of properties for each of them.
 
+*Phenomenon:* A product, its component, feature, process, task, domain entity, or any other thing or relation that can be recognized and discussed separately from other comparable things or relations.
+
 *Plain enumeration:* A text snippet that describes two or more comparable items by naming them.
 
 *Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
 
-*Subject of a document:* A product, technology, process, or other phenomenon that the document describes to its target audience.
+*Subject:* A phenomenon that a text introduces or explains to readers.
 
-*Target audience of a document:* A group of probable readers who share similar skills and information needs that they expect the document to satisfy. Robots and AI agents may comprise the target audience of a document as well as human beings, animals, higher and lower spirits, or aliens.
+*Target audience:* A group of probable readers who share similar skills and information needs that they expect the text to satisfy. 
+
+> **NOTE**  
+> Robots and AI agents may comprise the target audience of a text as well as human beings, animals, higher and lower spirits, or aliens.
+
+*Term:* A word or phrase that serves as the name of a specialized concept in a particular field of production, science, or art.
+
+> **NOTE**  
+> According to another definition, a term is a lexical unit of a language for special purposes that denotes a general concrete or abstract concept within the theory of a particular specialized field of knowledge or activity. 
 
 
 ## Framing a Document
@@ -65,7 +86,7 @@ Examples are given below.
 | Easy Reports | Requirements  | Requirement Specification | Easy Reports. Requirement Specification |
 
 
-## Organizing Content Within a Document
+## Introducing and Mentioning Concepts
 
 ### Introducing Concepts for Recognized Phenomena
 
@@ -140,7 +161,7 @@ not permitted to write comments to articles.
 ```
 
 
-### Enumerating Items
+### Enumerating and Describing Subjects
 
 #### Plain Enumeration
 
@@ -187,6 +208,10 @@ The yellow light tells traffic participants to prepare. They should get ready to
 The green light allows traffic. Participants must start moving.
 ```
 
-### Respecting Information Types
+## Maintaining Parallel Text Structures
+
+### Applying Sentence Patterns to Same Situations
+
+### Applying Information Types to Same Aspects
 
 
