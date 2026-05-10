@@ -1,0 +1,159 @@
+# Generic Requirements for a Technical Document
+
+## About this Document
+
+This document is a standard for a generic technical document outline. 
+
+This standard is the root node of a hierarchy of interconnected standards. Each standard within this hierarchy specifies requirements for a certain aspect of technical writing such as narrative structure, document logic, terminology usage, and so on. Each standard at further levels may redefine the requirements that are specified here. 
+
+The aim of this standard is to help authors follow the most important rules applicable to technical text and avoid the most baneful errors that can be made in technical writing. The standard does not force authors to keep any predefined document structures, style conventions, or terminology. Instead, it introduces a generic frame that should be detailed in standards at the next hierarchy levels.
+
+Each requirement in this standard has a unique identifier. A document at a further layer redefines a requirement by introducing a replacement requirement with the same identifier. 
+
+
+## Terms and Concepts
+
+*Document:* A stable body of information that has attributes allowing it to be identified.
+
+*Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
+
+*Target audience of a document:* A group of probable readers who share similar skills and information needs that they expect the document to satisfy. Robots and AI agents may comprise the target audience of a document as well as human beings, animals, higher and lower spirits, or aliens.
+
+*Subject of a document:* A product, technology, process, or other phenomenon that the document describes to its target audience.
+
+*Genre of a document:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
+
+*Concept:* A fact or an idea that readers completely understand or that can be explained to the readers through the relations among concepts they already understand.
+
+*Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
+
+*Plain enumeration:* A text snippet that describes two or more comparable items by naming them.
+
+*Parallel enumeration:* A text snippet that describes two or more comparable items by presenting the same set of properties for each of them.
+
+
+## Framing a Document
+
+### Targeting a Document
+
+| Req. ID  | Requirement                                                  |
+|----------|--------------------------------------------------------------|
+| GRTD.101 | Each document must be written for a certain target audience. |
+
+Examples are given below. 
+
+| Document                                | Target Audience       |
+|-----------------------------------------|-----------------------|
+| Easy Reports. User Manual               | Accountants           |
+| Easy Reports. Requirement Specification | Architect, developers |
+
+
+### Characterizing a Document
+
+| Req. ID  | Requirement                                                                   |
+|----------|-------------------------------------------------------------------------------|
+| GRTD.201 | Each document must represent a certain subject in a certain genre.            |
+| GRTD.202 | The title of the document must explicitly disclose its subject and its genre. |
+
+Examples are given below. 
+
+| Subject      | Point of View | Genre                     | Document Title                          |
+|--------------|---------------|---------------------------|-----------------------------------------|
+| Easy Reports | Usage         | User Manual               | Easy Reports. User Manual               |
+| Easy Reports | Requirements  | Requirement Specification | Easy Reports. Requirement Specification |
+
+
+## Organizing Content Within a Document
+
+### Introducing Concepts Before Using Them
+
+| Req. ID  | Requirement                                                                                        |
+|----------|----------------------------------------------------------------------------------------------------|
+| GRTD.301 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
+| GRTD.302 | Defining concepts cyclically is prohibited.                                                        |
+
+An example of wrong concept usage: the concepts are not defined. 
+
+```markdown
+# User Manual
+
+## Users and Their Permissions
+
+*Registered users* are permitted to write comments to articles. *Anonymous users* are
+not permitted to write comments to articles.
+```
+
+An example of wrong concept usage: the concepts are defined cyclically. 
+
+```markdown
+A *user* is a person who has an *account* in the system.
+
+An *account* is a record in the system that describes a *user*. 
+```
+
+An example of correct concept usage: the concepts are defined before they are mentioned.
+
+```markdown
+A *user* is a person who accesses the system to utilize the features it provides.
+
+An *account* is a record in the system that describes a *user*.
+
+A *registered user* is a *user* that has an *account* in the system.
+
+An *anonymous user* is a *user* that does not have an *account* in the system.
+
+*Registered users* are permitted to write comments to articles. *Anonymous users* are 
+not permitted to write comments to articles.
+```
+
+
+### Enumerating Items
+
+#### Plain Enumeration
+
+
+A plain enumeration must be represented as an unsorted list. 
+
+#### Enumerating Structured Items
+
+### Arranging Narratives as Cascades
+
+
+**Requirements**
+
+| Req. ID  | Requirement                                                                                    |
+|----------|------------------------------------------------------------------------------------------------|
+| GRTD.401 | The facts and ideas that the narrative introduces must first be enumerated and then explained. |
+
+
+**Examples**
+
+**Wrong**
+
+```markdown
+The red light prohibits traffic. Everyone must stop and wait for the yellow light.
+
+The yellow light tells traffic participants to prepare. They should get ready to move.
+
+The green light allows traffic. Participants must start moving.
+```
+
+**Correct**
+
+```markdown
+The traffic light gives the following signals:
+
+* Red
+* Yellow
+* Green
+
+The red light prohibits traffic. Everyone must stop and wait for the yellow light.
+
+The yellow light tells traffic participants to prepare. They should get ready to move.
+
+The green light allows traffic. Participants must start moving.
+```
+
+### Respecting Information Types
+
+
