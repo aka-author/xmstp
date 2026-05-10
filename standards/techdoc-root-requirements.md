@@ -11,25 +11,27 @@ The aim of this standard is to help authors follow the most important rules appl
 Each requirement in this standard has a unique identifier. A document at a further layer redefines a requirement by introducing a replacement requirement with the same identifier. 
 
 
-## Terms and Concepts
-
-*Document:* A stable body of information that has attributes allowing it to be identified.
-
-*Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
-
-*Target audience of a document:* A group of probable readers who share similar skills and information needs that they expect the document to satisfy. Robots and AI agents may comprise the target audience of a document as well as human beings, animals, higher and lower spirits, or aliens.
-
-*Subject of a document:* A product, technology, process, or other phenomenon that the document describes to its target audience.
-
-*Genre of a document:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
+## Terms
 
 *Concept:* A fact or an idea that readers completely understand or that can be explained to the readers through the relations among concepts they already understand.
 
+*Descriptive phrase:* A phrase that identifies a phenomenon through a generic term and additional descriptive properties.
+
+*Document:* A stable body of information that has attributes allowing it to be identified.
+
+*Genre of a document:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
+
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
+
+*Parallel enumeration:* A text snippet that describes two or more comparable items by presenting the same set of properties for each of them.
 
 *Plain enumeration:* A text snippet that describes two or more comparable items by naming them.
 
-*Parallel enumeration:* A text snippet that describes two or more comparable items by presenting the same set of properties for each of them.
+*Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
+
+*Subject of a document:* A product, technology, process, or other phenomenon that the document describes to its target audience.
+
+*Target audience of a document:* A group of probable readers who share similar skills and information needs that they expect the document to satisfy. Robots and AI agents may comprise the target audience of a document as well as human beings, animals, higher and lower spirits, or aliens.
 
 
 ## Framing a Document
@@ -65,12 +67,43 @@ Examples are given below.
 
 ## Organizing Content Within a Document
 
+### Introducing Concepts for Recognized Phenomena
+
+| Req. ID  | Requirement                                                  |
+|----------|--------------------------------------------------------------|
+| GRTD.301 | A concept must be introduced to mention the same phenomenon. |
+| GRTD.302 | Repeating the same descriptive phrase must be avoided.       |
+
+Technically, an author should define a term instead of repeating the same descriptive phrase. 
+
+An example of improper usage of descriptive phrases.
+
+```markdown
+A *user who has an account in the system* is permitted to publish articles in the system. 
+A *user who does not have an account in the system* is not permitted to publish articles in the system.
+
+A *user who has an account in the system* is permitted to write comments to articles. 
+A *user who does not have an account in the system* is not permitted to write comments to articles.
+```
+
+An example of introducing concepts for phenomena that are mentioned repeatedly. 
+
+```markdown
+A *registered user* is a user that has an account in the system.
+
+An *anonymous user* is a user that does not have an account in the system.
+
+*Registered users* are permitted to publish articles in the system. *Anonymous users* are not permitted to publish articles in the system. 
+
+*Registered users* are permitted to write comments to articles. *Anonymous users* are not permitted to write comments to articles.
+```
+
 ### Introducing Concepts Before Using Them
 
-| Req. ID  | Requirement                                                                                        |
-|----------|----------------------------------------------------------------------------------------------------|
-| GRTD.301 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
-| GRTD.302 | Defining concepts cyclically is prohibited.                                                        |
+| Req. ID  | Requirement                                                                                       |
+|----------|---------------------------------------------------------------------------------------------------|
+| GRTD.303 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
+| GRTD.304 | Defining concepts cyclically is prohibited.                                                       |
 
 An example of wrong concept usage: the concepts are not defined. 
 
