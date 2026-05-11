@@ -26,11 +26,23 @@ Level: 1.
 
 *Concept:* A fact or an idea that readers completely understand or that can be explained to the readers through the relations among concepts they already understand.
 
+*Continuous prose:* Text presented as a continuous flow of continuous prose blocks without explicit section titles inside the text.
+
+*Continuous prose block:* A structural fragment of text used to present information inside a continuous text flow, such as a paragraph, list, table, figure, note, or example.
+
 *Descriptive phrase:* A phrase that identifies a phenomenon through a generic term and additional descriptive properties.
 
 *Document:* A stable body of text that has attributes allowing it to be identified.
 
 *Genre:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
+
+*Information type:* A category of text intended to present a certain type of subject from a certain type of aspect.
+
+> **Note**  
+> An information type usually implies a specific method for structuring text and specific style conventions, including usage of specific sentence patterns.
+
+> **Example**  
+> Text that presents a task from the aspect of how to fulfill it may belong to the procedure information type. A text that presents an API method from the aspect of its parameters may belong to the reference information type. A text that presents a business process from the aspect of its stages may belong to the process description information type.
 
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
 
@@ -41,6 +53,13 @@ Level: 1.
 *Plain enumeration:* A text snippet that describes two or more comparable items by naming them.
 
 *Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
+
+*Self-contained idea:* An idea that can be explained or discussed independently from another idea.
+
+*Sentence pattern:* A recurrent sentence structure used to present a certain type of information in a consistent way.
+
+> **Example**  
+> A text may repeatedly instruct readers to click the OK button to save data. In such situations, authors should choose one sentence pattern and use it consistently throughout the text. For example, authors may choose the sentence pattern *Click OK to save the data* instead of other sentence patterns such as *Save the data by clicking OK* or *To save the data, click OK.* The other sentence patterns are not necessarily worse, but mixing them may make the text less consistent.
 
 *Subject:* A phenomenon that a text introduces or explains to readers.
 
@@ -85,6 +104,27 @@ Examples are given below.
 | Easy Reports | Usage         | User Manual               | Easy Reports. User Manual               |
 | Easy Reports | Requirements  | Requirement Specification | Easy Reports. Requirement Specification |
 
+
+## Building Continuous Prose 
+
+### Preferring Simple Phrases
+
+| Req. ID  | Requirement                                              |
+|----------|----------------------------------------------------------|
+| GRTD.203 | Each sentence must present a single self-contained idea. |
+
+Sentences that present more than one self-contained idea are deprecated. A sentence that provides more than one self-contained idea should be split into separate sentences. 
+
+For example, the following sentence encloses three self-contained ideas: 
+
+*After the system validates the configuration file successfully, it stores the parameters in the database and restarts the service automatically.*
+
+This sentence should be split into three sentences, each delivering a self-contained idea:
+
+*The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
+
+
+### Preferring Observable Paragraphs
 
 ## Introducing and Mentioning Concepts
 
