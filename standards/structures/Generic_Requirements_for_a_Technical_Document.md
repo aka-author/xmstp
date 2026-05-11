@@ -124,7 +124,41 @@ This sentence should be split into three sentences, each delivering a self-conta
 *The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
 
 
-### Preferring Observable Paragraphs
+### Maintaining Paragraph Consistency
+
+| Req. ID  | Requirement                                                                      |
+|----------|----------------------------------------------------------------------------------|
+| GRTD.204 | Pronouns must refer only to subjects explicitly mentioned in the same paragraph. |
+
+Pronouns that refer to subjects that are not explicitly mentioned in the same paragraph are deprecated.
+
+Consider the example below. The pronoun *they* in the second paragraph refers to *users* or *registered users* who are mentioned only in the first paragraph. Notice that such a usage of the pronoun yields an ambiguity.
+
+```markdown
+Users can create support tickets through the web interface. 
+Registered users can also attach screenshots to tickets.
+
+They can track ticket statuses on the support page. Email 
+notifications about ticket updates are also available.
+```
+
+The second paragraph should be rewritten as follows. 
+
+```markdown
+Registered users can track ticket statuses on the support page. 
+Email notifications about ticket updates are also available.
+```
+
+
+### Maintaining Paragraph Observability
+
+| Req. ID  | Requirement                                    |
+|----------|------------------------------------------------|
+| GRTD.205 | A paragraph should contain up to 10 sentences. |
+
+> **NOTE**  
+> Feel free to redefine the hard limit specified above in your local extensions.
+
 
 ## Introducing and Mentioning Concepts
 
