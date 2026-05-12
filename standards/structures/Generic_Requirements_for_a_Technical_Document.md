@@ -30,6 +30,8 @@ Level: 1.
 
 *Continuous prose block:* A structural fragment of text used to present information inside a continuous text flow, such as a paragraph, list, table, figure, note, or example.
 
+*Critical note:* A note that informs readers about possible hazard or other unwanted effects or consequences of their activities.
+
 *Descriptive phrase:* A phrase that identifies a phenomenon through a generic term and additional descriptive properties.
 
 *Document:* A stable body of text that has attributes allowing it to be identified.
@@ -45,6 +47,8 @@ Level: 1.
 > Text that presents a task from the aspect of how to fulfill it may belong to the procedure information type. A text that presents an API method from the aspect of its parameters may belong to the reference information type. A text that presents a business process from the aspect of its stages may belong to the process description information type.
 
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
+
+*Note:* A text fragment that provides additional information related to the surrounding text.
 
 *Parallel enumeration:* A text snippet that describes two or more comparable items by presenting the same set of properties for each of them.
 
@@ -107,7 +111,7 @@ Examples are given below.
 
 ## Building Continuous Prose 
 
-### Preferring Simple Phrases
+### Keeping Sentences Simple
 
 | Req. ID  | Requirement                                              |
 |----------|----------------------------------------------------------|
@@ -159,6 +163,47 @@ Email notifications about ticket updates are also available.
 > **NOTE**  
 > Feel free to redefine the hard limit specified above in your local extensions.
 
+
+### Maintaining Section Consistency
+
+| Req. ID  | Requirement                                                                                     |
+|----------|-------------------------------------------------------------------------------------------------|
+| GRTD.206 | A paragraph or a critical note must come first after the title in continuous prose.             |
+| GRTD.207 | A figure must be explicitly introduced in a preceding paragraph of the same continuous prose.   |
+| GRTD.208 | A table must be explicitly introduced in a preceding paragraph of the same continuous prose.    |
+| GRTD.209 | An example must be explicitly introduced in a preceding paragraph of the same continuous prose. |
+
+The example below displays continuous prose where the requirements are violated:
+
+- The table comes first after the title.
+- Neither paragraph introduces the table.
+
+```markdown
+### Supported File Formats
+
+| Format                   | Extension |
+|--------------------------|-----------|
+| Portable Document Format | `.pdf`    |
+| Markdown                 | `.md`     |
+
+The table above lists file formats supported by the application.
+```
+
+The example below displays continuous prose where the requirements are fulfilled:
+
+- The paragraph comes first after the title. 
+- The table is introduced in the preceding paragraph.
+
+```markdown
+### Supported File Formats
+
+The table below lists file formats supported by the application.
+
+| Format                   | Extension |
+|--------------------------|-----------|
+| Portable Document Format | `.pdf`    |
+| Markdown                 | `.md`     |
+```
 
 ## Introducing and Mentioning Concepts
 
