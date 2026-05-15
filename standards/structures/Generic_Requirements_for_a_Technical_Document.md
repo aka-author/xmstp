@@ -96,8 +96,11 @@ Level: 1.
 |----------|----------------------------------------|
 | GRTD.101 | Jargon and barbarisms must be avoided. |
 
-> **EXTENSION POINT**  
-> A list of prohibited words should be specified for a certain project.
+
+| Ext. Pt. ID  | Extension Point                                                       |
+|--------------|-----------------------------------------------------------------------|
+| GRTD.101     | A list of prohibited words should be specified for a certain project. |
+
 
 
 ### Choosing the Right Level of Generality
@@ -137,6 +140,34 @@ The plain verb is preferable here because *room cleaning* is not a defined term 
 
 
 ### Using Terms Consistently
+
+| Req. ID  | Requirement                                                                               |
+|----------|-------------------------------------------------------------------------------------------|
+| GRTD.101 | A term must never be shortened unless a shortened form or an abbreviation is declared.    |
+| GRTD.102 | A word derived from a term must not be treated as a term unless it is explicitly defined. |
+| GRTD.102 | Only a term must refer to a phenomenon if it is defined; using synonyms is forbidden.     |
+| GRTD.102 | Homonyms of defined terms must not be used with different meanings.                       |
+
+In the following paragraph, each sentence starting from the second one violates a corresponding requirement from the list above.
+
+```markdown
+Final cleaning is the preparation of a room after a guest departs. The cleaning must be completed before the next guest checks in. Once the guest departs, the staff will finally clean the room according to the standard procedure. If final tidying up is delayed, the room remains unavailable. The cleaning of the pool is scheduled for every morning. 
+```
+
+The errors are described in the table below. 
+
+| Sentence # | Error Explanation                                                   |
+|------------|---------------------------------------------------------------------|
+| 2          | The term *final cleaning* is shortened to *cleaning*.               |
+| 3          | The verb *finally clean* is derived from *final cleaning*.          |
+| 4          | The synonymic phrase *final tidying up* replaces the correct term.  |
+| 5          | The word *cleaning* is applied to a pool as a common sense concept. |
+
+In the following paragraph, the errors described in the previous paragraph are fixed.
+
+```markdown
+Final cleaning is the preparation of a room after a guest departs. Once the guest departs, the staff will perform final cleaning according to the standard procedure. If room servicing is delayed, final cleaning is postponed. The pool undergoes maintenance every morning.
+```
 
 
 
