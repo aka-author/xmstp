@@ -36,6 +36,11 @@ Level: 1.
 
 *Document:* A stable body of text that has attributes allowing it to be identified.
 
+*Generic verb:* A verb with weak or abstract meaning that mainly serves to express an action denoted by another word in the phrase.
+
+> **Examples**
+> Generic verbs include verbs such as perform, execute, conduct, make, and fulfill.
+
 *Genre:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
 
 *Information type:* A category of text intended to present a certain type of subject from a certain type of aspect.
@@ -45,6 +50,11 @@ Level: 1.
 
 > **Example**  
 > Text that presents a task from the aspect of how to fulfill it may belong to the procedure information type. A text that presents an API method from the aspect of its parameters may belong to the reference information type. A text that presents a business process from the aspect of its stages may belong to the process description information type.
+
+*Light verb construction:* A phrase that consists of a generic verb and a noun that denotes an action.
+
+> **Example**  
+> Light verb constructions include phrases such as perform scanning, execute synchronization, conduct verification, and make a decision.
 
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
 
@@ -76,6 +86,73 @@ Level: 1.
 
 > **NOTE**  
 > According to another definition, a term is a lexical unit of a language for special purposes that denotes a general concrete or abstract concept within the theory of a particular specialized field of knowledge or activity. 
+
+
+## Words and Phrases
+
+### Keeping Professional Tone in Word Choice
+
+| Req. ID  | Requirement                            |
+|----------|----------------------------------------|
+| GRTD.101 | Jargon and barbarisms must be avoided. |
+
+> **EXTENSION POINT**  
+> A list of prohibited words should be specified for a certain project.
+
+
+### Choosing the Right Level of Generality
+
+| Req. ID  | Requirement                                                            |
+|----------|------------------------------------------------------------------------|
+| GRTD.101 | Words and phrases must be as precise as possible in a certain context. |
+
+Redundantly generic words and phrases should be avoided. At the same time, words and phrases should not describe only the most common cases while ignoring less common but realistic ones.
+
+Imagine a system that manages an automated parking facility. Users usually arrive by car, but some of them may ride scooters or motorbikes. In this case, the word *car* would be too narrow, *vehicle* would be precise enough, and the phrase *transportation unit* would be too generic.
+
+| Req. ID  | Requirement                                                                                              |
+|----------|----------------------------------------------------------------------------------------------------------|
+| GRTD.101 | If a term is defined for an action, then the action must be expressed as a light verb construction.      |
+| GRTD.102 | A light verb construction must not be used for actions that are self-evident and have no defined term.   |
+
+For example, the following definition is provided in the document on a hotel management system:
+
+*Checkout room cleaning is a procedure that makes a room available for a new guest's check-in.*
+
+In this case, we should always write *perform the checkout room cleaning* and never write
+*clean the room after checkout* when referring specifically to this procedure.
+
+Conversely, consider a sentence in a manual for a robotic vacuum cleaner: 
+
+*A person should perform room cleaning as often as possible.*
+
+The sentence above sounds unnecessarily formal. The following sentence sounds better:
+
+*A person should clean their room as often as possible.*
+
+The plain verb is preferable here because *room cleaning* is not a defined term in the document.
+
+
+
+
+### Using Terms Consistently
+
+
+
+
+## Sentences
+
+
+## Paragraphs
+
+
+## Sections
+
+
+## Narrative
+
+
+## Documents
 
 
 ## Framing a Document
@@ -153,9 +230,6 @@ Registered users can track ticket statuses on the support page.
 Email notifications about ticket updates are also available.
 ```
 
-
-### Maintaining Paragraph Observability
-
 | Req. ID  | Requirement                                    |
 |----------|------------------------------------------------|
 | GRTD.205 | A paragraph should contain up to 10 sentences. |
@@ -164,7 +238,7 @@ Email notifications about ticket updates are also available.
 > Feel free to redefine the hard limit specified above in your local extensions.
 
 
-### Maintaining Section Consistency
+### Maintaining Continuous Prose Consistency
 
 | Req. ID  | Requirement                                                                                     |
 |----------|-------------------------------------------------------------------------------------------------|
