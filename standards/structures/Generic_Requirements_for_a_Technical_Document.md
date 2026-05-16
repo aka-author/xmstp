@@ -108,7 +108,6 @@ Level: 1.
 | GRTD.101     | A list of prohibited words should be specified for a certain project. |
 
 
-
 ### Choosing the Right Level of Generality
 
 | Req. ID  | Requirement                                                            |
@@ -230,6 +229,35 @@ Open the transaction browser from the main menu. You can then open the transacti
 
 ## Sentences
 
+### Ensuring Syntactic Clarity
+
+| Req. ID  | Requirement                                                                  |
+|----------|------------------------------------------------------------------------------|
+| GRTD.203 | A noun phrase must make the relationships between its constituents explicit. |
+
+Consider the following sentence:
+
+*The service provides computation capacities for arnocle software testing.*
+
+The noun phrase *arnocle software testing* is ambiguous because readers might hesitate whether it refers to arnocle software or arnocle testing. If they are not familiar enough with the concept of arnocles, they have no chance to figure it out instantly. Authors had better rewrite the phrase in one of the following ways depending on its actual meaning: *testing of arnocle software* or *arnocle testing of software*.
+
+| Req. ID  | Requirement                                                           |
+|----------|-----------------------------------------------------------------------|
+| GRTD.203 | Relations between actions mentioned in a sentence must be explicit.   |
+
+The phrase below does not disclose the relationship between clicking the button and turning video recording on.
+
+*Click Record and turn on video recording.*
+
+The sentence should be rewritten so that the relationship between these two actions is clarified.
+
+| Relation Between Actions | Explicit Phrasing                                       |
+|--------------------------|---------------------------------------------------------|
+| Causation                | *Click Record to turn on video recording.*              |
+| Sequence                 | *Click Record and then turn on video recording.*        |
+| Simultaneity             | *Click Record and turn on video recording in parallel.* |
+
+
 ### Presenting Ideas Separately
 
 | Req. ID  | Requirement                                              |
@@ -245,19 +273,6 @@ For example, the following sentence encloses three self-contained ideas:
 This sentence should be split into three sentences, each delivering a self-contained idea:
 
 *The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
-
-
-### Ensuring Syntactic Clarity
-
-| Req. ID  | Requirement                                                                  |
-|----------|------------------------------------------------------------------------------|
-| GRTD.203 | A noun phrase must make the relationships between its constituents explicit. |
-
-Consider the following sentence:
-
-*The service provides computation capacities for arnocle software testing.*
-
-The phrase *arnocle software testing* is ambiguous because readers might hesitate whether it refers to *arnocle software* or *arnocle testing*. If they are not familiar enough with the concept of arnocles, they have no chance to figure it out instantly. Authors had better rewrite the phrase in one of the following ways depending on its actual meaning: *testing of arnocle software* or *arnocle testing of software*.
 
 
 ## Paragraphs
