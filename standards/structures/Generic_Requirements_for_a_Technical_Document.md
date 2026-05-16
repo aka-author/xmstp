@@ -87,6 +87,8 @@ Level: 1.
 > **NOTE**  
 > According to another definition, a term is a lexical unit of a language for special purposes that denotes a general concrete or abstract concept within the theory of a particular specialized field of knowledge or activity. 
 
+*Term-related vocabulary:* The set of words and phrases regularly used together with a term in a certain context.
+
 
 ## Words and Phrases
 
@@ -139,6 +141,36 @@ The sentence above sounds unnecessarily formal. The following sentence sounds be
 The plain verb is preferable here because *room cleaning* is not a defined term in the document.
 
 
+### Using Self-Evident Words Consistently
+
+| Req. ID  | Requirement                                                                            |
+|----------|----------------------------------------------------------------------------------------|
+| GRTD.101 | A single word or set of synonyms must be chosen for a repeatedly mentioned phenomenon. |
+| GRTD.101 | Different synonyms must be chosen for different repeatedly mentioned phenomena.        |
+
+The following paragraph violates the requirements listed above.
+
+```markdown
+If the application has not started automatically, launch it manually from the menu. After the program is running, run the synchronization procedure.
+```
+
+The following errors are made in the previous paragraph:
+
+- Synonyms *application* and *program* denote the same subject.
+- Synonyms *start*, *launch*, and *run* denote the same effect.
+- The verb *run* denotes the different activities.
+
+The errors are fixed in the paragraph below.
+
+```markdown
+If the program has not run automatically, run it manually from the menu. After the program is running, start the synchronization procedure.
+```
+
+| Ext. Pt. ID  | Extension Point                                                                  |
+|--------------|----------------------------------------------------------------------------------|
+| GRTD.101     | The vocabulary of self-evident words should be restricted for a certain project. |
+
+
 ### Using Terms Consistently
 
 | Req. ID  | Requirement                                                                               |
@@ -169,7 +201,27 @@ In the following paragraph, the errors described in the previous paragraph are f
 Final cleaning is the preparation of a room after a guest departs. Once the guest departs, the staff will perform final cleaning according to the standard procedure. If room servicing is delayed, final cleaning is postponed. The pool undergoes maintenance every morning.
 ```
 
+### Using Term-Related Vocabulary Consistently
 
+| Req. ID  | Requirement                                                                                    |
+|----------|------------------------------------------------------------------------------------------------|
+| GRTD.101 | A single word or phrase must be chosen to express the same meaning related to a specific term. |
+
+In the following paragraph the verbs *open*, *display*, and *show* denote the same situation: the user makes the transaction browser (whatever it is) visible. Such inconsistency may mislead readers, making them think that the paragraph describes three different actions.
+
+```markdown
+Open the transaction browser from the main menu. You can then display the transaction browser by pressing Ctrl+T. If the transaction browser is hidden, show the transaction list again from the toolbar.
+```
+
+In the paragraph, the verb *open* is consistently applied to the situation when the user makes the transaction browser available.
+
+```markdown
+Open the transaction browser from the main menu. You can then open the transaction browser by pressing Ctrl+T. If the transaction browser is hidden, open the transaction browser again from the toolbar.
+```
+
+| Ext. Pt. ID  | Extension Point                                                        |
+|--------------|------------------------------------------------------------------------|
+| GRTD.101     | Term-related words and phrases should be defined in a certain project. |
 
 
 ## Sentences
