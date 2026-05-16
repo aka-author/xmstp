@@ -241,9 +241,9 @@ Consider the following sentence:
 
 The noun phrase *arnocle software testing* is ambiguous because readers might hesitate whether it refers to arnocle software or arnocle testing. If they are not familiar enough with the concept of arnocles, they have no chance to figure it out instantly. Authors had better rewrite the phrase in one of the following ways depending on its actual meaning: *testing of arnocle software* or *arnocle testing of software*.
 
-| Req. ID  | Requirement                                                           |
-|----------|-----------------------------------------------------------------------|
-| GRTD.203 | Relations between actions mentioned in a sentence must be explicit.   |
+| Req. ID  | Requirement                                                         |
+|----------|---------------------------------------------------------------------|
+| GRTD.203 | Relations between actions mentioned in a sentence must be explicit. |
 
 The phrase below does not disclose the relationship between clicking the button and turning video recording on.
 
@@ -273,6 +273,18 @@ For example, the following sentence encloses three self-contained ideas:
 This sentence should be split into three sentences, each delivering a self-contained idea:
 
 *The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
+
+| Req. ID  | Requirement                                                                                  |
+|----------|----------------------------------------------------------------------------------------------|
+| GRTD.203 | Two ideas whose conflict matters for the further narrative must be treated as a single idea. |
+
+Consider the following statement:
+
+*The firewall blocks unauthorized access. This introduces latency in high-traffic environments. Therefore, organizations must evaluate whether the security benefit justifies the performance cost before deploying it in production.*
+
+The first sentence might confuse the readers. The reason is, it presents a well-known or even trivial fact. Having read it, one gets perplexed: "Absolutely, and so what?" The better way to describe the same situation is shown below:
+
+*The firewall blocks unauthorized access, but it introduces latency in high-traffic environments. Therefore, organizations must evaluate whether the security benefit justifies the performance cost before deploying it in production.*
 
 
 ## Paragraphs
@@ -312,6 +324,17 @@ The second paragraph should be rewritten as follows.
 Registered users can track ticket statuses on the support page. 
 Email notifications about ticket updates are also available.
 ```
+
+
+### 
+
+| Req. ID  | Requirement                                                                      |
+|----------|----------------------------------------------------------------------------------|
+| GRTD.204 | The first sentence must either introduce a new idea o refer an idea introduced earlier |
+
+
+
+
 
 
 ## Sections
