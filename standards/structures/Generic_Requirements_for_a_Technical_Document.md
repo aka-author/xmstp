@@ -62,6 +62,8 @@ Level: 1.
 
 *Note:* A text fragment that provides additional information related to the surrounding text.
 
+*Noun phrase:* A phrase that usually has a noun or pronoun as its head and has the same grammatical functions as a noun.
+
 *Parallel enumeration:* A text snippet that describes two or more comparable items by presenting the same set of properties for each of them.
 
 *Phenomenon:* A product, its component, feature, process, task, domain entity, or any other thing or relation that can be recognized and discussed separately from other comparable things or relations.
@@ -243,6 +245,19 @@ For example, the following sentence encloses three self-contained ideas:
 This sentence should be split into three sentences, each delivering a self-contained idea:
 
 *The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
+
+
+### Ensuring Syntactic Clarity
+
+| Req. ID  | Requirement                                                                  |
+|----------|------------------------------------------------------------------------------|
+| GRTD.203 | A noun phrase must make the relationships between its constituents explicit. |
+
+Consider the following sentence:
+
+*The service provides computation capacities for arnocle software testing.*
+
+The phrase *arnocle software testing* is ambiguous because readers might hesitate whether it refers to *arnocle software* or *arnocle testing*. If they are not familiar enough with the concept of arnocles, they have no chance to figure it out instantly. Authors had better rewrite the phrase in one of the following ways depending on its actual meaning: *testing of arnocle software* or *arnocle testing of software*.
 
 
 ## Paragraphs
