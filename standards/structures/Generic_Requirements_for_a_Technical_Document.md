@@ -51,6 +51,8 @@ Level: 1.
 > **Example**  
 > Text that presents a task from the aspect of how to fulfill it may belong to the procedure information type. A text that presents an API method from the aspect of its parameters may belong to the reference information type. A text that presents a business process from the aspect of its stages may belong to the process description information type.
 
+*Light verb:* A generic verb with weak or abstract meaning that mainly serves to express an action denoted by another word in the phrase.
+
 *Light verb construction:* A phrase that consists of a generic verb and a noun that denotes an action.
 
 > **Example**  
@@ -226,8 +228,60 @@ Open the transaction browser from the main menu. You can then open the transacti
 
 ## Sentences
 
+### Presenting Ideas Separately
+
+| Req. ID  | Requirement                                              |
+|----------|----------------------------------------------------------|
+| GRTD.203 | Each sentence must present a single self-contained idea. |
+
+Sentences that present more than one self-contained idea are deprecated. A sentence that provides more than one self-contained idea should be split into separate sentences. 
+
+For example, the following sentence encloses three self-contained ideas: 
+
+*After the system validates the configuration file successfully, it stores the parameters in the database and restarts the service automatically.*
+
+This sentence should be split into three sentences, each delivering a self-contained idea:
+
+*The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
+
 
 ## Paragraphs
+
+### Maintaining Paragraph Observability
+
+| Req. ID  | Requirement                                    |
+|----------|------------------------------------------------|
+| GRTD.205 | A paragraph should contain up to 10 sentences. |
+
+| Ext. Pt. ID  | Extension Point                                                   |
+|--------------|-------------------------------------------------------------------|
+| GRTD.101     | The limit of 10 sentences may be redefined for a certain project. |
+
+
+### Restricting Pronoun References Locally
+
+| Req. ID  | Requirement                                                                      |
+|----------|----------------------------------------------------------------------------------|
+| GRTD.204 | Pronouns must refer only to subjects explicitly mentioned in the same paragraph. |
+
+Pronouns that refer to subjects that are not explicitly mentioned in the same paragraph are deprecated.
+
+Consider the example below. The pronoun *they* in the second paragraph refers to *users* or *registered users* who are mentioned only in the first paragraph. Notice that such a usage of the pronoun yields an ambiguity.
+
+```markdown
+Users can create support tickets through the web interface. 
+Registered users can also attach screenshots to tickets.
+
+They can track ticket statuses on the support page. Email 
+notifications about ticket updates are also available.
+```
+
+The second paragraph should be rewritten as follows. 
+
+```markdown
+Registered users can track ticket statuses on the support page. 
+Email notifications about ticket updates are also available.
+```
 
 
 ## Sections
@@ -272,54 +326,10 @@ Examples are given below.
 
 ## Building Continuous Prose 
 
-### Keeping Sentences Simple
-
-| Req. ID  | Requirement                                              |
-|----------|----------------------------------------------------------|
-| GRTD.203 | Each sentence must present a single self-contained idea. |
-
-Sentences that present more than one self-contained idea are deprecated. A sentence that provides more than one self-contained idea should be split into separate sentences. 
-
-For example, the following sentence encloses three self-contained ideas: 
-
-*After the system validates the configuration file successfully, it stores the parameters in the database and restarts the service automatically.*
-
-This sentence should be split into three sentences, each delivering a self-contained idea:
-
-*The system validates the configuration file. If the system has validated the configuration file successfully, it stores the configuration parameters in the database. Finally, the system restarts the service automatically.*
 
 
-### Maintaining Paragraph Consistency
 
-| Req. ID  | Requirement                                                                      |
-|----------|----------------------------------------------------------------------------------|
-| GRTD.204 | Pronouns must refer only to subjects explicitly mentioned in the same paragraph. |
 
-Pronouns that refer to subjects that are not explicitly mentioned in the same paragraph are deprecated.
-
-Consider the example below. The pronoun *they* in the second paragraph refers to *users* or *registered users* who are mentioned only in the first paragraph. Notice that such a usage of the pronoun yields an ambiguity.
-
-```markdown
-Users can create support tickets through the web interface. 
-Registered users can also attach screenshots to tickets.
-
-They can track ticket statuses on the support page. Email 
-notifications about ticket updates are also available.
-```
-
-The second paragraph should be rewritten as follows. 
-
-```markdown
-Registered users can track ticket statuses on the support page. 
-Email notifications about ticket updates are also available.
-```
-
-| Req. ID  | Requirement                                    |
-|----------|------------------------------------------------|
-| GRTD.205 | A paragraph should contain up to 10 sentences. |
-
-> **NOTE**  
-> Feel free to redefine the hard limit specified above in your local extensions.
 
 
 ### Maintaining Continuous Prose Consistency
