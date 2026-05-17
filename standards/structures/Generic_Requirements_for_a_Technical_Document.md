@@ -539,6 +539,49 @@ The system supports the following operations:
 - Database backup
 ```
 
+| Req. ID  | Requirement                                                                              |
+|----------|------------------------------------------------------------------------------------------|
+| GRTD.401 | The enumeration items must never share the same beginning, unless they are unchangeable. |
+
+The shared beginning, if it appears, should be "taken out of the brackets" by including it in the introduction phrase.
+
+The items of the following enumeration share the same beginning, which violates the requirement.
+
+```markdown
+The system supports the following operations:
+
+- Encrypting the data
+- Encrypting the keys
+- Encrypting the backups
+```
+
+The enumeration and its introduction phrase may be corrected as follows.
+
+```markdown
+The system supports encryption of the following targets:
+
+- Data
+- Keys
+- Backups
+```
+
+Items are considered unchangeable when their wording is fixed by convention or definition. The following are typical examples:
+
+- Proper names
+- Terms
+- Identifiers
+
+The items of the enumeration below require no corrections.
+
+```markdown
+The most influential figures named Roger in the computer industry include the following:
+
+- Roger Needham
+- Roger Penrose
+- Roger Pressman
+- Roger Rivest
+```
+
 
 #### Describing Items in a Parallel Enumeration
 
