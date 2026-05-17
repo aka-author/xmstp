@@ -467,6 +467,32 @@ The same introduction phrases with the errors fixed are given below:
 *Users may pay for the service with the following methods:*
 
 
+| Req. ID  | Requirement                                                                            |
+|----------|----------------------------------------------------------------------------------------|
+| GRTD.401 | For partial enumerations, the selection criteria or scope must be explicitly declared. |
+
+
+| Req. ID  | Requirement                                                                                           |
+|----------|-------------------------------------------------------------------------------------------------------|
+| GRTD.401 | For enumerated conditions, the relationships among them must be disclosed in the introduction phrase. |
+
+The following enumeration is poorly introduced:
+
+```markdown
+The system triggers an alert in the following cases:
+
+- The CPU usage exceeds 90%.
+- The memory usage exceeds 80%.
+```
+
+Depending on the actual logic, the introduction phrase should be rewritten in one of the following ways:
+
+*The system triggers an alert when any of the following conditions is met:*, or
+*The system triggers an alert when all of the following conditions are met simultaneously:*.
+
+
+
+
 #### Presenting Items in a Plain Enumeration
 
 | Req. ID  | Requirement                                                                                      |
