@@ -438,7 +438,35 @@ not permitted to write comments to articles.
 
 ### Enumerating Subjects
 
-#### Introducing Items in a Plain Enumeration
+#### Introducing Enumerations
+
+| Req. ID  | Requirement                                                                         |
+|----------|-------------------------------------------------------------------------------------|
+| GRTD.401 | An enumeration must be introduced in the paragraph directly above it.               |
+| GRTD.401 | The paragraph directly above the enumeration must end with the introduction phrase. |
+| GRTD.401 | The introduction phrase must contain a common term for the enumeration items.       |
+| GRTD.401 | The introduction phrase must never expose the number of enumeration items.          |
+| GRTD.401 | The introduction phrase must never end with a preposition or a verb.                |
+
+Introduction phrases, when properly written, usually employ one of the following sentence patterns:
+
+- *following {common term in plural}:*
+- *{common term in plural} ... are listed below:*
+
+Examples of poorly written introduction phrases are given below:
+
+*The five most important features of the system are:*
+*The system includes:*
+*Users may pay for the service with:*
+
+The same introduction phrases with the errors fixed are given below:
+
+*The most important features of the system are listed below:*
+*The system includes the following components:*
+*Users may pay for the service with the following methods:*
+
+
+#### Presenting Items in a Plain Enumeration
 
 | Req. ID  | Requirement                                                                                     |
 |----------|--------------------------------------------------------------------------------------------------|
