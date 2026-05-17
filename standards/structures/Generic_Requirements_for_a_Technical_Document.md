@@ -610,13 +610,31 @@ The requirement applies to the following data types in particular.
 
 | Data Type      | Explanation                                                                        |
 |----------------|------------------------------------------------------------------------------------|
-| Boolean values | A single format must be chosen, e.g. *Yes/No*, and used in all tables.             |
-| Dates          | A single date format must be chosen, e.g. *YYYY-MM-DD*, and used in all tables.    |
+| Boolean values | A single format must be chosen, e.g. `Yes/No`, and used in all tables.             |
+| Dates          | A single date format must be chosen, e.g. `YYYY-MM-DD`, and used in all tables.    |
 | Magnitudes     | The same units and the same number of decimal places must be used throughout.      |
-| Currency       | The same currency format must be chosen, e.g. *$1,000.00*, and used in all tables. |
-| Percentages    | The same form must be chosen, e.g. *10%* or *0.10*, and used in all tables.        |
+| Currency       | The same currency format must be chosen, e.g. `$1,000.00`, and used in all tables. |
+| Percentages    | The same form must be chosen, e.g. `10%` or `0.10`, and used in all tables.        |
 
 Inconsistent formatting forces readers to interpret the same kind of data differently in different places, which increases cognitive load and the risk of misreading.
+
+
+#### Avoiding Redundant Enumerations
+
+| Req. ID  | Requirement                                                                        |
+|----------|------------------------------------------------------------------------------------|
+| GRTD.401 | Items mentioned to deliver an idea rather than to be presented must remain inline. |
+
+Authors sometimes mention a few items not to enumerate them exhaustively, but to give readers an orientation. This happens in the following typical cases:
+
+- Examples that illustrate what kind of things are being discussed
+- Representative cases that orient readers before going into detail
+
+In these cases, converting the items to a list implies completeness and misleads the reader. Such items must remain part of the running text.
+
+The comma-separated items in the following sentence are not an enumeration:
+
+*A modern operating system manages many resources: processes, memory, file systems, and so on.*
 
 
 ### Arranging Narratives as Cascades
