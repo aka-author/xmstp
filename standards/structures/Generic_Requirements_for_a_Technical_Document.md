@@ -452,6 +452,7 @@ Introduction phrases, when properly written, usually employ one of the following
 
 - *following {common term in plural}:*
 - *{common term in plural} ... are listed below:*
+- *{common term in plural} ... are as follows:*
 
 Examples of poorly written introduction phrases are given below:
 
@@ -468,7 +469,7 @@ The same introduction phrases with the errors fixed are given below:
 
 #### Presenting Items in a Plain Enumeration
 
-| Req. ID  | Requirement                                                                                     |
+| Req. ID  | Requirement                                                                                      |
 |----------|--------------------------------------------------------------------------------------------------|
 | GRTD.401 | An unordered list must be used to represent an enumeration if the items are ordered arbitrarily. |
 | GRTD.401 | An ordered list must be used to represent an enumeration if the items have an inherent order.    |
@@ -480,10 +481,64 @@ In particular, an ordered list is relevant in the following cases:
 - Versions or releases of a product
 - Concepts broadly known under their numbers, e.g. OSI/ISO layers
 
+| Ext. Pt. ID  | Extension Point                                                                  |
+|--------------|----------------------------------------------------------------------------------|
+| GRTD.101     | More cases when ordered lists are relevant may be defined for a certain project. |
 
+| Req. ID  | Requirement                                                                     |
+|----------|---------------------------------------------------------------------------------|
+| GRTD.401 | The grammatical structure of the items in the same enumeration must be uniform. |
 
+The most popular grammatical forms of enumeration items are as follows:
 
-A plain enumeration must be represented as an unsorted list. 
+- Nouns and noun phrases
+- Phrases with a verbal noun in gerund form as the head
+- Full sentences
+
+The enumeration shown below violates the requirement of grammatical uniformity.
+
+```markdown
+The system supports the following authentication methods:
+
+- Password-based login
+- Using a hardware token
+- Biometric
+- You can also authenticate via SMS code
+```
+
+In the following example the error is fixed. The enumeration items are grammatically uniform now.
+
+```markdown
+The system supports the following authentication methods:
+
+- Password-based login
+- Hardware token
+- Biometric authentication
+- SMS code
+```
+
+One of the most common errors made in enumerations is mixing nouns with verbal nouns. An example is shown below.
+
+```markdown
+The system supports the following operations:
+
+- Data encryption
+- Authenticating users
+- Key rotation
+- Backing up the database
+```
+
+To fix such an error, authors should choose either of these two forms and correct non-fitting items. The poorly written enumeration shown above might be fixed as follows.
+
+```markdown
+The system supports the following operations:
+
+- Data encryption
+- User authentication
+- Key rotation
+- Database backup
+```
+
 
 #### Enumerating Structured Items
 
