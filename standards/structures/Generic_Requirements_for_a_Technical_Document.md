@@ -361,10 +361,82 @@ The table below breaks down the connections among the sentences in the revised p
 | 5 | Conclusion  | The conflict           | Its organizational impact in public-facing deployments |
 
 
-## Sections
-
-
 ## Narrative
+
+### Managing Concepts
+
+#### Introducing Concepts for Recognized Phenomena
+
+| Req. ID  | Requirement                                                  |
+|----------|--------------------------------------------------------------|
+| GRTD.301 | A concept must be introduced to mention the same phenomenon. |
+| GRTD.302 | Repeating the same descriptive phrase must be avoided.       |
+
+Technically, an author should define a term instead of repeating the same descriptive phrase. 
+
+An example of improper usage of descriptive phrases.
+
+```markdown
+A *user who has an account in the system* is permitted to publish articles in the system. 
+A *user who does not have an account in the system* is not permitted to publish articles in the system.
+
+A *user who has an account in the system* is permitted to write comments to articles. 
+A *user who does not have an account in the system* is not permitted to write comments to articles.
+```
+
+An example of introducing concepts for phenomena that are mentioned repeatedly. 
+
+```markdown
+A *registered user* is a user that has an account in the system.
+
+An *anonymous user* is a user that does not have an account in the system.
+
+*Registered users* are permitted to publish articles in the system. *Anonymous users* are not permitted to publish articles in the system. 
+
+*Registered users* are permitted to write comments to articles. *Anonymous users* are not permitted to write comments to articles.
+```
+
+#### Introducing Concepts Before Using Them
+
+| Req. ID  | Requirement                                                                                       |
+|----------|---------------------------------------------------------------------------------------------------|
+| GRTD.303 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
+| GRTD.304 | Defining concepts cyclically is prohibited.                                                       |
+
+An example of wrong concept usage: the concepts are not defined. 
+
+```markdown
+# User Manual
+
+## Users and Their Permissions
+
+*Registered users* are permitted to write comments to articles. *Anonymous users* are
+not permitted to write comments to articles.
+```
+
+An example of wrong concept usage: the concepts are defined cyclically. 
+
+```markdown
+A *user* is a person who has an *account* in the system.
+
+An *account* is a record in the system that describes a *user*. 
+```
+
+An example of correct concept usage: the concepts are defined before they are mentioned.
+
+```markdown
+A *user* is a person who accesses the system to utilize the features it provides.
+
+An *account* is a record in the system that describes a *user*.
+
+A *registered user* is a *user* that has an *account* in the system.
+
+An *anonymous user* is a *user* that does not have an *account* in the system.
+
+*Registered users* are permitted to write comments to articles. *Anonymous users* are 
+not permitted to write comments to articles.
+```
+
 
 
 ## Documents
@@ -450,79 +522,6 @@ The table below lists file formats supported by the application.
 | Markdown                 | `.md`     |
 ```
 
-## Introducing and Mentioning Concepts
-
-### Introducing Concepts for Recognized Phenomena
-
-| Req. ID  | Requirement                                                  |
-|----------|--------------------------------------------------------------|
-| GRTD.301 | A concept must be introduced to mention the same phenomenon. |
-| GRTD.302 | Repeating the same descriptive phrase must be avoided.       |
-
-Technically, an author should define a term instead of repeating the same descriptive phrase. 
-
-An example of improper usage of descriptive phrases.
-
-```markdown
-A *user who has an account in the system* is permitted to publish articles in the system. 
-A *user who does not have an account in the system* is not permitted to publish articles in the system.
-
-A *user who has an account in the system* is permitted to write comments to articles. 
-A *user who does not have an account in the system* is not permitted to write comments to articles.
-```
-
-An example of introducing concepts for phenomena that are mentioned repeatedly. 
-
-```markdown
-A *registered user* is a user that has an account in the system.
-
-An *anonymous user* is a user that does not have an account in the system.
-
-*Registered users* are permitted to publish articles in the system. *Anonymous users* are not permitted to publish articles in the system. 
-
-*Registered users* are permitted to write comments to articles. *Anonymous users* are not permitted to write comments to articles.
-```
-
-### Introducing Concepts Before Using Them
-
-| Req. ID  | Requirement                                                                                       |
-|----------|---------------------------------------------------------------------------------------------------|
-| GRTD.303 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
-| GRTD.304 | Defining concepts cyclically is prohibited.                                                       |
-
-An example of wrong concept usage: the concepts are not defined. 
-
-```markdown
-# User Manual
-
-## Users and Their Permissions
-
-*Registered users* are permitted to write comments to articles. *Anonymous users* are
-not permitted to write comments to articles.
-```
-
-An example of wrong concept usage: the concepts are defined cyclically. 
-
-```markdown
-A *user* is a person who has an *account* in the system.
-
-An *account* is a record in the system that describes a *user*. 
-```
-
-An example of correct concept usage: the concepts are defined before they are mentioned.
-
-```markdown
-A *user* is a person who accesses the system to utilize the features it provides.
-
-An *account* is a record in the system that describes a *user*.
-
-A *registered user* is a *user* that has an *account* in the system.
-
-An *anonymous user* is a *user* that does not have an *account* in the system.
-
-*Registered users* are permitted to write comments to articles. *Anonymous users* are 
-not permitted to write comments to articles.
-```
 
 
 ### Enumerating and Describing Subjects
