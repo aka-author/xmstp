@@ -466,11 +466,35 @@ The same introduction phrases with the errors fixed are given below:
 *The system includes the following components:*
 *Users may pay for the service with the following methods:*
 
+| Req. ID  | Requirement                                                                                   |
+|----------|-----------------------------------------------------------------------------------------------|
+| GRTD.401 | For partial enumerations, the selection criteria must be declared in the introduction phrase. |
 
-| Req. ID  | Requirement                                                                            |
-|----------|----------------------------------------------------------------------------------------|
-| GRTD.401 | For partial enumerations, the selection criteria or scope must be explicitly declared. |
+The selection criteria declare which subset of items is included in the enumeration and why the remaining items are omitted. The following are typical examples of selection criteria.
 
+| Criterion      | Typical Situations                                                    |
+|----------------|-----------------------------------------------------------------------|
+| Importance     | The most significant, influential, or impactful items                 |
+| Relevance      | Items applicable to a specific context, audience, or use case         |
+| Recognition    | Items formally recognized or supported within the product or standard |
+| Timeliness     | Items known, discovered, or introduced at the time of writing         |
+| Unavoidability | Items that cannot be ignored, while others may be safely omitted      |
+
+The following introduction phrase misinforms the readers. 
+
+```markdown
+The following types of attacks threaten the system:
+
+- Distributed denial of service
+- SQL injection
+- Man-in-the-middle
+```
+
+The sad truth is that the types of attacks are far more numerous.
+
+The introduction phrase may be rewritten as follows:
+
+*The following types of attacks threaten the system to the greatest extent:*.
 
 | Req. ID  | Requirement                                                                                           |
 |----------|-------------------------------------------------------------------------------------------------------|
