@@ -540,7 +540,84 @@ The system supports the following operations:
 ```
 
 
-#### Enumerating Structured Items
+#### Describing Items in a Parallel Enumeration
+
+| Req. ID  | Requirement                                                                                   |
+|----------|-----------------------------------------------------------------------------------------------|
+| GRTD.401 | A table must be used to represent an enumeration where the items have the same structure.     |
+| GRTD.401 | A numbering column must be included in the table if the items have an inherent order.         |
+| GRTD.401 | An introduction phrase before a parallel enumeration must end with a full stop.               |
+
+Consider the following enumeration.
+
+```markdown
+The system consists of the following modules:
+
+- Authentication module — manages user authentication, not scalable
+- Billing module — processes payments and invoices, can be scaled horizontally
+- Notification module — sends email and SMS alerts, not scalable
+- Reporting module — generates usage reports, scalability is supported
+```
+
+Such an enumeration should be represented as a table.
+
+```markdown
+The system consists of the following modules.
+
+| Module                | Purpose                         | Scalable |
+|-----------------------|---------------------------------|----------|
+| Authentication module | Manages user authentication     | No       |
+| Billing module        | Processes payments and invoices | Yes      |
+| Notification module   | Sends email and SMS alerts      | No       |
+| Reporting module      | Generates usage reports         | Yes      |
+```
+
+| Req. ID  | Requirement                                                                                   |
+|----------|-----------------------------------------------------------------------------------------------|
+| GRTD.401 | The grammatical structure and/or format of the data must be uniform within each table column. |
+
+The parallel enumeration shown below violates the requirement of uniformity.
+
+```markdown
+The system consists of the following modules.
+
+| Module                | Purpose                              | Scalable      | Release date |
+|-----------------------|--------------------------------------|---------------|--------------|
+| Authentication module | Manages user authentication          | No            | 2021-03-15   |
+| Billing module        | Payment and invoice processing       | Yes           | June 2022    |
+| Notification module   | Sends email and SMS alerts           | Not supported | 03/2023      |
+| Reporting module      | For generating usage reports         | Scalability is supported | 2023 |
+```
+
+In the following parallel enumeration, the error is fixed. The data is uniform within each column.
+
+```markdown
+The system consists of the following modules.
+
+| Module                | Purpose                         | Scalable | Release date |
+|-----------------------|---------------------------------|----------|--------------|
+| Authentication module | Manages user authentication     | No       | 2021-03-15   |
+| Billing module        | Processes payments and invoices | Yes      | 2022-06-01   |
+| Notification module   | Sends email and SMS alerts      | No       | 2023-03-01   |
+| Reporting module      | Generates usage reports         | Yes      | 2023-01-01   |
+```
+
+| Req. ID  | Requirement                                                                                              |
+|----------|----------------------------------------------------------------------------------------------------------|
+| GRTD.401 | The format used for the same data type must be uniform across all parallel enumerations in the document. |
+
+The requirement applies to the following data types in particular.
+
+| Data Type      | Explanation                                                                        |
+|----------------|------------------------------------------------------------------------------------|
+| Boolean values | A single format must be chosen, e.g. *Yes/No*, and used in all tables.             |
+| Dates          | A single date format must be chosen, e.g. *YYYY-MM-DD*, and used in all tables.    |
+| Magnitudes     | The same units and the same number of decimal places must be used throughout.      |
+| Currency       | The same currency format must be chosen, e.g. *$1,000.00*, and used in all tables. |
+| Percentages    | The same form must be chosen, e.g. *10%* or *0.10*, and used in all tables.        |
+
+Inconsistent formatting forces readers to interpret the same kind of data differently in different places, which increases cognitive load and the risk of misreading.
+
 
 ### Arranging Narratives as Cascades
 
