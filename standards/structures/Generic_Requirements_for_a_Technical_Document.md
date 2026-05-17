@@ -72,6 +72,8 @@ Level: 1.
 
 *Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
 
+*Rheme:* The part of a sentence that presents new information about the theme.
+
 *Self-contained idea:* An idea that can be explained or discussed independently from another idea.
 
 *Sentence pattern:* A recurrent sentence structure used to present a certain type of information in a consistent way.
@@ -93,6 +95,7 @@ Level: 1.
 
 *Term-related vocabulary:* The set of words and phrases regularly used together with a term in a certain context.
 
+*Theme:* The part of a sentence that presents the known or assumed information and serves as the point of departure for what is said next.
 
 ## Words and Phrases
 
@@ -326,15 +329,36 @@ Email notifications about ticket updates are also available.
 ```
 
 
-### 
+### Implementing a Train of Thoughts within a Paragraph
 
-| Req. ID  | Requirement                                                                      |
-|----------|----------------------------------------------------------------------------------|
-| GRTD.204 | The first sentence must either introduce a new idea o refer an idea introduced earlier |
+| Req. ID  | Requirement                                                                             |
+|----------|-----------------------------------------------------------------------------------------|
+| GRTD.204 | The first sentence in the paragraph must introduce or mention the idea to be discussed. |
+| GRTD.204 | The last sentence in the paragraph must deliver a meaningful conclusion or direction.   |
+| GRTD.204 | The intermediate sentences in the paragraph must be organized as a train of thoughts.   |
+| GRTD.204 | Ideas obvious to or already introduced to the target audience must be omitted.          |
 
+The paragraph below keeps readers baffled until they reach the last sentence, look back, and, finally, restore the logic in their minds themselves.
 
+*Organizations deploying firewalls must carefully evaluate the tradeoff between security and availability. Latency reduces availability. The firewall introduces latency in high-traffic environments. High traffic volumes are typical for public-facing services. Public-facing services are therefore the most affected by firewall-induced performance degradation.*
 
+This paragraph throws an instruction at the readers and then tries to justify it. The trivial connection between latency and availability comes instantly after the direction, explaining nothing. Later, the author adds more reasons as if they doubt whether the readers believe them.
 
+The following revision logically leads readers from the initial cause to a meaningful conclusion.
+
+*The firewall blocks unauthorized access, but it introduces latency in high-traffic environments. This latency grows proportionally with the volume of incoming traffic. High traffic volumes are typical for public-facing services. Public-facing services are therefore the most affected by firewall-induced performance degradation. Organizations deploying firewalls in such environments must carefully evaluate the tradeoff between security and availability.*
+
+A paragraph should be structured from exposition to conclusion. The exposition comes first. It introduces a new idea or points to a known one. The conclusion goes at the end of the paragraph. It delivers the actual value of the paragraph. The intermediate sentences build a bridge between the exposition and the conclusion. In the train of thoughts, each sentence picks up the rheme of the previous one as its new theme. This way, the reasoning advances step by step until the conclusion becomes inevitable.
+
+The table below breaks down the connections among the sentences in the revised paragraph.
+
+| # | Role        | Theme                  | Rheme                                                  |
+|---|-------------|------------------------|--------------------------------------------------------|
+| 1 | Exposition  | The firewall           | The conflict between security and availability         |
+| 2 | Development | This latency           | Its growth proportional to traffic volume              |
+| 3 | Development | High traffic volumes   | Their prevalence in public-facing services             |
+| 4 | Development | Public-facing services | Their heightened exposure to availability degradation  |
+| 5 | Conclusion  | The conflict           | Its organizational impact in public-facing deployments |
 
 
 ## Sections
