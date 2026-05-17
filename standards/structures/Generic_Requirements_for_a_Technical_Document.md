@@ -421,7 +421,6 @@ A *user* is a person who has an *account* in the system.
 
 An *account* is a record in the system that describes a *user*. 
 ```
-
 An example of correct concept usage: the concepts are defined before they are mentioned.
 
 ```markdown
@@ -436,6 +435,68 @@ An *anonymous user* is a *user* that does not have an *account* in the system.
 *Registered users* are permitted to write comments to articles. *Anonymous users* are 
 not permitted to write comments to articles.
 ```
+
+### Enumerating Subjects
+
+#### Introducing Items in a Plain Enumeration
+
+| Req. ID  | Requirement                                                                                     |
+|----------|--------------------------------------------------------------------------------------------------|
+| GRTD.401 | An unordered list must be used to represent an enumeration if the items are ordered arbitrarily. |
+| GRTD.401 | An ordered list must be used to represent an enumeration if the items have an inherent order.    |
+
+In particular, an ordered list is relevant in the following cases:
+
+- Positions in a ranking or rating
+- Phases of a procedure, process, or lifecycle
+- Versions or releases of a product
+- Concepts broadly known under their numbers, e.g. OSI/ISO layers
+
+
+
+
+A plain enumeration must be represented as an unsorted list. 
+
+#### Enumerating Structured Items
+
+### Arranging Narratives as Cascades
+
+
+**Requirements**
+
+| Req. ID  | Requirement                                                                                    |
+|----------|------------------------------------------------------------------------------------------------|
+| GRTD.401 | The facts and ideas that the narrative introduces must first be enumerated and then explained. |
+
+
+**Examples**
+
+**Wrong**
+
+```markdown
+The red light prohibits traffic. Everyone must stop and wait for the yellow light.
+
+The yellow light tells traffic participants to prepare. They should get ready to move.
+
+The green light allows traffic. Participants must start moving.
+```
+
+**Correct**
+
+```markdown
+The traffic light gives the following signals:
+
+* Red
+* Yellow
+* Green
+
+The red light prohibits traffic. Everyone must stop and wait for the yellow light.
+
+The yellow light tells traffic participants to prepare. They should get ready to move.
+
+The green light allows traffic. Participants must start moving.
+```
+
 
 
 
@@ -524,52 +585,7 @@ The table below lists file formats supported by the application.
 
 
 
-### Enumerating and Describing Subjects
 
-#### Plain Enumeration
-
-
-A plain enumeration must be represented as an unsorted list. 
-
-#### Enumerating Structured Items
-
-### Arranging Narratives as Cascades
-
-
-**Requirements**
-
-| Req. ID  | Requirement                                                                                    |
-|----------|------------------------------------------------------------------------------------------------|
-| GRTD.401 | The facts and ideas that the narrative introduces must first be enumerated and then explained. |
-
-
-**Examples**
-
-**Wrong**
-
-```markdown
-The red light prohibits traffic. Everyone must stop and wait for the yellow light.
-
-The yellow light tells traffic participants to prepare. They should get ready to move.
-
-The green light allows traffic. Participants must start moving.
-```
-
-**Correct**
-
-```markdown
-The traffic light gives the following signals:
-
-* Red
-* Yellow
-* Green
-
-The red light prohibits traffic. Everyone must stop and wait for the yellow light.
-
-The yellow light tells traffic participants to prepare. They should get ready to move.
-
-The green light allows traffic. Participants must start moving.
-```
 
 ## Maintaining Parallel Text Structures
 
