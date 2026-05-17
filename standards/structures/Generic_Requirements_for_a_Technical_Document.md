@@ -481,6 +481,12 @@ In particular, an ordered list is relevant in the following cases:
 - Versions or releases of a product
 - Concepts broadly known under their numbers, e.g. OSI/ISO layers
 
+| Req. ID  | Requirement                                 |
+|----------|---------------------------------------------|
+| GRTD.401 | An enumeration must be formally exhaustive. |
+
+Formally exhaustive means that the enumeration must not imply the existence of unlisted items. Items such as *etc.*, *and so on*, *and others*, and *other* are therefore forbidden. If the author cannot or does not intend to enumerate all items literally, this must be reflected in the introduction phrase.
+
 | Ext. Pt. ID  | Extension Point                                                                  |
 |--------------|----------------------------------------------------------------------------------|
 | GRTD.101     | More cases when ordered lists are relevant may be defined for a certain project. |
