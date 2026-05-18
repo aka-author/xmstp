@@ -527,19 +527,19 @@ Typically, the options play one of the following roles:
 - Consequences that may arise
 - Classification groups (exactly as in this enumeration!)
 
-The next introduction phrase gets readers to uncertainty:
+The next introduction phrase leaves readers uncertain:
 
 *The neural interface controller failure results in the following consequences:*
 
 Depending on the relationship among the possible effects, the introduction phrase should be improved as follows.
 
-| Relationship       | Introduction phrase                                                         |
-|--------------------|-----------------------------------------------------------------------------|
-| Neither or one     |  *... in neither or one of the following effects*                           |
-| One and only one   |  *... in one and only one of the following effects*                         |
-| Arbitrary subset   |  *... in unpredictable combination one the following effects*               |
-| Conditioned subset |  *... in a certain combination of the following effects as described below* |
-| Always a full set  |  *... in the following set of effects*                                      |
+| Relationship       | Introduction phrase                                                        |
+|--------------------|----------------------------------------------------------------------------|
+| Neither or one     | *... in neither or one of the following effects*                           |
+| One and only one   | *... in one and only one of the following effects*                         |
+| Arbitrary subset   | *... in an unpredictable combination of the following effects*             |
+| Conditioned subset | *... in a certain combination of the following effects as described below* |
+| Always a full set  | *... in the following set of effects*                                      |
 
 In the case of a conditioned subset, an explanation should come directly after the enumeration.
 
