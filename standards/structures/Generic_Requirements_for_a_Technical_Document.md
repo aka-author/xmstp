@@ -448,6 +448,8 @@ not permitted to write comments to articles.
 | GRTD.401 | The introduction phrase must never expose the number of enumeration items.          |
 | GRTD.401 | The introduction phrase must never end with a preposition or a verb.                |
 
+Highly abstract common terms such as *object*, *subject*, or *thing* are not recommended as common terms, unless we enumerate specific objects in software design, subjects of particular scientific research, or things in someone's suitcase. Abstract nouns are acceptable as common terms when they are terms rather than words of common vocabulary.
+
 Introduction phrases, when properly written, usually employ one of the following sentence patterns:
 
 - *following {common term in plural}:*
@@ -515,8 +517,6 @@ Depending on the actual logic, the introduction phrase should be rewritten in on
 *The system triggers an alert when all of the following conditions are met simultaneously:*.
 
 
-
-
 #### Presenting Items in a Plain Enumeration
 
 | Req. ID  | Requirement                                                                                      |
@@ -541,9 +541,10 @@ Formally exhaustive means that the enumeration must not imply the existence of u
 |--------------|----------------------------------------------------------------------------------|
 | GRTD.101     | More cases when ordered lists are relevant may be defined for a certain project. |
 
-| Req. ID  | Requirement                                                                     |
-|----------|---------------------------------------------------------------------------------|
-| GRTD.401 | The grammatical structure of the items in the same enumeration must be uniform. |
+| Req. ID  | Requirement                                                                       |
+|----------|-----------------------------------------------------------------------------------|
+| GRTD.401 | The enumeration items must be comparable and describable by the same common term. |
+| GRTD.401 | The grammatical structure of the items in the same enumeration must be uniform.   |
 
 The most popular grammatical forms of enumeration items are as follows:
 
