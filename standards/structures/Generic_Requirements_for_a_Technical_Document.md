@@ -516,6 +516,33 @@ Depending on the actual logic, the introduction phrase should be rewritten in on
 *The system triggers an alert when any of the following conditions is met:*, or
 *The system triggers an alert when all of the following conditions are met simultaneously:*.
 
+| Req. ID  | Requirement                                                                                        |
+|----------|----------------------------------------------------------------------------------------------------|
+| GRTD.401 | For enumerated options, the introduction phrase must explain in which combinations they come.      |
+| GRTD.401 | Detailed explanations referred to in the introduction phrase must follow the enumeration directly. |
+
+Typically, the options play one of the following roles:
+
+- Possibilities to be chosen
+- Consequences that may arise
+- Classification groups (exactly as in this enumeration!)
+
+The next introduction phrase gets readers to uncertainty:
+
+*The neural interface controller failure results in the following consequences:*
+
+Depending on the relationship among the possible effects, the introduction phrase should be improved as follows.
+
+| Relationship       | Introduction phrase                                                         |
+|--------------------|-----------------------------------------------------------------------------|
+| Neither or one     |  *... in neither or one of the following effects*                           |
+| One and only one   |  *... in one and only one of the following effects*                         |
+| Arbitrary subset   |  *... in unpredictable combination one the following effects*               |
+| Conditioned subset |  *... in a certain combination of the following effects as described below* |
+| Always a full set  |  *... in the following set of effects*                                      |
+
+In the case of a conditioned subset, an explanation should come directly after the enumeration.
+
 
 #### Presenting Items in a Plain Enumeration
 
