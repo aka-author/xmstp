@@ -763,17 +763,13 @@ The comma-separated items in the following sentence are not an enumeration:
 
 ### Arranging Narratives as Cascades
 
+#### Introducing Subjects Before Discussing Them
 
-**Requirements**
+| Req. ID  | Requirement                                                                                      |
+|----------|--------------------------------------------------------------------------------------------------|
+| GRTD.401 | The subjects that the narrative covers must first be enumerated and then explained or discussed. |
 
-| Req. ID  | Requirement                                                                                    |
-|----------|------------------------------------------------------------------------------------------------|
-| GRTD.401 | The facts and ideas that the narrative introduces must first be enumerated and then explained. |
-
-
-**Examples**
-
-**Wrong**
+The following example demonstrates how concepts can be discussed before being introduced. The structuring shown below is not reader-friendly, because it forces the readers to dive into details before capturing the whole picture.
 
 ```markdown
 The red light prohibits traffic. Everyone must stop and wait for the yellow light.
@@ -783,14 +779,14 @@ The yellow light tells traffic participants to prepare. They should get ready to
 The green light allows traffic. Participants must start moving.
 ```
 
-**Correct**
+An enumeration of concepts should come before paragraphs that discuss each concept in detail. The structure shown below is easier to follow because the reader knows what to expect before engaging with each concept in detail. This becomes especially important when the descriptions are long or complex.
 
 ```markdown
 The traffic light gives the following signals:
 
-* Red
-* Yellow
-* Green
+- Red
+- Yellow
+- Green
 
 The red light prohibits traffic. Everyone must stop and wait for the yellow light.
 
@@ -799,7 +795,7 @@ The yellow light tells traffic participants to prepare. They should get ready to
 The green light allows traffic. Participants must start moving.
 ```
 
-
+#### Cascading Sections
 
 
 ## Documents
