@@ -795,7 +795,39 @@ The yellow light tells traffic participants to prepare. They should get ready to
 The green light allows traffic. Participants must start moving.
 ```
 
-#### Cascading Sections
+#### Arranging Sections Into Cascades
+
+| Req. ID  | Requirement                                                                                      |
+|----------|--------------------------------------------------------------------------------------------------|
+| GRTD.401 | A section covering multiple subjects must open with an introductory subsection enumerating them. |
+| GRTD.401 | Each subject enumerated in the introductory subsection must have its own subsection.             |
+
+The cascading technique is applicable to formal sections. First, an introductory section must provide a holistic view of the subject. Then each part is described in a dedicated section.
+
+The following structure demonstrates how the cascading technique is applied at the section level. The introductory subsection gives the reader a complete picture before any details are discussed. This becomes especially important when the individual sections are long or complex.
+
+```markdown
+3. Handling Traffic Light Signals
+
+   3.1. Types of Signals
+
+      The traffic light gives the following signals:
+
+      - Red
+      - Yellow
+      - Green
+
+   3.2. Handling the Red Light
+      ...
+
+   3.3. Handling the Yellow Light
+      ...
+
+   3.4. Handling the Green Light
+      ...
+```
+
+
 
 
 ## Documents
