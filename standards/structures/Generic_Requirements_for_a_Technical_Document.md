@@ -761,15 +761,15 @@ The comma-separated items in the following sentence are not an enumeration:
 *A modern operating system manages many resources: processes, memory, file systems, and so on.*
 
 
-### Arranging Narratives as Cascades
+### Cascading Narratives
 
-#### Introducing Subjects Before Discussing Them
+#### Introducing Subjects Within Continuous Prose
 
 | Req. ID  | Requirement                                                                                      |
 |----------|--------------------------------------------------------------------------------------------------|
-| GRTD.401 | The subjects that the narrative covers must first be enumerated and then explained or discussed. |
+| GRTD.610 | The subjects that the narrative covers must first be enumerated and then explained or discussed. |
 
-The following example demonstrates how concepts can be discussed before being introduced. The structuring shown below is not reader-friendly, because it forces the readers to dive into details before capturing the whole picture.
+The following example demonstrates how concepts can be discussed before being introduced. The structuring shown below is not reader-friendly, because it forces readers to dive into details before capturing the whole picture.
 
 ```markdown
 The red light prohibits traffic. Everyone must stop and wait for the yellow light.
@@ -795,12 +795,13 @@ The yellow light tells traffic participants to prepare. They should get ready to
 The green light allows traffic. Participants must start moving.
 ```
 
-#### Arranging Sections Into Cascades
+
+#### Developing Narrative Across Sections
 
 | Req. ID  | Requirement                                                                                      |
 |----------|--------------------------------------------------------------------------------------------------|
-| GRTD.401 | A section covering multiple subjects must open with an introductory subsection enumerating them. |
-| GRTD.401 | Each subject enumerated in the introductory subsection must have its own subsection.             |
+| GRTD.620 | A section covering multiple subjects must open with an introductory subsection enumerating them. |
+| GRTD.630 | Each subject enumerated in the introductory subsection must have its own subsection.             |
 
 The cascading technique is applicable to formal sections. First, an introductory section must provide a holistic view of the subject. Then each part is described in a dedicated section.
 
@@ -809,26 +810,90 @@ The following structure demonstrates how the cascading technique is applied at t
 ```markdown
 3. Handling Traffic Light Signals
 
-   3.1. Types of Signals
+3.1. Types of Signals
 
-      The traffic light gives the following signals:
+The traffic light gives the following signals:
 
-      - Red
-      - Yellow
-      - Green
+- Red
+- Yellow
+- Green
 
-   3.2. Handling the Red Light
-      ...
+3.2. Handling the Red Light
+    ...
 
-   3.3. Handling the Yellow Light
-      ...
+3.3. Handling the Yellow Light
+    ...
 
-   3.4. Handling the Green Light
-      ...
+3.4. Handling the Green Light
+    ...
 ```
 
 
+#### Ordering Subjects Uniformly
 
+| Req. ID  | Requirement                                                                                  |
+|----------|----------------------------------------------------------------------------------------------|
+| GRTD.640 | Subject descriptions must follow the same order in which the subjects were first enumerated. |
+
+The following example demonstrates inconsistently ordered list items, paragraphs, and subsections.
+
+```markdown
+3. Handling Traffic Light Signals
+
+3.1. Types of Signals
+
+The traffic light gives the following signals:
+
+- Red
+- Yellow
+- Green
+
+The green light allows traffic. Participants must start moving.
+
+The red light prohibits traffic. Everyone must stop and wait for the yellow light.
+
+The yellow light tells traffic participants to prepare. They should get ready to move.
+
+3.2. Handling the Yellow Light
+    ...
+
+3.3. Handling the Green Light
+    ...
+
+3.4. Handling the Red Light
+    ...
+```
+
+The inconsistent ordering may mislead readers. Each time readers encounter an unexpected subject, they may become uncertain whether an expected subject was omitted or will be discussed later for some undisclosed reason. In addition, readers who briefly scan the document may become confused regarding navigation and subject organization.
+
+The following improvement makes the ordering consistent and predictable for readers.
+
+```markdown
+3. Handling Traffic Light Signals
+
+3.1. Types of Signals
+
+The traffic light gives the following signals:
+
+- Red
+- Yellow
+- Green
+
+The red light prohibits traffic. Everyone must stop and wait for the yellow light.
+
+The yellow light tells traffic participants to prepare. They should get ready to move.
+
+The green light allows traffic. Participants must start moving.
+
+3.1. Handling the Red Light
+    ...
+
+3.2. Handling the Yellow Light
+    ...
+
+3.3. Handling the Green Light
+    ...
+```
 
 ## Documents
 
