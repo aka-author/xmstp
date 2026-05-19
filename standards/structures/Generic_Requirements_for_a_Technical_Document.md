@@ -900,7 +900,9 @@ The green light allows traffic. Participants must start moving.
 
 #### Applying Sentence Patterns to Parallel Cases
 
+
 #### Applying Information Types to Parallel Subjects
+
 
 
 
