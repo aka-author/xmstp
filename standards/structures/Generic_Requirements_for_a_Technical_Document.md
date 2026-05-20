@@ -107,7 +107,7 @@ Level: 1.
 
 | Ext. Pt. ID  | Extension Point                                                       |
 |--------------|-----------------------------------------------------------------------|
-| GRTD.110     | A list of prohibited words should be specified for a certain project. |
+| GRTD.110.ext | A list of prohibited words should be specified for a certain project. |
 
 
 ### Choosing the Right Level of Generality
@@ -173,7 +173,7 @@ If the program has not run automatically, run it manually from the menu. After t
 
 | Ext. Pt. ID  | Extension Point                                                                  |
 |--------------|----------------------------------------------------------------------------------|
-| GRTD.170     | The vocabulary of self-evident words should be restricted for a certain project. |
+| GRTD.170.ext | The vocabulary of self-evident words should be restricted for a certain project. |
 
 
 ### Using Terms Consistently
@@ -226,7 +226,7 @@ Open the transaction browser from the main menu. You can then open the transacti
 
 | Ext. Pt. ID  | Extension Point                                                        |
 |--------------|------------------------------------------------------------------------|
-| GRTD.230     | Term-related words and phrases should be defined in a certain project. |
+| GRTD.230.ext | Term-related words and phrases should be defined in a certain project. |
 
 
 ## Sentences
@@ -299,7 +299,7 @@ The first sentence might confuse the readers. The reason is, it presents a well-
 
 | Ext. Pt. ID  | Extension Point                                                   |
 |--------------|-------------------------------------------------------------------|
-| GRTD.290     | The limit of 10 sentences may be redefined for a certain project. |
+| GRTD.290.ext | The limit of 10 sentences may be redefined for a certain project. |
 
 
 ### Restricting Pronoun References Locally
@@ -563,7 +563,7 @@ Formally exhaustive means that the enumeration must not imply the existence of u
 
 | Ext. Pt. ID  | Extension Point                                                                  |
 |--------------|----------------------------------------------------------------------------------|
-| GRTD.510     | More cases when ordered lists are relevant may be defined for a certain project. |
+| GRTD.510.ext | More cases when ordered lists are relevant may be defined for a certain project. |
 
 | Req. ID  | Requirement                                                                       |
 |----------|-----------------------------------------------------------------------------------|
@@ -726,8 +726,8 @@ The system consists of the following modules.
 | Reporting module      | Generates usage reports         | Yes      | 2023-01-01   |
 ```
 
-| Req. ID  | Requirement                                                                                              |
-|----------|----------------------------------------------------------------------------------------------------------|
+| Req. ID  | Requirement                                                                                     |
+|----------|-------------------------------------------------------------------------------------------------|
 | GRTD.590 | The format used for the same data type must be uniform across all parallel enumerations in the document. |
 
 The requirement applies to the following data types in particular.
@@ -900,6 +900,47 @@ The green light allows traffic. Participants must start moving.
 
 #### Applying Sentence Patterns to Parallel Cases
 
+| Req. ID  | Requirement                                                                              |
+|----------|------------------------------------------------------------------------------------------|
+| GRTD.650 | Parallel cases must be described with the same sentence pattern throughout the document. |
+
+The example below represents parallel situations described inconsistently.
+
+```markdown
+To update a client card:
+...
+3. Click OK to save the data.
+
+If you want to edit a product description:
+...
+3. Save the data by clicking OK.
+
+For modifying an order record:
+...
+3. Click OK. The data will be saved.
+```
+
+The example shown above may be improved as follows.
+
+```markdown
+To update a client card:
+...
+3. Click OK to save the data.
+
+To update a product description:
+...
+3. Click OK to save the data.
+
+To update an order record:
+...
+3. Click OK to save the data.
+```
+
+| Ext. Pt. ID  | Extension Point                                                      |
+|--------------|----------------------------------------------------------------------|
+| GRTD.290.ext | A set of sentence patterns should be defined for a specific project. |
+
+
 
 #### Applying Information Types to Parallel Subjects
 
@@ -939,6 +980,10 @@ Examples are given below.
 | Easy Reports | Usage         | User Manual               | Easy Reports. User Manual               |
 | Easy Reports | Requirements  | Requirement Specification | Easy Reports. Requirement Specification |
 
+
+
+## ==========================================================================
+## ==========================================================================
 
 ## Building Continuous Prose 
 
