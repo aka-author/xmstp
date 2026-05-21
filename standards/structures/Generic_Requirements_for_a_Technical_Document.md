@@ -941,9 +941,71 @@ To update an order record:
 | GRTD.290.ext | A set of sentence patterns should be defined for a specific project. |
 
 
-
 #### Applying Information Types to Parallel Subjects
 
+| Req. ID  | Requirement                                                                                         |
+|----------|-----------------------------------------------------------------------------------------------------|
+| GRTD.300 | The same information type must be used to describe parallel subjects from the same aspect.          |
+| GRTD.310 | An information type must prescribe a template for describing a subject from the aspect.             |
+| GRTD.320 | The template must define rubrics across which the subject must be described.                        |
+| GRTD.330 | The template must prescribe the content of each rubric, including nested subjects and their aspect. |
+| GRTD.340 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
+
+The following example displays two parallel subjects described inconsistently. The device is the subject, and technical parameters is the aspect in this case.
+
+```markdown
+The firewall has the following technical parameters:
+
+- Maximum throughput: 10 Gbps
+- Supported protocols: TCP, UDP, ICMP
+- Maximum concurrent connections: 1,000,000
+
+The IDS is characterized by the following technical parameters: 
+throughput of up to 5 Gbps, signature-based detection, alert delivery 
+via syslog and SNMP, and up to 500,000 concurrent connections.
+```
+
+Each device is described in a unique manner. This makes readers adapt to a new structure each time, which increases cognitive load and slows comprehension.
+
+The may be improved as follows.
+
+```markdown
+The firewall has the following technical parameters.
+
+| Parameter                      | Value        |
+|--------------------------------|--------------|
+| Maximum throughput             | 10 Gbps      |
+| Supported protocols            | TCP/UDP/ICMP |
+| Maximum concurrent connections | 1,000,000    |
+
+The technical parameters of the IDS are listed below.
+
+| Parameter                      | Value               |
+|--------------------------------|---------------------|
+| Maximum throughput             | 5 Gbps              |
+| Detection method               | Signature-based     |
+| Alert format                   | Syslog, SNMP        |
+| Maximum concurrent connections | 500,000             |
+```
+
+Each device is described from the aspect of its technical parameters. The information type prescribes the following template:
+
+- Introduction phrase
+- Parameter table
+
+The introduction phrase employs the following sentence pattern:
+
+*The technical parameters of {device name} are listed below.*
+
+The parameter table includes the following columns:
+
+- Parameter
+- Value
+
+
+| Ext. Pt. ID  | Extension Point                                                      |
+|--------------|----------------------------------------------------------------------|
+| GRTD.350.ext | A set of information types should be defined for a specific project. |
 
 
 
@@ -1035,13 +1097,5 @@ The table below lists file formats supported by the application.
 ```
 
 
-
-
-
-## Maintaining Parallel Text Structures
-
-### Applying Sentence Patterns to Same Situations
-
-### Applying Information Types to Same Aspects
 
 
