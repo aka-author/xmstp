@@ -769,7 +769,7 @@ The system consists of the following modules.
 
 | Req. ID  | Requirement                                                                                     |
 |----------|-------------------------------------------------------------------------------------------------|
-| GRTD.630 | The format used for the same data type must be uniform across all parallel enumerations in the document. |
+| GRTD.630 | The format used for the same data type must be uniform across all parallel enumerations.        |
 
 The requirement applies to the following data types in particular.
 
