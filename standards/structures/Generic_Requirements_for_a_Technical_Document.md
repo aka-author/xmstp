@@ -949,7 +949,8 @@ To update an order record:
 | GRTD.310 | An information type must prescribe a template for describing a subject from the aspect.             |
 | GRTD.320 | The template must define rubrics across which the subject must be described.                        |
 | GRTD.330 | The template must prescribe the content of each rubric, including nested subjects and their aspect. |
-| GRTD.340 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
+| GRTD.340 | The template must prescribe sentence patterns to be applied in each rubric, if applicable.          |
+| GRTD.350 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
 
 The following example displays two parallel subjects described inconsistently. The device is the subject, and technical parameters is the aspect in this case.
 
@@ -1002,10 +1003,69 @@ The parameter table includes the following columns:
 - Parameter
 - Value
 
+Consider one more example that displays three parallel subjects described inconsistently. The error is the subject, and its behavior and resolution is the aspect.
+
+```markdown
+Error 401
+
+The error occurs when the authentication token is missing or expired. The system rejects the request and returns the error code to the client. The user must re-authenticate to obtain a valid token.
+
+Error 403
+
+Cause: the user is authenticated but lacks the required permissions.
+Effect: access is denied.
+Resolution: the administrator must grant the necessary permissions.
+
+Error 503
+
+| Rubric     | Description                                                    |
+|------------|----------------------------------------------------------------|
+| Cause      | The system is under excessive load or undergoing maintenance.  |
+| Effect     | The system is temporarily unavailable.                         |
+| Resolution | The user should retry the request after a short delay.         |
+```
+
+The example may be improved as follows.
+
+```markdown
+Error 401
+
+    Cause 
+        The authentication token is missing or expired.
+
+    Effect 
+        The system rejects the request and returns the error code to the client.
+
+    Resolution
+        The user must re-authenticate to obtain a valid token.
+
+Error 403
+
+    Cause
+        The user is authenticated but lacks the required permissions.
+
+    Effect
+        Access is denied.
+
+    Resolution
+        The administrator must grant the necessary permissions.
+
+Error 503
+
+    Cause
+        The system is under excessive load or undergoing maintenance.
+
+    Effect
+        The system is temporarily unavailable.
+
+    Resolution
+        The user should retry the request after a short delay.
+```
+
 
 | Ext. Pt. ID  | Extension Point                                                      |
 |--------------|----------------------------------------------------------------------|
-| GRTD.350.ext | A set of information types should be defined for a specific project. |
+| GRTD.360.ext | A set of information types should be defined for a specific project. |
 
 
 
