@@ -1110,9 +1110,7 @@ Error 503
 | GRTD.770.ext | A set of information types should be defined for a specific project. |
 
 
-
 ## Documents
-
 
 ## Framing a Document
 
