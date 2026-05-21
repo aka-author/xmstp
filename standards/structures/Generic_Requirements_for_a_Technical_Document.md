@@ -118,6 +118,10 @@ Level: 1.
 
 Redundantly generic words and phrases should be avoided. At the same time, words and phrases should not describe only the most common cases while ignoring less common but realistic ones.
 
+| Sample ID    | Sample                              |
+|--------------|-------------------------------------|
+| GRTD.120.smp | Adjusting the generality of a terms |
+
 Imagine a system that manages an automated parking facility. Users usually arrive by car, but some of them may ride scooters or motorbikes. In this case, the word *car* would be too narrow, *vehicle* would be precise enough, and the phrase *transportation unit* would be too generic.
 
 
@@ -127,6 +131,10 @@ Imagine a system that manages an automated parking facility. Users usually arriv
 |----------|--------------------------------------------------------------------------------------------------------|
 | GRTD.130 | If a term is defined for an action, then the action must be expressed as a light verb construction.    |
 | GRTD.140 | A light verb construction must not be used for actions that are self-evident and have no defined term. |
+
+| Sample ID    | Sample                                    |
+|--------------|-------------------------------------------|
+| GRTD.140.smp | Adjusting the level of phrasing formality |
 
 For example, the following definition is provided in the document on a hotel management system:
 
@@ -152,6 +160,10 @@ The plain verb is preferable here because *room cleaning* is not a defined term 
 |----------|----------------------------------------------------------------------------------------|
 | GRTD.150 | A single word or set of synonyms must be chosen for a repeatedly mentioned phenomenon. |
 | GRTD.160 | Different synonyms must be chosen for different repeatedly mentioned phenomena.        |
+
+| Sample ID    | Sample                                             |
+|--------------|----------------------------------------------------|
+| GRTD.140.smp | Fixing the consistency of self-evident words usage |
 
 The following paragraph violates the requirements listed above.
 
@@ -187,6 +199,10 @@ If the program has not run automatically, run it manually from the menu. After t
 
 In the following paragraph, each sentence starting from the second one violates a corresponding requirement from the list above.
 
+| Sample ID    | Sample                                |
+|--------------|---------------------------------------|
+| GRTD.140.smp | Fixing the consistency of terms usage |
+
 ```markdown
 Final cleaning is the preparation of a room after a guest departs. The cleaning must be completed before the next guest checks in. Once the guest departs, the staff will finally clean the room according to the standard procedure. If final tidying up is delayed, the room remains unavailable. The cleaning of the pool is scheduled for every morning. 
 ```
@@ -211,6 +227,10 @@ Final cleaning is the preparation of a room after a guest departs. Once the gues
 | Req. ID  | Requirement                                                                                    |
 |----------|------------------------------------------------------------------------------------------------|
 | GRTD.220 | A single word or phrase must be chosen to express the same meaning related to a specific term. |
+
+| Sample ID    | Sample                                            |
+|--------------|---------------------------------------------------|
+| GRTD.140.smp | Fixing the consistency of term-related vocabulary |
 
 In the following paragraph the verbs *open*, *display*, and *show* denote the same situation: the user makes the transaction browser (whatever it is) visible. Such inconsistency may mislead readers, making them think that the paragraph describes three different actions.
 
@@ -237,6 +257,10 @@ Open the transaction browser from the main menu. You can then open the transacti
 |----------|------------------------------------------------------------------------------|
 | GRTD.240 | A noun phrase must make the relationships between its constituents explicit. |
 
+| Sample ID    | Sample                                             |
+|--------------|----------------------------------------------------|
+| GRTD.140.smp | Fixing the syntactic clarity lack in a noun phrase |
+
 Consider the following sentence:
 
 *The service provides computation capacities for arnocle software testing.*
@@ -246,6 +270,10 @@ The noun phrase *arnocle software testing* is ambiguous because readers might he
 | Req. ID  | Requirement                                                         |
 |----------|---------------------------------------------------------------------|
 | GRTD.250 | Relations between actions mentioned in a sentence must be explicit. |
+
+| Sample ID    | Sample                                                  |
+|--------------|---------------------------------------------------------|
+| GRTD.140.smp | Fixing the syntactic clarity lack in a verb conjunction |
 
 The phrase below does not disclose the relationship between clicking the button and turning video recording on.
 
