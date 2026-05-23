@@ -1057,6 +1057,10 @@ The green light allows traffic. Participants must start moving.
 |----------|------------------------------------------------------------------------------------------|
 | GRTD.690 | Parallel cases must be described with the same sentence pattern throughout the document. |
 
+| Sample ID    | Sample                                                      |
+|--------------|-------------------------------------------------------------|
+| GRTD.140.smp | Choosing a sentence pattern for a final step of a procedure |
+
 The example below represents parallel situations described inconsistently.
 
 ```markdown
@@ -1106,6 +1110,10 @@ To update an order record:
 | GRTD.760 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
 
 Readers process information faster when they know what to expect. Once a reader encounters a subject described according to a certain structure, they learn it. Every subsequent subject of the same type described from the same aspect follows the same structure, so the reader knows where to find each piece of information without scanning the text. Inconsistent structures force readers to re-orient with every new subject, which slows comprehension and increases the risk of missing critical information.
+
+| Sample ID    | Sample                                                                       |
+|--------------|------------------------------------------------------------------------------|
+| GRTD.140.smp | Choosing an information type for describing technical parameters of a device |
 
 The following example displays two parallel subjects described inconsistently. The device is the subject, and technical parameters is the aspect in this case.
 
@@ -1157,6 +1165,10 @@ The parameter table includes the following columns:
 
 - Parameter
 - Value
+
+| Sample ID    | Sample                                             |
+|--------------|----------------------------------------------------|
+| GRTD.140.smp | Choosing an information type for describing errors |
 
 Consider one more example that displays three parallel subjects described inconsistently. The error is the subject, and its behavior and resolution is the aspect.
 
@@ -1232,7 +1244,9 @@ Error 503
 |----------|--------------------------------------------------------------|
 | GRTD.780 | Each document must be written for a certain target audience. |
 
-Examples are given below. 
+| Sample ID    | Sample                               |
+|--------------|--------------------------------------|
+| GRTD.140.smp | Identifying document target audience |
 
 | Document                                | Target Audience       |
 |-----------------------------------------|-----------------------|
@@ -1247,7 +1261,9 @@ Examples are given below.
 | GRTD.790 | Each document must represent a certain subject in a certain genre.            |
 | GRTD.800 | The title of the document must explicitly disclose its subject and its genre. |
 
-Examples are given below. 
+| Sample ID    | Sample                     |
+|--------------|----------------------------|
+| GRTD.140.smp | Assembling document titles | 
 
 | Subject      | Point of View | Genre                     | Document Title                          |
 |--------------|---------------|---------------------------|-----------------------------------------|
