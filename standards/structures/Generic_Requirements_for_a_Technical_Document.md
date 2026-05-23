@@ -2,6 +2,13 @@
 
 ## About this Document
 
+### Identification
+
+Standard ID: GRTD.
+
+Level: 1.
+
+
 ### Purpose
 
 This document is a standard for a generic technical document outline. 
@@ -10,14 +17,29 @@ This standard is the root node of a hierarchy of interconnected standards. Each 
 
 The aim of this standard is to help authors follow the most important rules applicable to technical text and avoid the most baneful errors that can be made in technical writing. The standard does not force authors to keep any predefined document structures, style conventions, or terminology. Instead, it introduces a generic frame that should be detailed in standards at the next hierarchy levels.
 
+### Structure
+
+The standard uses four information types to present its content.
+
+| Information Type | Purpose                                                                       |
+|------------------|-------------------------------------------------------------------------------|
+| Requirement      | States a rule that technical content must comply with                         |
+| Directive        | Gives practical guidance on how to comply with the preceding requirement      |
+| Extension Point  | Marks a point where the standard may or should be extended at a further level |
+| Example          | Provides a learn-by-example illustration of a requirement or directive        |
+
+Each entry of any information type is introduced by a header table with the following columns.
+
+| Column | Description                                      |
+|--------|--------------------------------------------------|
+| ID     | A unique identifier of the entry.                |
+| Second column | The content of the entry — a requirement, directive, extension point, or example. |
+
+An entry may be followed by details. The details are optional and extend from the header table to the next header table or to the end of the section, whichever comes first.
+
+
+
 Each requirement, extension point, example, and directive in this standard has a unique identifier. Identifiers increase in steps of 10 throughout the standard, shared across all four kinds (for example, R.GRTD.0100, X.GRTD.0110, R.GRTD.0120, D.GRTD.0130). A document at a further layer redefines a requirement by introducing a replacement requirement with the same identifier.
-
-
-### Identification
-
-Standard ID: GRTD.
-
-Level: 1.
 
 
 ## Terms
