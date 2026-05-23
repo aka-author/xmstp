@@ -296,6 +296,10 @@ The sentence should be rewritten so that the relationship between these two acti
 
 Sentences that present more than one self-contained idea are deprecated. A sentence that provides more than one self-contained idea should be split into separate sentences. 
 
+| Sample ID    | Sample                                                       |
+|--------------|--------------------------------------------------------------|
+| GRTD.140.smp | Splitting an overcomplicated sentence into simpler sentences |
+
 For example, the following sentence encloses three self-contained ideas: 
 
 *After the system validates the configuration file successfully, it stores the parameters in the database and restarts the service automatically.*
@@ -307,6 +311,10 @@ This sentence should be split into three sentences, each delivering a self-conta
 | Req. ID  | Requirement                                                                                  |
 |----------|----------------------------------------------------------------------------------------------|
 | GRTD.270 | Two ideas whose conflict matters for the further narrative must be treated as a single idea. |
+
+| Sample ID    | Sample                                     |
+|--------------|--------------------------------------------|
+| GRTD.140.smp | Representing a conflict as a holistic idea |
 
 Consider the following statement:
 
@@ -338,6 +346,10 @@ The first sentence might confuse the readers. The reason is, it presents a well-
 
 Pronouns that refer to subjects that are not explicitly mentioned in the same paragraph are deprecated.
 
+| Sample ID    | Sample                  |
+|--------------|-------------------------|
+| GRTD.140.smp | Fixing misused pronouns |
+
 Consider the example below. The pronoun *they* in the second paragraph refers to *users* or *registered users* who are mentioned only in the first paragraph. Notice that such a usage of the pronoun yields an ambiguity.
 
 ```markdown
@@ -363,6 +375,10 @@ Email notifications about ticket updates are also available.
 | GRTD.320 | The last sentence in the paragraph must deliver a meaningful conclusion or direction.   |
 | GRTD.330 | The intermediate sentences in the paragraph must be organized as a train of thoughts.   |
 | GRTD.340 | Ideas obvious to or already introduced to the target audience must be omitted.          |
+
+| Sample ID    | Sample                                          |
+|--------------|-------------------------------------------------|
+| GRTD.140.smp | Building a train of thoughts within a paragraph |
 
 The paragraph below keeps readers baffled until they reach the last sentence, look back, and, finally, restore the logic in their minds themselves.
 
@@ -395,6 +411,10 @@ The table below breaks down the connections among the sentences in the revised p
 | GRTD.360 | A figure must be explicitly introduced in a preceding paragraph of the same continuous prose.   |
 | GRTD.370 | A table must be explicitly introduced in a preceding paragraph of the same continuous prose.    |
 | GRTD.380 | An example must be explicitly introduced in a preceding paragraph of the same continuous prose. |
+
+| Sample ID    | Sample                                |
+|--------------|---------------------------------------|
+| GRTD.140.smp | Fixing an improper table introduction |
 
 The example below displays continuous prose where the requirements are violated:
 
@@ -441,6 +461,10 @@ The table below lists file formats supported by the application.
 
 Technically, an author should define a term instead of repeating the same descriptive phrase. 
 
+| Sample ID    | Sample                           |
+|--------------|----------------------------------|
+| GRTD.140.smp | Conceptualizing repetitive ideas |
+
 An example of improper usage of descriptive phrases.
 
 ```markdown
@@ -468,6 +492,10 @@ An *anonymous user* is a user that does not have an account in the system.
 |----------|---------------------------------------------------------------------------------------------------|
 | GRTD.410 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
 | GRTD.420 | Defining concepts cyclically is prohibited.                                                       |
+
+| Sample ID    | Sample                                     |
+|--------------|--------------------------------------------|
+| GRTD.140.smp | Define and using terms in the proper order |
 
 An example of wrong concept usage: the concepts are not defined. 
 
@@ -522,6 +550,10 @@ Introduction phrases, when properly written, usually employ one of the following
 - *{common term in plural} ... are listed below:*
 - *{common term in plural} ... are as follows:*
 
+| Sample ID    | Sample                                                         |
+|--------------|----------------------------------------------------------------|
+| GRTD.140.smp | Fixing poorly written introduction phrases before enumerations |
+
 Examples of poorly written introduction phrases are given below:
 
 *The five most important features of the system are:*
@@ -548,6 +580,10 @@ The selection criteria declare which subset of items is included in the enumerat
 | Timeliness     | Items known, discovered, or introduced at the time of writing         |
 | Unavoidability | Items that cannot be ignored, while others may be safely omitted      |
 
+| Sample ID    | Sample                                                             |
+|--------------|--------------------------------------------------------------------|
+| GRTD.140.smp | Fixing misleading introduction phrases before partial enumerations |
+
 The following introduction phrase misinforms the readers. 
 
 ```markdown
@@ -567,6 +603,10 @@ The introduction phrase may be rewritten as follows:
 | Req. ID  | Requirement                                                                                           |
 |----------|-------------------------------------------------------------------------------------------------------|
 | GRTD.490 | For enumerated conditions, the relationships among them must be disclosed in the introduction phrase. |
+
+| Sample ID    | Sample                                                          |
+|--------------|-----------------------------------------------------------------|
+| GRTD.140.smp | Fixing a vague introduction phrase before enumerated conditions |
 
 The following enumeration is poorly introduced:
 
@@ -592,6 +632,10 @@ Typically, the options play one of the following roles:
 - Possibilities to be chosen
 - Consequences that may arise
 - Classification groups (exactly as in this enumeration!)
+
+| Sample ID    | Sample                                                            |
+|--------------|-------------------------------------------------------------------|
+| GRTD.140.smp | Fixing a vague introduction phrase before enumerated consequences |
 
 The next introduction phrase leaves readers uncertain:
 
@@ -645,6 +689,10 @@ The most popular grammatical forms of enumeration items are as follows:
 - Phrases with a verbal noun in gerund form as the head
 - Full sentences
 
+| Sample ID    | Sample                                        |
+|--------------|-----------------------------------------------|
+| GRTD.140.smp | Making enumerated items grammatically uniform |
+
 The enumeration shown below violates the requirement of grammatical uniformity.
 
 ```markdown
@@ -666,6 +714,10 @@ The system supports the following authentication methods:
 - Biometric authentication
 - SMS code
 ```
+
+| Sample ID    | Sample                                     |
+|--------------|--------------------------------------------|
+| GRTD.140.smp | Fixing a mixture of nouns and verbal nouns |
 
 One of the most common errors made in enumerations is mixing nouns with verbal nouns. An example is shown below.
 
@@ -695,6 +747,10 @@ The system supports the following operations:
 
 The shared beginning, if it appears, should be "taken out of the brackets" by including it in the introduction phrase.
 
+| Sample ID    | Sample                                               |
+|--------------|------------------------------------------------------|
+| GRTD.140.smp | Optimizing enumeration items with the same beginning |
+
 The items of the following enumeration share the same beginning, which violates the requirement.
 
 ```markdown
@@ -721,6 +777,10 @@ Items are considered unchangeable when their wording is fixed by convention or d
 - Terms
 - Identifiers
 
+| Sample ID    | Sample                                               |
+|--------------|------------------------------------------------------|
+| GRTD.140.smp | Using enumerations with the same beginning correctly |
+
 The items of the enumeration below require no corrections.
 
 ```markdown
@@ -740,6 +800,10 @@ The most influential figures named Roger in the computer industry include the fo
 | GRTD.590 | A table must be used to represent an enumeration where the items have the same structure.     |
 | GRTD.600 | A numbering column must be included in the table if the items have an inherent order.         |
 | GRTD.610 | An introduction phrase before a parallel enumeration must end with a full stop.               |
+
+| Sample ID    | Sample                                                      |
+|--------------|-------------------------------------------------------------|
+| GRTD.140.smp | Transforming a cumbersome parallel enumeration into a table |
 
 Consider the following enumeration.
 
@@ -768,6 +832,10 @@ The system consists of the following modules.
 | Req. ID  | Requirement                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
 | GRTD.620 | The grammatical structure and/or format of the data must be uniform within each table column. |
+
+| Sample ID    | Sample                                                                           |
+|--------------|----------------------------------------------------------------------------------|
+| GRTD.140.smp | Applying the same format to values withing each column in a parallel enumeration |
 
 The parallel enumeration shown below violates the requirement of uniformity.
 
@@ -825,6 +893,10 @@ Authors sometimes mention a few items not to enumerate them exhaustively, but to
 
 In these cases, converting the items to a list implies completeness and misleads the reader. Such items must remain part of the running text.
 
+| Sample ID    | Sample                               |
+|--------------|--------------------------------------|
+| GRTD.140.smp | Using comma-separated items properly |
+
 The comma-separated items in the following sentence are not an enumeration:
 
 *A modern operating system manages many resources: processes, memory, file systems, and so on.*
@@ -837,6 +909,10 @@ The comma-separated items in the following sentence are not an enumeration:
 | Req. ID  | Requirement                                                                                      |
 |----------|--------------------------------------------------------------------------------------------------|
 | GRTD.650 | The subjects that the narrative covers must first be enumerated and then explained or discussed. |
+
+| Sample ID    | Sample                                                              |
+|--------------|---------------------------------------------------------------------|
+| GRTD.140.smp | Enumerating subjects before describing them in dedicated paragraphs |
 
 The following example demonstrates how concepts can be discussed before being introduced. The structuring shown below is not reader-friendly, because it forces readers to dive into details before capturing the whole picture.
 
@@ -874,6 +950,10 @@ The green light allows traffic. Participants must start moving.
 
 The cascading technique is applicable to formal sections. First, an introductory section must provide a holistic view of the subject. Then each part is described in a dedicated section.
 
+| Sample ID    | Sample                                                                                        |
+|--------------|-----------------------------------------------------------------------------------------------|
+| GRTD.140.smp | Introducing subjects in the introductory section before describing them in dedicated sections |
+
 The following structure demonstrates how the cascading technique is applied at the section level. The introductory subsection gives the reader a complete picture before any details are discussed. This becomes especially important when the individual sections are long or complex.
 
 ```markdown
@@ -905,6 +985,10 @@ The traffic light gives the following signals:
 | GRTD.680 | Subject descriptions must follow the same order in which the subjects were first enumerated. |
 
 The following example demonstrates inconsistently ordered list items, paragraphs, and subsections.
+
+| Sample ID    | Sample                                                   |
+|--------------|----------------------------------------------------------|
+| GRTD.140.smp | Keeping the same order when discussing the same subjects |
 
 ```markdown
 3. Handling Traffic Light Signals
