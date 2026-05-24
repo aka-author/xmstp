@@ -6,7 +6,7 @@
 
 Standard ID: GRTD.
 
-Level: 1.
+Superior standard ID: None. 
 
 
 ### Purpose
@@ -83,7 +83,7 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Aspect:* An angle from which a text presents its subject to readers.
 
-*Concept:* A fact or an idea that readers completely understand or that can be explained to the readers through the relations among concepts they already understand.
+*Concept:* A phenomenon, fact or an idea that readers completely understand or that can be explained to the readers through the relations among concepts they already understand.
 
 *Continuous prose:* Text presented as a continuous flow of continuous prose blocks without explicit section titles inside the text.
 
@@ -91,31 +91,17 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Critical note:* A note that informs readers about possible hazard or other unwanted effects or consequences of their activities.
 
-*Descriptive phrase:* A phrase that identifies a phenomenon through a generic term and additional descriptive properties.
+*Descriptive phrase:* A phrase that identifies a concept through a generic term and additional descriptive properties.
 
 *Document:* A stable body of text that has attributes allowing it to be identified.
-
-*Generic verb:* A verb with weak or abstract meaning that mainly serves to express an action denoted by another word in the phrase.
-
-> **EXAMPLE**
-> Generic verbs include verbs such as perform, execute, conduct, make, and fulfill.
 
 *Genre:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
 
 *Information type:* A category of text intended to present a certain type of subject from a certain type of aspect.
 
-> **NOTE**  
-> An information type usually implies a specific method for structuring text and specific style conventions, including usage of specific sentence patterns.
+*Light verb:* A generic verb with weak or abstract meaning that mainly serves to express an action denoted by another word in the phrase. Light verbs include verbs such as perform, execute, conduct, make, and fulfill.
 
-> **EXAMPLE**  
-> Text that presents a task from the aspect of how to fulfill it may belong to the procedure information type. A text that presents an API method from the aspect of its parameters may belong to the reference information type. A text that presents a business process from the aspect of its stages may belong to the process description information type.
-
-*Light verb:* A generic verb with weak or abstract meaning that mainly serves to express an action denoted by another word in the phrase.
-
-*Light verb construction:* A phrase that consists of a generic verb and a noun that denotes an action.
-
-> **EXAMPLE**  
-> Light verb constructions include phrases such as perform scanning, execute synchronization, conduct verification, and make a decision.
+*Light verb construction:* A phrase that consists of a generic verb and a noun that denotes an action. Light verb constructions include phrases such as perform scanning, execute synchronization, conduct verification, and make a decision.
 
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
 
@@ -137,20 +123,11 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Sentence pattern:* A recurrent sentence structure used to present a certain type of information in a consistent way.
 
-> **EXAMPLE**  
-> A text may repeatedly instruct readers to click the OK button to save data. In such situations, authors should choose one sentence pattern and use it consistently throughout the text. For example, authors may choose the sentence pattern *Click OK to save the data* instead of other sentence patterns such as *Save the data by clicking OK* or *To save the data, click OK.* The other sentence patterns are not necessarily worse, but mixing them may make the text less consistent.
+*Subject:* A concept that a text introduces or explains to readers.
 
-*Subject:* A phenomenon that a text introduces or explains to readers.
+*Target audience:* A group of probable readers who share similar skills and information needs that they expect the text to satisfy. Robots and AI agents may comprise the target audience of a text as well as human beings, animals, higher and lower spirits, or aliens.
 
-*Target audience:* A group of probable readers who share similar skills and information needs that they expect the text to satisfy. 
-
-> **NOTE**  
-> Robots and AI agents may comprise the target audience of a text as well as human beings, animals, higher and lower spirits, or aliens.
-
-*Term:* A word or phrase that serves as the name of a specialized concept in a particular field of production, science, or art.
-
-> **NOTE**  
-> According to another definition, a term is a lexical unit of a language for special purposes that denotes a general concrete or abstract concept within the theory of a particular specialized field of knowledge or activity. 
+*Term:* A word or phrase that serves as the name of a specialized concept in a particular field of production, science, or art. According to another definition, a term is a lexical unit of a language for special purposes that denotes a general concrete or abstract concept within the theory of a particular specialized field of knowledge or activity. 
 
 *Term-related vocabulary:* The set of words and phrases regularly used together with a term in a certain context.
 
@@ -220,10 +197,10 @@ The plain verb is preferable here because *room cleaning* is not a defined term 
 
 ### Using Self-Evident Words Consistently
 
-| ID          | Requirement                                                                            |
-|-------------|----------------------------------------------------------------------------------------|
-| R.GRTD.0180 | A single word or set of synonyms must be chosen for a repeatedly mentioned phenomenon. |
-| R.GRTD.0190 | Different synonyms must be chosen for different repeatedly mentioned phenomena.        |
+| ID          | Requirement                                                                         |
+|-------------|-------------------------------------------------------------------------------------|
+| R.GRTD.0180 | A single word or set of synonyms must be chosen for a repeatedly mentioned concept. |
+| R.GRTD.0190 | Different synonyms must be chosen for different repeatedly mentioned concepts.      |
 
 | ID          | Example                                            |
 |-------------|----------------------------------------------------|
@@ -258,7 +235,7 @@ If the program has not run automatically, run it manually from the menu. After t
 |-------------|-------------------------------------------------------------------------------------------|
 | R.GRTD.0220 | A term must never be shortened unless a shortened form or an abbreviation is declared.    |
 | R.GRTD.0230 | A word derived from a term must not be treated as a term unless it is explicitly defined. |
-| R.GRTD.0240 | Only a term must refer to a phenomenon if it is defined; using synonyms is forbidden.     |
+| R.GRTD.0240 | Only a term must refer to a concept if it is defined; using synonyms is forbidden.        |
 | R.GRTD.0250 | Homonyms of defined terms must not be used with different meanings.                       |
 
 | ID          | Example                               |
