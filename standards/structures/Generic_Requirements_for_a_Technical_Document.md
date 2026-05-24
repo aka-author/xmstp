@@ -189,7 +189,7 @@ Redundantly generic words and phrases should be avoided. At the same time, words
 Imagine a system that manages an automated parking facility. Users usually arrive by car, but some of them may ride scooters or motorbikes. In this case, the word *car* would be too narrow, *vehicle* would be precise enough, and the phrase *transportation unit* would be too generic.
 
 
-## Choosing the Right Level of Formality
+### Choosing the Right Level of Formality
 
 | ID          | Requirement                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------------------|
@@ -397,9 +397,9 @@ The first sentence might confuse the readers. The reason is, it presents a well-
 
 ### Maintaining Paragraph Observability
 
-| ID          | Requirement                                    |
-|-------------|------------------------------------------------|
-| R.GRTD.0390 | A paragraph should contain up to 10 sentences. |
+| ID          | Requirement                                  |
+|-------------|----------------------------------------------|
+| R.GRTD.0390 | A paragraph must contain up to 10 sentences. |
 
 | ID          | Extension Point                                                   |
 |-------------|-------------------------------------------------------------------|
@@ -565,9 +565,9 @@ An *anonymous user* is a user that does not have an account in the system.
 | R.GRTD.0580 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
 | R.GRTD.0590 | Defining concepts cyclically is prohibited.                                                       |
 
-| ID          | Example                                    |
-|-------------|--------------------------------------------|
-| E.GRTD.0600 | Define and using terms in the proper order |
+| ID          | Example                                      |
+|-------------|----------------------------------------------|
+| E.GRTD.0600 | Defining and using terms in the proper order |
 
 An example of wrong concept usage: the concepts are not defined. 
 
@@ -682,7 +682,7 @@ The sad truth is that the types of attacks are far more numerous.
 
 The introduction phrase may be rewritten as follows:
 
-*The following types of attacks threaten the system to the greatest extent:*.
+*The following types of attacks threaten the system to the greatest extent:*
 
 | ID          | Requirement                                                                                           |
 |-------------|-------------------------------------------------------------------------------------------------------|
@@ -992,9 +992,9 @@ Inconsistent formatting forces readers to interpret the same kind of data differ
 |-------------|------------------------------------------------------------------------------------|
 | R.GRTD.1010 | Items mentioned to deliver an idea rather than to be presented must remain inline. |
 
-| ID          | Directive                                                               |
-|-------------|-------------------------------------------------------------------------|
-| D.GRTD.1020 | Do not convert illustrative or representative items to an enumerations. |
+| ID          | Directive                                                            |
+|-------------|----------------------------------------------------------------------|
+| D.GRTD.1020 | Do not convert illustrative or representative items to enumerations. |
 
 Authors sometimes mention a few items not to enumerate them exhaustively, but to give readers an orientation. This happens in the following typical cases:
 
@@ -1250,7 +1250,7 @@ via syslog and SNMP, and up to 500,000 concurrent connections.
 
 Each device is described in a unique manner. This makes readers adapt to a new structure each time, which increases cognitive load and slows comprehension.
 
-The may be improved as follows.
+The text may be improved as follows.
 
 ```markdown
 The firewall has the following technical parameters.
