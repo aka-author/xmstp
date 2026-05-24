@@ -62,6 +62,22 @@ The type prefix indicates the entry kind as shown below.
 
 The number is arbitrary, but the recommended practice is to use four-digit numbers with leading zeroes and a step of 10, so that entries can be inserted between existing ones without renumbering. Identifiers are shared across all entry kinds within the same standard.
 
+Cancellation of an entry appears as follows. 
+
+| ID          | Requirement |
+|-------------|-------------|
+| R.GRTD.4320 | Cancelled   |
+
+The following techniques are available for extending the standard via extension points.
+
+If an entire standard extends a superior standard, the extension point should be referenced in its "Identification" section.
+
+If a certain entry extends a superior standard, the extension point should be referenced in the entry table as shown below.
+
+| ID          | Ext. Pt.    | Requirement         |
+|-------------|-------------|---------------------|
+| R.ABCD.0210 | R.GRTD.4320 | A rabbit must drum. |
+
 
 ## Terms
 
