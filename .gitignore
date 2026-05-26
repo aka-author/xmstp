@@ -1,0 +1,14 @@
+# Local tooling (agent/editor helpers; not part of the standard)
+/tools/
+/tooling/
+
+# Ad-hoc helpers at repository root
+/*.ps1
+/*.bat
+/renumber_*.py
+/fix_*.py
+/align_*.py
+/run_*.*
+
+__pycache__/
+*.pyc

@@ -1,6 +1,6 @@
 # Generic Requirements for a Technical Document
 
-## About this Document
+## About This Document
 
 ### Identification
 
