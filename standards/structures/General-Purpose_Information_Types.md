@@ -22,13 +22,19 @@ The aim of this standard is to help authors structure recurring types of content
 
 ### General Requirements for Definitions
 
+The purpose of a definition is to introduce a term for a concept within running text,
+
 | ID          | Requirement                                                                                    |
 |-------------|------------------------------------------------------------------------------------------------|
 | R.GPIT.0190 | A definition must be one of the following types: genus-differentia, conjunctive, generalizing. |
 | R.GPIT.0190 | A definition must always be a single sentence.                                                 |
 
 
-#### Genus-Differentia Definitions
+### Genus-Differentia Definitions
+
+Genus-differentia definition is a subtype of definition.
+
+The purpose of a genus-differentia definition is to define a term for a concept that can be formally derived from a wider concept.
 
 | ID          | Requirement                                                        |
 |-------------|--------------------------------------------------------------------|
@@ -51,7 +57,11 @@ A genus-differentia definition usually follows the scheme below.
 Here, *registered user* is the concept being defined. *User* is the broader concept. *Having an account in the system* is the limitation that distinguishes a registered user from other users.
 
 
-#### Conjunctive Definitions
+### Conjunctive Definitions
+
+Conjunctive definition is a subtype of definition.
+
+The purpose of a conjunctive definition is to define a umbrella term for a few specific concepts. 
 
 | ID          | Requirement                                                        |
 |-------------|--------------------------------------------------------------------|
@@ -74,7 +84,12 @@ A conjunctive definition usually follows the scheme below.
 Here, *vehicle* is the concept being defined. *Automobiles*, *motorbikes*, and *bicycles* are the constituent concepts it unites.
 
 
-#### Generalizing Definitions
+### Generalizing Definitions
+
+Generalizing definition is a subtype of definition.
+
+The purpose of a generalizing definition is to define a term for a concept that cannot or need not be defined formally, but may rather be explained at the common sense level.
+
 
 | ID          | Requirement                                                                 |
 |-------------|-----------------------------------------------------------------------------|
@@ -101,6 +116,8 @@ Here, *pets* is the concept being defined. *Cats*, *dogs*, and *parrots* are rep
 
 ### Glossary Entries
 
+The purpose of a glossary entry is to introduce a term within a glossary.
+
 | ID          | Requirement                                                                   |
 |-------------|-------------------------------------------------------------------------------|
 | R.GPIT.0290 | A glossary entry must be derived from a definition by factoring the term out. |
@@ -126,6 +143,8 @@ The corresponding glossary entry is:
 
 #### General Requirements for Glossaries
 
+The purpose of a glossary is to give readers a list of terms with their definitions, where they can be easily found and referenced.
+
 | ID          | Requirement                                                             |
 |-------------|-------------------------------------------------------------------------|
 | R.CMIT.0320 | A glossary must consist of glossary entries and optional related notes. |
@@ -133,6 +152,10 @@ The corresponding glossary entry is:
 
 
 #### Alphabetic Glossaries
+
+Alphabetical glossary is a subtype of glossary.
+
+The purpose of an alphabetical glossary is to give readers a glossary optimized for fast search of a term of interest.
 
 | ID          | Requirement                                                               |
 |-------------|---------------------------------------------------------------------------|
@@ -154,6 +177,11 @@ The corresponding glossary entry is:
 ```
 
 #### Logical Glossaries
+
+Logical glossary is a subtype of glossary.
+
+The purpose of a logical glossary is to give readers a glossary optimized for understanding the ontology of the document.
+
 
 | ID          | Requirement                                                                         |
 |-------------|-------------------------------------------------------------------------------------|
@@ -191,14 +219,34 @@ The error is fixed below. The term *user* is moved before the entries that use i
 
 ## Property Sheets
 
-### Technical Parameters
+### Technical Parameters List
 
+The purpose of a technical parameter list is to communicate the values of technical parameters of the subject to readers.
 
+| ID          | Example                                                            |
+|-------------|--------------------------------------------------------------------|
+| E.GPIT.0100 | A technical parameters list must contain the rubrics listed below. |
 
+| Part                  | Mandatory |
+|-----------------------|-----------|
+| Introduction sentence | Yes       |
+| Parameter table       | Yes       |
 
-| ID | Example |
-|----|---------|
-| E.GPIT.100 |   |
+| ID          | Example                                                            |
+|-------------|--------------------------------------------------------------------|
+| E.GPIT.0200 | The introduction sentence must explicitly reference the subject.   |
+| E.GPIT.0300 | The introduction sentence must introduce the parameter table.      |
+
+| ID          | Directive                                                               |
+|-------------|-------------------------------------------------------------------------|
+| D.GPIT.0100 | The introduction phrase should apply one of the following sentence patterns. |
+
+- `The technical parameters of {subject} are given in the table below.`
+- `The {subject} has the following technical parameters.`
+
+| ID          | Example                                |
+|-------------|----------------------------------------|
+| E.GPIT.0400 | The technical parameters of a firewall |
 
 ```markdown
 The firewall has the following technical parameters.
