@@ -18,9 +18,29 @@ This standard specifies requirements for a set of information types that are not
 The aim of this standard is to help authors structure recurring types of content consistently and correctly. The standard does not prescribe which information types must appear in a given document. Instead, it defines the rules that apply whenever an author chooses to use a particular information type.
 
 
+## Providing the Base Text Framework
+
+### Generic Text Span
+
+
+
+### Generic Text Block
+
+The purpose of a generic text snippet is to 
+
+| ID          | Requirement                                                             |
+|-------------|-------------------------------------------------------------------------|
+| R.GPIT.0100 | The generic text snippet must be a correct snippet of continuous prose. |
+
+| ID          | Extension Point                                                                        |
+|-------------|----------------------------------------------------------------------------------------|
+| X.GPIT.0100 | The subordinate standards may define extensions or limitations for continuous content. |
+
 ## Giving Definitions of Concepts
 
 ### General Requirements for Definitions
+
+The definition is a subtype of a generic text span.
 
 The purpose of a definition is to introduce a term for a concept within running text,
 
@@ -116,6 +136,8 @@ Here, *pets* is the concept being defined. *Cats*, *dogs*, and *parrots* are rep
 
 ### Glossary Entries
 
+Glossary entry is a subtype of generic text span.
+
 The purpose of a glossary entry is to introduce a term within a glossary.
 
 | ID          | Requirement                                                                   |
@@ -142,6 +164,8 @@ The corresponding glossary entry is:
 ### Glossaries
 
 #### General Requirements for Glossaries
+
+Glossary is a subtype of generic text block.
 
 The purpose of a glossary is to give readers a list of terms with their definitions, where they can be easily found and referenced.
 
@@ -220,6 +244,8 @@ The error is fixed below. The term *user* is moved before the entries that use i
 ## Property Sheets
 
 ### Technical Parameters List
+
+Technical parameter list is a subtype of generic text block.
 
 The purpose of a technical parameter list is to communicate the values of technical parameters of the subject to readers.
 
