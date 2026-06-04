@@ -6,7 +6,7 @@
 
 Standard ID: GPIT.
 
-Superior standard ID: Generic Requirements for a Technical Document (GRTD). 
+Superior standard ID: Generic Requirements for a Technical Document (GRTD).
 
 
 ### Purpose
@@ -20,13 +20,9 @@ The aim of this standard is to help authors structure recurring types of content
 
 ## Providing the Base Text Framework
 
-### Generic Text Span
-
-
-
 ### Generic Text Block
 
-The purpose of a generic text snippet is to 
+The purpose of a generic text block is to provide a structural unit of continuous prose within a document.
 
 | ID          | Requirement                                                             |
 |-------------|-------------------------------------------------------------------------|
@@ -36,18 +32,19 @@ The purpose of a generic text snippet is to
 |-------------|----------------------------------------------------------------------------------------|
 | X.GPIT.0100 | The subordinate standards may define extensions or limitations for continuous content. |
 
+
 ## Giving Definitions of Concepts
 
 ### General Requirements for Definitions
 
 The definition is a subtype of a generic text span.
 
-The purpose of a definition is to introduce a term for a concept within running text,
+The purpose of a definition is to introduce a term for a concept within running text.
 
 | ID          | Requirement                                                                                    |
 |-------------|------------------------------------------------------------------------------------------------|
 | R.GPIT.0190 | A definition must be one of the following types: genus-differentia, conjunctive, generalizing. |
-| R.GPIT.0190 | A definition must always be a single sentence.                                                 |
+| R.GPIT.0200 | A definition must always be a single sentence.                                                 |
 
 
 ### Genus-Differentia Definitions
@@ -58,19 +55,19 @@ The purpose of a genus-differentia definition is to define a term for a concept 
 
 | ID          | Requirement                                                        |
 |-------------|--------------------------------------------------------------------|
-| R.GPIT.0200 | A genus-differentia definition must narrow a broader concept down. |
+| R.GPIT.0210 | A genus-differentia definition must narrow a broader concept down. |
 
 | ID          | Directive                                                       |
 |-------------|-----------------------------------------------------------------|
-| D.GPIT.0210 | State the broader concept first, then impose limitations on it. |
+| D.GPIT.0220 | State the broader concept first, then impose limitations on it. |
 
 A genus-differentia definition usually follows the scheme below.
 
 `{Concept being defined} is a {broader concept} that {limitations}.`
 
-| ID          | Example                                                           |
-|-------------|-------------------------------------------------------------------|
-| E.GPIT.0220 | Writing a genus-differentia definition                            |
+| ID          | Example                                |
+|-------------|----------------------------------------|
+| E.GPIT.0230 | Writing a genus-differentia definition |
 
 *A registered user is a user that has an account in the system.*
 
@@ -81,15 +78,15 @@ Here, *registered user* is the concept being defined. *User* is the broader conc
 
 Conjunctive definition is a subtype of definition.
 
-The purpose of a conjunctive definition is to define a umbrella term for a few specific concepts. 
+The purpose of a conjunctive definition is to define an umbrella term for a few specific concepts.
 
-| ID          | Requirement                                                        |
-|-------------|--------------------------------------------------------------------|
-| R.GPIT.0230 | A conjunctive definition must enumerate the concepts it unites.    |
+| ID          | Requirement                                                     |
+|-------------|-----------------------------------------------------------------|
+| R.GPIT.0240 | A conjunctive definition must enumerate the concepts it unites. |
 
-| ID          | Directive                                                          |
-|-------------|--------------------------------------------------------------------|
-| D.GPIT.0240 | List all constituent concepts explicitly and exhaustively.         |
+| ID          | Directive                                                  |
+|-------------|------------------------------------------------------------|
+| D.GPIT.0250 | List all constituent concepts explicitly and exhaustively. |
 
 A conjunctive definition usually follows the scheme below.
 
@@ -97,7 +94,7 @@ A conjunctive definition usually follows the scheme below.
 
 | ID          | Example                          |
 |-------------|----------------------------------|
-| E.GPIT.0250 | Writing a conjunctive definition |
+| E.GPIT.0260 | Writing a conjunctive definition |
 
 *A vehicle includes automobiles, motorbikes, and bicycles.*
 
@@ -110,14 +107,13 @@ Generalizing definition is a subtype of definition.
 
 The purpose of a generalizing definition is to define a term for a concept that cannot or need not be defined formally, but may rather be explained at the common sense level.
 
-
 | ID          | Requirement                                                                 |
 |-------------|-----------------------------------------------------------------------------|
-| R.GPIT.0260 | A generalizing definition must provide representative cases of the concept. |
+| R.GPIT.0270 | A generalizing definition must provide representative cases of the concept. |
 
 | ID          | Directive                                                                      |
 |-------------|--------------------------------------------------------------------------------|
-| D.GPIT.0270 | List the most representative cases and signal that the list is not exhaustive. |
+| D.GPIT.0280 | List the most representative cases and signal that the list is not exhaustive. |
 
 A generalizing definition usually follows the scheme below.
 
@@ -125,7 +121,7 @@ A generalizing definition usually follows the scheme below.
 
 | ID          | Example                           |
 |-------------|-----------------------------------|
-| E.GPIT.0280 | Writing a generalizing definition |
+| E.GPIT.0290 | Writing a generalizing definition |
 
 *Pets are cats, dogs, parrots, and other creatures people keep in their homes.*
 
@@ -142,15 +138,15 @@ The purpose of a glossary entry is to introduce a term within a glossary.
 
 | ID          | Requirement                                                                   |
 |-------------|-------------------------------------------------------------------------------|
-| R.GPIT.0290 | A glossary entry must be derived from a definition by factoring the term out. |
+| R.GPIT.0300 | A glossary entry must be derived from a definition by factoring the term out. |
 
 | ID          | Directive                                                                                         |
 |-------------|---------------------------------------------------------------------------------------------------|
-| D.GPIT.0300 | Place the term first, followed by a colon, followed by the definition rephrased as a noun phrase. |
+| D.GPIT.0310 | Place the term first, followed by a colon, followed by the definition rephrased as a noun phrase. |
 
 | ID          | Example                                    |
 |-------------|--------------------------------------------|
-| E.GPIT.0310 | Turning a definition into a glossary entry |
+| E.GPIT.0320 | Turning a definition into a glossary entry |
 
 Given the following definition:
 
@@ -171,8 +167,8 @@ The purpose of a glossary is to give readers a list of terms with their definiti
 
 | ID          | Requirement                                                             |
 |-------------|-------------------------------------------------------------------------|
-| R.CMIT.0320 | A glossary must consist of glossary entries and optional related notes. |
-| R.CMIT.0330 | A glossary must be either alphabetic or logical.                        |
+| R.GPIT.0330 | A glossary must consist of glossary entries and optional related notes. |
+| R.GPIT.0340 | A glossary must be either alphabetic or logical.                        |
 
 
 #### Alphabetic Glossaries
@@ -183,11 +179,11 @@ The purpose of an alphabetical glossary is to give readers a glossary optimized 
 
 | ID          | Requirement                                                               |
 |-------------|---------------------------------------------------------------------------|
-| R.CMIT.0340 | Entries in an alphabetic glossary must be ordered by term alphabetically. |
+| R.GPIT.0350 | Entries in an alphabetic glossary must be ordered by term alphabetically. |
 
 | ID          | Example                        |
 |-------------|--------------------------------|
-| E.CMIT.0360 | Writing an alphabetic glossary |
+| E.GPIT.0360 | Writing an alphabetic glossary |
 
 ```markdown
 *Account:* a record in the system that describes a registered user.
@@ -206,16 +202,15 @@ Logical glossary is a subtype of glossary.
 
 The purpose of a logical glossary is to give readers a glossary optimized for understanding the ontology of the document.
 
-
 | ID          | Requirement                                                                         |
 |-------------|-------------------------------------------------------------------------------------|
-| R.CMIT.0350 | A term in a logical glossary must never be defined after a definition that uses it. |
+| R.GPIT.0370 | A term in a logical glossary must never be defined after a definition that uses it. |
 
 | ID          | Example                                             |
 |-------------|-----------------------------------------------------|
-| E.CMIT.0370 | Fixing a logical glossary with incorrect term order |
+| E.GPIT.0380 | Fixing a logical glossary with incorrect term order |
 
-The following glossary violates the requirement. 
+The following glossary violates the requirement.
 
 ```markdown
 *Account:* a record in the system that describes a registered user.
@@ -249,30 +244,30 @@ Technical parameter list is a subtype of generic text block.
 
 The purpose of a technical parameter list is to communicate the values of technical parameters of the subject to readers.
 
-| ID          | Example                                                            |
-|-------------|--------------------------------------------------------------------|
-| E.GPIT.0100 | A technical parameters list must contain the rubrics listed below. |
+| ID          | Requirement                                                        |
+|-------------|---------------------------------------------------------------------|
+| R.GPIT.0390 | A technical parameters list must contain the parts listed below.   |
 
 | Part                  | Mandatory |
 |-----------------------|-----------|
 | Introduction sentence | Yes       |
 | Parameter table       | Yes       |
 
-| ID          | Example                                                            |
-|-------------|--------------------------------------------------------------------|
-| E.GPIT.0200 | The introduction sentence must explicitly reference the subject.   |
-| E.GPIT.0300 | The introduction sentence must introduce the parameter table.      |
+| ID          | Requirement                                                        |
+|-------------|---------------------------------------------------------------------|
+| R.GPIT.0400 | The introduction sentence must explicitly reference the subject.   |
+| R.GPIT.0410 | The introduction sentence must introduce the parameter table.      |
 
-| ID          | Directive                                                               |
-|-------------|-------------------------------------------------------------------------|
-| D.GPIT.0100 | The introduction phrase should apply one of the following sentence patterns. |
+| ID          | Directive                                                                    |
+|-------------|------------------------------------------------------------------------------|
+| D.GPIT.0420 | The introduction phrase should apply one of the following sentence patterns. |
 
 - `The technical parameters of {subject} are given in the table below.`
 - `The {subject} has the following technical parameters.`
 
 | ID          | Example                                |
 |-------------|----------------------------------------|
-| E.GPIT.0400 | The technical parameters of a firewall |
+| E.GPIT.0430 | The technical parameters of a firewall |
 
 ```markdown
 The firewall has the following technical parameters.

@@ -87,7 +87,9 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Continuous prose:* Text presented as a continuous flow of continuous prose blocks without explicit section titles inside the text.
 
-*Continuous prose block:* A structural fragment of text used to present information inside a continuous text flow, such as a paragraph, list, table, figure, note, or example.
+*Continuous prose block:* A paragraph, list, table, figure, note, or similar structural text fragment, a member of a series of such fragments stacked top to bottom within a column or the parent fragment.
+
+*Continuous prose span:* A word, phrase, abbreviation, inline image, or similar continuous prose fragment, arbitrarily delimited within a single block or the parent fragment and extending in the reading direction.
 
 *Critical note:* A note that informs readers about possible hazard or other unwanted effects or consequences of their activities.
 
