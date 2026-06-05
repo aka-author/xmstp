@@ -244,19 +244,19 @@ Technical parameter list is a subtype of generic text block.
 
 The purpose of a technical parameter list is to communicate the values of technical parameters of the subject to readers.
 
-| ID          | Requirement                                                        |
-|-------------|---------------------------------------------------------------------|
-| R.GPIT.0390 | A technical parameters list must contain the parts listed below.   |
+| ID          | Requirement                                                      |
+|-------------|------------------------------------------------------------------|
+| R.GPIT.0390 | A technical parameters list must contain the parts listed below. |
 
 | Part                  | Mandatory |
 |-----------------------|-----------|
 | Introduction sentence | Yes       |
 | Parameter table       | Yes       |
 
-| ID          | Requirement                                                        |
-|-------------|---------------------------------------------------------------------|
-| R.GPIT.0400 | The introduction sentence must explicitly reference the subject.   |
-| R.GPIT.0410 | The introduction sentence must introduce the parameter table.      |
+| ID          | Requirement                                                      |
+|-------------|------------------------------------------------------------------|
+| R.GPIT.0400 | The introduction sentence must explicitly reference the subject. |
+| R.GPIT.0410 | The introduction sentence must introduce the parameter table.    |
 
 | ID          | Directive                                                                    |
 |-------------|------------------------------------------------------------------------------|
