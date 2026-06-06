@@ -1202,12 +1202,49 @@ To update an order record:
 | R.GRTD.1190 | The template must prescribe sentence patterns to be applied in each rubric, if applicable.          |
 | R.GRTD.1200 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
 
-
-| ID          | Directive                                                                                |
-|-------------|------------------------------------------------------------------------------------------|
-| D.GRTD.1210 | Choose an information type and apply its template consistently to all parallel subjects. |
+| ID          | Directive                                                                                             |
+|-------------|-------------------------------------------------------------------------------------------------------|
+| D.GRTD.1210 | Choose an information type and apply its template consistently to all parallel subjects.              |
 
 Readers process information faster when they know what to expect. Once a reader encounters a subject described according to a certain structure, they learn it. Every subsequent subject of the same type described from the same aspect follows the same structure, so the reader knows where to find each piece of information without scanning the text. Inconsistent structures force readers to re-orient with every new subject, which slows comprehension and increases the risk of missing critical information.
+
+| ID          | Requirement                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| R.GRTD.1211 | A snippet must not contain content explicitly forbidden by the information type of this snippet.    |
+| D.GRTD.1212 | A snippet must not belong to content explicitly forbidden by the information type of this snippet.  |
+
+| ID          | Directive                                                                                             |
+|-------------|------------------------------------------------------------------------------------------------------
+| D.GRTD.1213 | "Must contain only the..." forbids the snippet any content not explicitly listed.                     |
+| D.GRTD.1214 | "Must appear only in the..." forbids the snippet from appearing in any content not explicitly listed. |
+
+| ID          | Example                                                                 |
+|-------------|-------------------------------------------------------------------------|
+| D.GRTD.1215 | Restricting the placement of information types in non-specific contexts |
+
+Consider the following requirement for an information type.
+
+```markdown
+| ID          | Requirement                                                |
+|-------------|------------------------------------------------------------|
+| R.QRST.6666 | A **glossary** must contain only the rubrics listed below. |
+
+| Rubric             | Information Type   | Mandatory | Repetition                           |
+|--------------------|--------------------|-----------|--------------------------------------|
+| **glossary entry** | **glossary entry** | Yes       | One or more                          |
+| **note**           | **note**           | No        | One or more after **glossary entry** |
+```
+
+The requirement above means that a glossary is not allowed to contain other snippets except glossary entries and notes. 
+
+Consider the following requirement for an information type.
+
+```markdown
+A **glossary entry** is allowed only in a **glossary**. 
+```
+
+This means that placing glossary entries in any other context is forbidden. 
+
 
 | ID          | Example                                                                      |
 |-------------|------------------------------------------------------------------------------|
