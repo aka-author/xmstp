@@ -55,7 +55,6 @@ The purpose of an **actor-system interaction step** snippet is to explain to rea
 |-------------|-------------------------------------------------------------------------------|
 | D.ICIT.0101 | The **clarification** should directly follow the rubric it actually explains. |
 
-
 | ID          | Example                        |
 |-------------|--------------------------------|
 | E.ICIT.0101 | Setting the deployment timeout |
@@ -76,7 +75,6 @@ If the field border turns red, the entered value is out of the allowed range. En
 | ID          | Example                             |
 |-------------|-------------------------------------|
 | E.ICIT.0101 | Setting the engine to full throttle |
-
 
 ```markdown
 Push the throttle lever forward to the position marked **MAX**.
