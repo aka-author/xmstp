@@ -35,13 +35,13 @@ The purpose of an **actor-system interaction step** snippet is to explain to rea
 |-------------|-----------------------------------------------------------------------------|
 | R.ICIT.0100 | An **actor-system interaction step** must contain the rubrics listed below. |
 
-| Rubric              | Mandatory   |
-|---------------------|-------------|
-| **Imperative**      | Yes         |
-| **Response**        | Recommended |
-| **Outcome**         | Recommended |
-| **Clarification**   | No          |
-| **Troubleshooting** | No          |
+| Rubric              | Information Type       | Mandatory   | Repetition |
+|---------------------|------------------------|-------------|------------|
+| **Imperative**      | **generic text block** | Yes         | Once       |
+| **Response**        | **generic text block** | Recommended | Once       |
+| **Outcome**         | **generic text block** | Recommended | Once       |
+| **Clarification**   | **generic text block** | No          | Once       |
+| **Troubleshooting** | **generic text block** | No          | Once       |
 
 | ID          | Requirement                                                                                        |
 |-------------|----------------------------------------------------------------------------------------------------|
@@ -94,6 +94,27 @@ If the RPM needle does not reach the red zone, the throttle cable may be slack o
 In this example, the DANGER notice could belong in either **clarification** or **troubleshooting**. Both are possible. Using more sophisticated markup such as DITA would allow this to be expressed more explicitly.
 
 
+### Actor-System Interaction Sequence
+
+**Actor-system interaction sequence** is a subtype of **generic text block**.
+
+The purpose of an **actor-system interaction sequence** snippet is to present the ordered set of actor-system interaction steps that constitute an actor-system interaction task.
+
+| ID          | Requirement                                                                     |
+|-------------|---------------------------------------------------------------------------------|
+| R.ICIT.XXXX | An **actor-system interaction sequence** must contain the rubrics listed below. |
+
+| Rubric           | Information Type                  | Mandatory | Repetition               |
+|------------------|-----------------------------------|-----------|--------------------------|
+| **First step**   | **actor-system interaction step** | Yes       | Once                     |
+| **Step section** | **generic text block**            | No        | Before each further step |
+| **Further step** | **actor-system interaction step** | No        | One or more              |
+
+| ID          | Requirement                                                                   |
+|-------------|-------------------------------------------------------------------------------|
+| R.ICIT.XXXX | The **actor-system interaction step** snippets must be numbered sequentially. |
+
+
 ### Actor-System Interaction Task
 
 **Actor-system interaction task** is a subtype of **generic text block**.
@@ -104,13 +125,13 @@ The purpose of an **actor-system interaction task** snippet is to explain to rea
 |-------------|------------------------------------------------------------------------------|
 | R.ICIT.XXXX | An **actor-system interaction task** must contain the rubrics listed below.  |
 
-| Rubric              | Mandatory   | Information Type                      |
-|---------------------|-------------|---------------------------------------|
-| **Context**         | Recommended | **Generic text block**                |
-| **Prerequisites**   | No          | **Generic text block**                |
-| **Steps**           | Yes         | **Actor-system interaction sequence** |
-| **Outcome**         | Recommended | **Generic text block**                |
-| **Postrequisites**  | No          | **Generic text block**                |
+| Rubric             | Information Type                      | Mandatory   | Repetition |
+|--------------------|---------------------------------------|-------------|------------|
+| **Context**        | **generic text block**                | Recommended | Once       |
+| **Prerequisites**  | **generic text block**                | No          | Once       |
+| **Steps**          | **actor-system interaction sequence** | Yes         | Once       |
+| **Outcome**        | **generic text block**                | Recommended | Once       |
+| **Postrequisites** | **generic text block**                | No          | Once       |
 
 | ID          | Requirement                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------------------|
@@ -120,13 +141,6 @@ The purpose of an **actor-system interaction task** snippet is to explain to rea
 | R.ICIT.XXXX | The **outcome** must describe the resulting state after the task is completed in the positive case. |
 | R.ICIT.XXXX | The **postrequisites** must describe what may or should be done once the task is complete.          |
 
-
 | ID          | Directive                                                                 |
 |-------------|---------------------------------------------------------------------------|
 | D.ICIT.XXXX | The **prerequisites** usually contains a plain enumeration of conditions. |
-
-
-| ID          | Directive                                                                                          |
-|-------------|----------------------------------------------------------------------------------------------------|
-| D.ICIT.XXXX | The **actor-system interaction step** snippets within **steps** must be numbered sequentially.     |
-| D.ICIT.XXXX | The **steps** may have **generic text block** snippets between **actor-system interaction step** . |
