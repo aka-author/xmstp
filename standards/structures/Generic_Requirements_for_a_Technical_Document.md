@@ -1208,43 +1208,13 @@ To update an order record:
 
 Readers process information faster when they know what to expect. Once a reader encounters a subject described according to a certain structure, they learn it. Every subsequent subject of the same type described from the same aspect follows the same structure, so the reader knows where to find each piece of information without scanning the text. Inconsistent structures force readers to re-orient with every new subject, which slows comprehension and increases the risk of missing critical information.
 
-| ID          | Requirement                                                                                         |
-|-------------|-----------------------------------------------------------------------------------------------------|
-| R.GRTD.1211 | A snippet must not contain content explicitly forbidden by the information type of this snippet.    |
-| D.GRTD.1212 | A snippet must not belong to content explicitly forbidden by the information type of this snippet.  |
+| ID          | Directive                                                           |
+|-------------|---------------------------------------------------------------------|
+| D.GRTD.1215 | Follow the conventions given below when applying information types. |
 
-| ID          | Directive                                                                                             |
-|-------------|------------------------------------------------------------------------------------------------------
-| D.GRTD.1213 | "Must contain only the..." forbids the snippet any content not explicitly listed.                     |
-| D.GRTD.1214 | "Must appear only in the..." forbids the snippet from appearing in any content not explicitly listed. |
+A phrase *must contain only...* in the requirements for an information type forbids the snippet implementing this information type from containing anything not covered by this phrase.
 
-| ID          | Example                                                                 |
-|-------------|-------------------------------------------------------------------------|
-| D.GRTD.1215 | Restricting the placement of information types in non-specific contexts |
-
-Consider the following requirement for an information type.
-
-```markdown
-| ID          | Requirement                                                |
-|-------------|------------------------------------------------------------|
-| R.QRST.6666 | A **glossary** must contain only the rubrics listed below. |
-
-| Rubric             | Information Type   | Mandatory | Repetition                           |
-|--------------------|--------------------|-----------|--------------------------------------|
-| **glossary entry** | **glossary entry** | Yes       | One or more                          |
-| **note**           | **note**           | No        | One or more after **glossary entry** |
-```
-
-The requirement above means that a glossary is not allowed to contain other snippets except glossary entries and notes. 
-
-Consider the following requirement for an information type.
-
-```markdown
-A **glossary entry** is allowed only in a **glossary**. 
-```
-
-This means that placing glossary entries in any other context is forbidden. 
-
+A phrase *must appear only in...* in the requirements for an information type forbids the snippet implementing this information type from appearing in any context not covered by this phrase.
 
 | ID          | Example                                                                      |
 |-------------|------------------------------------------------------------------------------|
