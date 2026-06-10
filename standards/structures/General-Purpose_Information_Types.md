@@ -211,6 +211,7 @@ The purpose of an **Alphabetic glossary** is to give readers a **Glossary** opti
 *Registered user:* a user that has an account in the system.
 ```
 
+
 #### Logical Glossaries
 
 **Logical glossary** is a subtype of **Glossary**.
