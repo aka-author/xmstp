@@ -87,15 +87,23 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Continuous prose:* Text presented as a continuous flow of continuous prose blocks without explicit section titles inside the text.
 
-*Continuous prose block:* A paragraph, list, table, figure, note, or similar structural text fragment, a member of a series of such fragments stacked top to bottom within a column or the parent fragment.
+*Continuous prose block:* A paragraph, list, table, figure, note, or similar semantically consistent structural text fragment, a member of a series of such fragments stacked top to bottom within a column or the parent continuous prose block.
 
-*Continuous prose span:* A word, phrase, abbreviation, inline image, or similar continuous prose fragment, arbitrarily delimited within a single block or the parent fragment and extending in the reading direction.
+> **NOTE**  
+> As you see, continuous prose block is defined recursively. For example, a list item is a continuous prose block, while the list it belongs to is a continuous prose block too. An arbitrary subsequence of list items within the list is not a continuous prose block because it is usually not consistent semantically: it is less than an entire enumeration but more than one enumeration item. Therefore it does not represent any consistent concept. Thus, splitting into continuous prose blocks is objective insofar as anything about natural language can be objective.
+
+*Continuous prose span:* A word, phrase, abbreviation, inline image, or similar structural text fragment, delimited within a single consistent prose block or the parent continuous prose span and extending in the reading direction.
+
+> **NOTE**  
+> A continuous prose span always belongs to a single continuous prose block. It can never start in one continuous prose block and finish in another.
 
 *Critical note:* A note that informs readers about possible hazard or other unwanted effects or consequences of their activities.
 
 *Descriptive phrase:* A phrase that identifies a concept through a generic term and additional descriptive properties.
 
 *Document:* A stable body of text that has attributes allowing it to be identified.
+
+*Document (section) formal structure:* A solid sequence of the sections nested directly within a document (section).
 
 *Genre:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
 
@@ -117,15 +125,26 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Plain enumeration:* A text snippet that describes two or more comparable items by naming them.
 
+*Preamble:* A continuous prose block between the title of the section and its first subsection.
+
 *Reader:* A human being, AI agent, or any intelligent entity that can accept, perceive, and use the information represented in the document. 
 
 *Rheme:* The part of a sentence that presents new information about the theme.
+
+*Section:* A continuous prose block that consists of a title followed by a continuous prose block, not a title itself.
+
+*Section level:* The number of sections (treating a document as a root section) that directly or indirectly contain a given section.
 
 *Self-contained idea:* An idea that can be explained or discussed independently from another idea.
 
 *Sentence pattern:* A recurrent sentence structure used to present a certain type of information in a consistent way.
 
-*Subject:* A concept that a text introduces or explains to readers.
+*Solid sequence:* A sequence of items of the same type not split by items of other types.
+
+> **NOTE**  
+> For example, a solid sequence of sections means that no content prose blocks appear between two consecutive sections unless they belong to the first of them.
+
+*Subsection:* A section within the section structure.
 
 *Target audience:* A group of probable readers who share similar skills and information needs that they expect the text to satisfy. Robots and AI agents may comprise the target audience of a text as well as human beings, animals, higher and lower spirits, or aliens.
 
@@ -134,6 +153,10 @@ If a certain entry extends a superior standard, the extension point should be re
 *Term-related vocabulary:* The set of words and phrases regularly used together with a term in a certain context.
 
 *Theme:* The part of a sentence that presents the known or assumed information and serves as the point of departure for what is said next.
+
+*Title:* A continuous prose block that does not contain other continuous prose blocks and announces a neighbor continuous prose block for readers.
+
+*Title level:* The level of the section led the title.
 
 
 ## Words and Phrases

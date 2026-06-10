@@ -31,9 +31,9 @@ The aim of this standard is to help authors structure recurring types of content
 
 The purpose of an **actor-system interaction step** snippet is to explain to readers how to perform an actor-system interaction step within a specific actor-system interaction task.
 
-| ID          | Requirement                                                                 |
-|-------------|-----------------------------------------------------------------------------|
-| R.ICIT.0100 | An **actor-system interaction step** must contain the rubrics listed below. |
+| ID          | Requirement                                                                      |
+|-------------|----------------------------------------------------------------------------------|
+| R.ICIT.0100 | An **actor-system interaction step** must contain only the rubrics listed below. |
 
 | Rubric              | Information Type       | Mandatory   | Repetition |
 |---------------------|------------------------|-------------|------------|
@@ -98,9 +98,9 @@ In this example, the DANGER notice could belong in either **clarification** or *
 
 The purpose of an **actor-system interaction sequence** snippet is to present the ordered set of actor-system interaction steps that constitute an actor-system interaction task.
 
-| ID          | Requirement                                                                     |
-|-------------|---------------------------------------------------------------------------------|
-| R.ICIT.XXXX | An **actor-system interaction sequence** must contain the rubrics listed below. |
+| ID          | Requirement                                                                          |
+|-------------|--------------------------------------------------------------------------------------|
+| R.ICIT.XXXX | An **actor-system interaction sequence** must contain only the rubrics listed below. |
 
 | Rubric           | Information Type                  | Mandatory | Repetition               |
 |------------------|-----------------------------------|-----------|--------------------------|
@@ -119,9 +119,9 @@ The purpose of an **actor-system interaction sequence** snippet is to present th
 
 The purpose of an **actor-system interaction task** snippet is to explain to readers how to perform an actor-system interaction task.
 
-| ID          | Requirement                                                                  |
-|-------------|------------------------------------------------------------------------------|
-| R.ICIT.XXXX | An **actor-system interaction task** must contain the rubrics listed below.  |
+| ID          | Requirement                                                                       |
+|-------------|-----------------------------------------------------------------------------------|
+| R.ICIT.XXXX | An **actor-system interaction task** must contain only the rubrics listed below.  |
 
 | Rubric             | Information Type                      | Mandatory   | Repetition |
 |--------------------|---------------------------------------|-------------|------------|
@@ -139,6 +139,6 @@ The purpose of an **actor-system interaction task** snippet is to explain to rea
 | R.ICIT.XXXX | The **outcome** must describe the resulting state after the task is completed in the positive case. |
 | R.ICIT.XXXX | The **postrequisites** must describe what may or should be done once the task is complete.          |
 
-| ID          | Directive                                                                 |
-|-------------|---------------------------------------------------------------------------|
-| D.ICIT.XXXX | The **prerequisites** usually contains a plain enumeration of conditions. |
+| ID          | Directive                                                                |
+|-------------|--------------------------------------------------------------------------|
+| D.ICIT.XXXX | The **prerequisites** usually contain a plain enumeration of conditions. |
