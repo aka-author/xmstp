@@ -105,6 +105,8 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Document (section) formal structure:* A solid sequence of the sections nested directly within a document (section).
 
+*Extract:* An umbrella term for examples, code blocks, listings, long quotations, and so on.  
+
 *Genre:* Both the angle from which its subject is presented and the way the material is organized and expressed, determined by the information needs of the target audience.
 
 *Information type:* A category of text intended to present a certain type of subject from a certain type of aspect.
@@ -115,7 +117,7 @@ If a certain entry extends a superior standard, the extension point should be re
 
 *Narrative:* A flow of statements that guides readers from facts and ideas they already know to facts and ideas they do not yet know.
 
-*Note:* A text fragment that provides additional information related to the surrounding text.
+*Note:* An umbrella term for warning, caution, important information, and danger notification blocks, tips, generic notes, and so on.
 
 *Noun phrase:* A phrase that usually has a noun or pronoun as its head and has the same grammatical functions as a noun.
 
