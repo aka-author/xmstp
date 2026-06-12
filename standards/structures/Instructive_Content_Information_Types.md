@@ -25,6 +25,51 @@ The aim of this standard is to help authors structure recurring types of content
 
 ## Actor-System Interaction 
 
+### Actor-System Interaction Sheet
+
+**Actor-System Interaction Sheet** is a subtype of **Continuous prose block**.
+
+The purpose of an **Actor-System Interaction Sheet** snippet is to explain to readers how to use the features available in a specific context.
+
+| ID          | Requirement                                                                        |
+|-------------|------------------------------------------------------------------------------------|
+| R.ICIT.0100 | An **Actor-system interaction sheet** must contain only the rubrics listed below.  |
+
+| Rubric            | Type of Content | Mandatory | Repetition |
+|-------------------|-----------------|-----------|------------|
+| **Introduction**  | **Paragraph**   | Yes       | Once       |
+| **Feature table** | **Table**       | Yes       | Once       |
+
+| ID          | Requirement                                                                                  |
+|-------------|----------------------------------------------------------------------------------------------|
+| R.ICIT.0101 | The **Introduction** must explicitly refer to the **Feature table**.                         |
+| R.ICIT.0102 | The **Introduction** must contain a generic term for the features inherited from their type. |
+| R.ICIT.0103 | The **Feature table** must contain the columns listed below.                                 |
+
+| Column      | Content                                          |
+|-------------|--------------------------------------------------|
+| **Feature** | The name of the feature.                         |
+| **Purpose** | The purpose of the feature and usage directives. |
+
+| ID          | Directive                                            |
+|-------------|------------------------------------------------------|
+| D.ICIT.0101 | The column captions must depend on the feature type. |
+
+| ID          | Example                 |
+|-------------|-------------------------|
+| E.ICIT.0101 | Filling in a dialog box |
+
+```markdown
+In the **Client Card** dialog box fill in the fields as explained below.
+
+| Field          | Value                                                      |
+|----------------|------------------------------------------------------------|
+| **First name** | Type the client's first name.                              |
+| **Last name**  | Type the client's last name.                               |
+| **Birth date** | Type the client's birth date or select it in the calendar. |
+|                | To open the calendar click the button next to the field.   |
+```
+
 ### Actor-System Interaction Step
 
 **Actor-system interaction step** is a subtype of **Continuous prose block**.
@@ -51,14 +96,19 @@ The purpose of an **Actor-system interaction step** snippet is to explain to rea
 | R.ICIT.0104 | The **Clarification** must provide auxiliary helpful details such as figures, tables, notes, etc.  |
 | R.ICIT.0105 | The **Troubleshooting** must discuss possible failures, their causes, fixes, and workarounds.      |
 
-| ID          | Directive                                                                     |
-|-------------|-------------------------------------------------------------------------------|
-| D.ICIT.0101 | The **Clarification** should directly follow the rubric it actually explains. |
+| ID          | Directive                                                                               |
+|-------------|-----------------------------------------------------------------------------------------|
+| D.ICIT.0101 | The **Clarification** should directly follow the rubric it actually explains.           |
+| D.ICIT.0102 | The **Clarification** must contain an **Actor-system interaction sheet** if applicable. |
+
+In particular, placing an **Actor-system interaction sheet** within a **Clarification** is applicable in the following cases:
+
+- An actor fills in a dialog box or form fields in arbitrary order.
+- An actor may choose freely among the features available in the context.
 
 | ID          | Example                        |
 |-------------|--------------------------------|
 | E.ICIT.0101 | Setting the deployment timeout |
-
 
 ```markdown
 In the Deployment Settings dialog, set the **Timeout** field to the value recommended in the deployment plan.
