@@ -42,9 +42,9 @@ The purpose of an **Actor-System Interaction Sheet** snippet is to explain to re
 
 | ID          | Requirement                                                                                  |
 |-------------|----------------------------------------------------------------------------------------------|
-| R.ICIT.0101 | The **Introduction** must explicitly refer to the **Feature table**.                         |
-| R.ICIT.0102 | The **Introduction** must contain a generic term for the features inherited from their type. |
-| R.ICIT.0103 | The **Feature table** must contain the columns listed below.                                 |
+| R.ICIT.0110 | The **Introduction** must explicitly refer to the **Feature table**.                         |
+| R.ICIT.0120 | The **Introduction** must contain a generic term for the features inherited from their type. |
+| R.ICIT.0130 | The **Feature table** must contain the columns listed below.                                 |
 
 | Column      | Content                                          |
 |-------------|--------------------------------------------------|
@@ -53,11 +53,11 @@ The purpose of an **Actor-System Interaction Sheet** snippet is to explain to re
 
 | ID          | Directive                                            |
 |-------------|------------------------------------------------------|
-| D.ICIT.0101 | The column captions must depend on the feature type. |
+| D.ICIT.0140 | The column captions must depend on the feature type. |
 
 | ID          | Example                 |
 |-------------|-------------------------|
-| E.ICIT.0101 | Filling in a dialog box |
+| E.ICIT.0150 | Filling in a dialog box |
 
 ```markdown
 In the **Client Card** dialog box fill in the fields as explained below.
@@ -78,7 +78,7 @@ The purpose of an **Actor-system interaction step** snippet is to explain to rea
 
 | ID          | Requirement                                                                      |
 |-------------|----------------------------------------------------------------------------------|
-| R.ICIT.0100 | An **Actor-system interaction step** must contain only the rubrics listed below. |
+| R.ICIT.0200 | An **Actor-system interaction step** must contain only the rubrics listed below. |
 
 | Rubric              | Type of Content            | Mandatory   | Repetition |
 |---------------------|----------------------------|-------------|------------|
@@ -90,16 +90,16 @@ The purpose of an **Actor-system interaction step** snippet is to explain to rea
 
 | ID          | Requirement                                                                                        |
 |-------------|----------------------------------------------------------------------------------------------------|
-| R.ICIT.0101 | The **Imperative** must tell readers to perform an action directed at the system.                  |
-| R.ICIT.0102 | The **Response** must describe a reader-detectable system reaction occurring in the positive case. |
-| R.ICIT.0103 | The **Outcome** must explain the resulting state after the step in the positive case.              |
-| R.ICIT.0104 | The **Clarification** must provide auxiliary helpful details such as figures, tables, notes, etc.  |
-| R.ICIT.0105 | The **Troubleshooting** must discuss possible failures, their causes, fixes, and workarounds.      |
+| R.ICIT.0210 | The **Imperative** must tell readers to perform an action directed at the system.                  |
+| R.ICIT.0220 | The **Response** must describe a reader-detectable system reaction occurring in the positive case. |
+| R.ICIT.0230 | The **Outcome** must explain the resulting state after the step in the positive case.              |
+| R.ICIT.0240 | The **Clarification** must provide auxiliary helpful details such as figures, tables, notes, etc.  |
+| R.ICIT.0250 | The **Troubleshooting** must discuss possible failures, their causes, fixes, and workarounds.      |
 
 | ID          | Directive                                                                               |
 |-------------|-----------------------------------------------------------------------------------------|
-| D.ICIT.0101 | The **Clarification** should directly follow the rubric it actually explains.           |
-| D.ICIT.0102 | The **Clarification** must contain an **Actor-system interaction sheet** if applicable. |
+| D.ICIT.0260 | The **Clarification** should directly follow the rubric it actually explains.           |
+| D.ICIT.0270 | The **Clarification** must contain an **Actor-system interaction sheet** if applicable. |
 
 In particular, placing an **Actor-system interaction sheet** within a **Clarification** is applicable in the following cases:
 
@@ -108,7 +108,7 @@ In particular, placing an **Actor-system interaction sheet** within a **Clarific
 
 | ID          | Example                              |
 |-------------|--------------------------------------|
-| E.ICIT.0101 | Configuring the deployment settings  |
+| E.ICIT.0280 | Configuring the deployment settings  |
 
 ```markdown
 In the **Deployment Settings** dialog, configure the deployment as explained below.
@@ -128,7 +128,7 @@ If a field border turns red, the entered value is invalid. Correct the value acc
 
 | ID          | Example                             |
 |-------------|-------------------------------------|
-| E.ICIT.0101 | Setting the engine to full throttle |
+| E.ICIT.0290 | Setting the engine to full throttle |
 
 ```markdown
 Push the throttle lever forward to the position marked **MAX**.
@@ -154,7 +154,7 @@ The purpose of an **Actor-system interaction sequence** snippet is to present th
 
 | ID          | Requirement                                                                          |
 |-------------|--------------------------------------------------------------------------------------|
-| R.ICIT.XXXX | An **Actor-system interaction sequence** must contain only the rubrics listed below. |
+| R.ICIT.0300 | An **Actor-system interaction sequence** must contain only the rubrics listed below. |
 
 | Rubric           | Type of Content                   | Mandatory | Repetition               |
 |------------------|-----------------------------------|-----------|--------------------------|
@@ -164,7 +164,7 @@ The purpose of an **Actor-system interaction sequence** snippet is to present th
 
 | ID          | Requirement                                                                   |
 |-------------|-------------------------------------------------------------------------------|
-| R.ICIT.XXXX | The **Actor-system interaction step** snippets must be numbered sequentially. |
+| R.ICIT.0310 | The **Actor-system interaction step** snippets must be numbered sequentially. |
 
 
 ### Actor-System Interaction Task
@@ -175,7 +175,7 @@ The purpose of an **Actor-system interaction task** snippet is to explain to rea
 
 | ID          | Requirement                                                                       |
 |-------------|-----------------------------------------------------------------------------------|
-| R.ICIT.XXXX | An **Actor-system interaction task** must contain only the rubrics listed below.  |
+| R.ICIT.0400 | An **Actor-system interaction task** must contain only the rubrics listed below.  |
 
 | Rubric             | Type of Content                       | Mandatory   | Repetition |
 |--------------------|---------------------------------------|-------------|------------|
@@ -187,19 +187,19 @@ The purpose of an **Actor-system interaction task** snippet is to explain to rea
 
 | ID          | Requirement                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------------------|
-| R.ICIT.XXXX | The **Context** must explain the purpose of the task and when it should be performed.               |
-| R.ICIT.XXXX | The **Prerequisites** must list the conditions that must be met before the task can be performed.   |
-| R.ICIT.XXXX | The **Steps** must provide a **Actor-system interaction sequence** that constitutes the task.       |
-| R.ICIT.XXXX | The **Outcome** must describe the resulting state after the task is completed in the positive case. |
-| R.ICIT.XXXX | The **Postrequisites** must describe what may or should be done once the task is complete.          |
+| R.ICIT.0410 | The **Context** must explain the purpose of the task and when it should be performed.               |
+| R.ICIT.0420 | The **Prerequisites** must list the conditions that must be met before the task can be performed.   |
+| R.ICIT.0430 | The **Steps** must provide a **Actor-system interaction sequence** that constitutes the task.       |
+| R.ICIT.0440 | The **Outcome** must describe the resulting state after the task is completed in the positive case. |
+| R.ICIT.0450 | The **Postrequisites** must describe what may or should be done once the task is complete.          |
 
 | ID          | Directive                                                                |
 |-------------|--------------------------------------------------------------------------|
-| D.ICIT.XXXX | The **Prerequisites** usually contain a plain enumeration of conditions. |
+| D.ICIT.0460 | The **Prerequisites** usually contain a plain enumeration of conditions. |
 
 | ID          | Example                        |
 |-------------|--------------------------------|
-| E.ICIT.0101 | Creating a deployment job      |
+| E.ICIT.0470 | Creating a deployment job      |
 
 ```markdown
 Perform this procedure to create and configure a new deployment job. Perform this procedure each time you need to deploy a new version of the application.
