@@ -106,20 +106,24 @@ In particular, placing an **Actor-system interaction sheet** within a **Clarific
 - An actor fills in a dialog box or form fields in arbitrary order.
 - An actor may choose freely among the features available in the context.
 
-| ID          | Example                        |
-|-------------|--------------------------------|
-| E.ICIT.0101 | Setting the deployment timeout |
+| ID          | Example                              |
+|-------------|--------------------------------------|
+| E.ICIT.0101 | Configuring the deployment settings  |
 
 ```markdown
-In the Deployment Settings dialog, set the **Timeout** field to the value recommended in the deployment plan.
+In the **Deployment Settings** dialog, configure the deployment as explained below.
 
-The field border turns green, indicating the value is accepted.
+| Field           | Value                                                                              |
+|-----------------|------------------------------------------------------------------------------------|
+| **Retry limit** | Type the maximum number of retry attempts before the job is marked as failed.      |
+| **On timeout**  | Select the action to perform when the timeout is reached: **Abort** or **Notify**. |
+| **Environment** | Select the target deployment environment: **Staging** or **Production**.           |
 
-The deployment job will terminate automatically once the specified timeout is reached, preventing indefinite hangs.
+The dialog confirms each accepted value by turning the field border green.
 
-The timeout value must be a positive integer representing seconds. Decimal values are not accepted.
+The deployment job will run according to the specified settings.
 
-If the field border turns red, the entered value is out of the allowed range. Enter a value between 1 and 300.
+If a field border turns red, the entered value is invalid. Correct the value according to the field's requirements above.
 ```
 
 | ID          | Example                             |
@@ -192,3 +196,42 @@ The purpose of an **Actor-system interaction task** snippet is to explain to rea
 | ID          | Directive                                                                |
 |-------------|--------------------------------------------------------------------------|
 | D.ICIT.XXXX | The **Prerequisites** usually contain a plain enumeration of conditions. |
+
+| ID          | Example                        |
+|-------------|--------------------------------|
+| E.ICIT.0101 | Creating a deployment job      |
+
+```markdown
+Perform this procedure to create and configure a new deployment job. Perform this procedure each time you need to deploy a new version of the application.
+
+Before starting, make sure all of the following conditions are met:
+
+- You have the Deployment Manager role.
+- The deployment plan for the target version is available.
+
+1. In the **Jobs** panel, click **New Deployment Job**.
+
+   The **New Deployment Job** dialog opens.
+
+2. In the **New Deployment Job** dialog, fill in the fields as explained below.
+
+   | Field           | Value                                                                    |
+   |-----------------|--------------------------------------------------------------------------|
+   | **Job name**    | Type a unique name for the job.                                          |
+   | **Version**     | Type the version identifier as specified in the deployment plan.         |
+   | **Environment** | Select the target deployment environment: **Staging** or **Production**. |
+
+   The dialog confirms each accepted value by turning the field border green.
+
+3. Click **Save**.
+
+   The dialog closes.
+
+   The new job appears in the **Jobs** panel.
+
+   If the **Save** button is unavailable, one or more required fields are empty or invalid. Correct the fields before saving.
+
+The deployment job is created and ready to be scheduled or executed.
+
+To run the job immediately, see *Executing a Deployment Job*.
+```
