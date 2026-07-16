@@ -1,0 +1,1314 @@
+---
+description: Strict workspace rules
+alwaysApply: true
+---
+# Strict Workspace Rules
+
+These rules apply to the entire workspace and every nested project, repository, and folder.
+
+This file is the primary source of workspace rules. Project-specific rules may supplement it only where this document explicitly permits an override.
+
+## 1. XMSTP Documentation Rules
+
+### 1.1. Applicable Standard
+
+Technical documentation must follow my XMSTP customization:
+
+* Primary standard: `C:\privat\misha\Vibecoding\mstp\MyMSTP.md `
+
+Do not invent a document structure merely because it is common in a particular markup language, publishing tool, or repository.
+
+### 1.2. Self-Contained Documents
+
+Documents must be understandable without undocumented knowledge from another project.
+
+Do not use another repository or product as an unexplained normative reference.
+
+Do not write:
+
+* *as in project X*
+* *copy the approach from repository Y*
+* *use the reference implementation from another product*
+
+Rewrite the necessary information so the current document is self-contained.
+
+Explicit links to authoritative standards, APIs, laws, and external specifications are permitted.
+
+## 2. Supreme rule: *Mutabor*
+
+The *Mutabor* authorization gate is the highest workspace rule in this document.
+
+The decision is binary as follows.
+
+| Current user message                                                        | Required behavior                |
+| --------------------------------------------------------------------------- | -------------------------------- |
+| Contains valid *Mutabor* authorization and an explicit mutation instruction | Execute exactly that instruction |
+| Does not contain valid *Mutabor* authorization                              | Perform no project mutation      |
+
+A valid *Mutabor* instruction must not be rejected because of any of the following reasons:
+
+* Branch protection
+* Repository conventions
+* Project rules
+* Best practices
+* Risk warnings
+* The agent's preference
+* The agent's opinion that another approach would be better
+* Previous mistakes
+* The possibility that the change may later need to be reverted
+
+Other rules determine how narrowly and accurately the instruction must be executed. They do not veto a valid *Mutabor* instruction.
+
+The exact-scope rule remains absolute:
+
+> Valid *Mutabor* means yes to the explicit instruction and nothing else.
+
+*Mutabor* does not authorize the following activities:
+
+* Related work
+* Inferred work
+* Cleanup
+* Consistency updates
+* Cross-reference updates
+* Nearby fixes
+* Additional Git operations
+* Any other action not explicitly requested
+
+The following external constraints remain:
+
+- Platform-level safety restrictions 
+- Unavailable capabilities 
+- Missing credentials
+- Genuine technical impossibility
+
+## 3. The *Mutabor* Authorization Gate
+
+### 3.1. Absolute Binary Rule
+
+The agent must apply the following rule:
+
+> Valid *Mutabor* plus an explicit mutation instruction means execute that instruction.
+
+> No valid *Mutabor* means no project mutation.
+
+When valid authorization is present, the agent must not perform any of the following actions:
+
+* Ask whether the user is sure
+* Request additional confirmation solely because the operation is risky
+* Reject the instruction because the target is a protected branch
+* Replace the requested action with a safer unrequested action
+* Postpone the action
+* Require another workflow
+* Argue against the instruction instead of executing it
+
+When valid authorization is absent, the agent must not perform any of the following actions:
+
+* Edit files
+* Create, rename, move, or delete files or folders
+* Stage or apply diffs
+* Create pending editor changes attached to actual files
+* Run commands that change project content or project state
+* Change Git state
+* Install or update packages
+* Modify configuration
+* Modify databases or external services
+* create persistent generated output in the project
+
+### 3.2. Valid Authorization
+
+Authorization is valid only when *Mutabor* satisfies all the following conditions:
+
+* Uses exactly this capitalization
+* Appears as a separate token
+* Is delimited by whitespace, punctuation, or a line break
+* Occurs in the current user message
+* Accompanies an explicit instruction to perform a mutation
+* Functions as authorization rather than as quoted, hypothetical, descriptive, or negated text
+
+Valid examples:
+
+```text
+Mutabor: Fix the definition of Requirement in Prescriptive_Content_Information_Types.md.
+```
+
+```text
+Push the current branch to main. Mutabor
+```
+
+```text
+Mutabor: Create branch dev from commit abc123 and switch to it.
+```
+
+A message may discuss the token and also contain valid authorization:
+
+```text
+I understand how Mutabor works. Mutabor: Update the named definition.
+```
+
+The second occurrence functions as authorization.
+
+Invalid examples:
+
+```text
+Should I use Mutabor here?
+```
+
+```text
+Explain what Mutabor means.
+```
+
+```text
+The documentation contains the word "Mutabor".
+```
+
+```text
+Do not treat Mutabor as authorization in this message.
+```
+
+```text
+MUTABOR
+```
+
+```text
+mutabor
+```
+
+```text
+Mutaborious
+```
+
+The token does not count as authorization when it appears only in any of the following contexts::
+
+* Inside quoted material
+* Inside pasted source text
+* Inside a code block
+* Inside logs or tool output
+* As the subject of discussion
+* In a hypothetical example
+* In a question
+* In negated or revoked authorization
+* In a previous message
+* In another conversation
+
+The presence of *Mutabor* does not override an explicit prohibition in the same message.
+
+Example:
+
+```text
+Mutabor, but only inspect the file. Do not change anything.
+```
+
+This message does not authorize a mutation.
+
+### 3.3. Authorization Applies Only to the Current Message
+
+Authorization expires at the end of the current user message.
+
+It is never carried forward.
+
+The following message does not inherit authorization:
+
+```text
+Continue.
+```
+
+The following message contains new authorization:
+
+```text
+Mutabor: Continue the previously described edit.
+```
+
+When the agent asks a clarifying question, the original authorization expires.
+
+The user's reply must contain *Mutabor* again before any mutation may occur.
+
+### 3.4. Mandatory Execution
+
+When the current message contains valid *Mutabor* authorization and an explicit mutation instruction, the agent must execute the instruction.
+
+The instruction may explicitly authorize actions that these rules prohibit by default, including the following activities:
+
+* Editing a protected branch
+* Committing to a protected branch
+* Pushing to a protected branch
+* Creating, renaming, switching, or deleting a branch
+* Modifying a generated file
+* Modifying a lock file
+* Modifying third-party or vendored content
+* Using a specifically named implementation method
+* Performing another normally restricted operation
+
+The explicit *Mutabor* instruction overrides the conflicting workspace restriction.
+
+Example:
+
+```text
+Mutabor: Commit the current changes to main and push main.
+```
+
+The named commit and push are authorized.
+
+### 3.5. Exact Scope Remains Mandatory
+
+Valid authorization applies only to the explicit instruction in the same message.
+
+Example:
+
+```text
+Mutabor: Fix the definition of Requirement in Prescriptive_Content_Information_Types.md.
+```
+
+This authorizes only:
+
+* editing `Prescriptive_Content_Information_Types.md`;
+* editing the definition of `Requirement`;
+* making the wording changes required to correct that definition.
+
+It does not authorize any of the following changes:
+
+* Updating another file
+* Changing another definition
+* Reordering the glossary
+* Updating cross-references
+* Fixing nearby content
+* Committing the change
+* Pushing the change
+
+*Mutabor* is absolute authorization for the named action. It is not authorization for unnamed actions.
+
+### 3.6. Technical Impossibility
+
+A valid *Mutabor* instruction must not be rejected merely because another workspace or project rule conflicts with it.
+
+Execution may remain impossible in the following cases:
+
+* The required capability is unavailable
+* The target does not exist
+* Required credentials or permissions are unavailable
+* The instruction is internally contradictory
+* A platform-level safety restriction prohibits the operation
+
+In such a case, the agent must act as follows:
+
+1. Perform every explicitly requested part that remains technically possible without expanding scope.
+2. Report the exact part that could not be performed.
+3. Identify the concrete technical blocker.
+4. Avoid substituting an unrequested action.
+
+A technical inability is not permission to invent a policy-based refusal.
+
+### 3.7. Authorization Preflight
+
+Before every mutation, verify that all the following conditions are met:
+
+* The current message contains valid *Mutabor* authorization.
+* The current message explicitly directs the mutation.
+* The proposed action contains only the explicitly requested scope.
+* The action is technically possible with the available capabilities and permissions.
+* No unrequested action is included.
+
+If authorization is absent or invalid, do not mutate.
+
+If scope is too broad, reduce it to the explicit instruction.
+
+If execution is technically impossible, report the exact blocker.
+
+## 4. Exact Scope
+
+### 4.1. Core Rule
+
+> One named change means only that change.
+
+The agent must perform only the following modifications:
+
+* The file explicitly named in the current authorized message
+* The section, definition, function, requirement, element, or other target explicitly named in that message
+* The exact behavior or wording explicitly requested
+
+Everything else must remain untouched.
+
+Example:
+
+```text
+Mutabor: Fix the definition of Requirement in Prescriptive_Content_Information_Types.md.
+```
+
+This authorizes the following changes:
+
+* Editing `Prescriptive_Content_Information_Types.md`
+* Editing the definition of `Requirement`
+* Making only the changes required to correct that definition
+
+This does not authorize any of the following changes:
+
+* Editing another file that contains the old wording
+* Updating cross-references
+* Updating another glossary entry
+* Reordering the glossary
+* Fixing a nearby definition
+* Correcting formatting elsewhere in the file
+* Changing examples that were not named
+* Updating a README or changelog
+* Making terminology consistent across the repository
+
+Related work is separate work.
+
+Related work requires explicit inclusion in the same authorized message or a new message containing *Mutabor*.
+
+### 4.2. Named-File Boundary
+
+When the user names one file, the agent must not modify another file.
+
+This remains true even when another file meets one or more of the following conditions:
+
+* Contains the same text
+* Refers to the changed content
+* Becomes inconsistent
+* Contains a related requirement
+* Would normally be updated during cleanup
+* Is generated from or used by the named file
+
+If another file appears necessary, the agent must perform all the following actions:
+
+1. Stop before changing that file.
+2. Explain why the additional file appears necessary.
+3. Identify the exact additional change.
+4. Wait for a new message containing *Mutabor* and naming the additional file or broader scope.
+
+The agent must not silently expand a one-file request into a multi-file task.
+
+### 4.3. Named-Target Boundary
+
+When the user names a definition, section, function, requirement, class, page, field, or other target, the agent must modify only that target.
+
+Do not modify any of the following targets:
+
+* Neighboring targets;
+* parent sections;
+* child sections not included in the request;
+* similar targets elsewhere;
+* repeated wording elsewhere;
+* explanatory text outside the named target.
+
+A named target does not authorize changes to the entire file.
+
+### 4.4. Supporting Changes
+
+A task may include a minimal supporting change only when leaving it unchanged would make the requested edit itself invalid.
+
+For documentation, such cases are rare.
+
+Potentially valid supporting changes within the same named file include the following actions:
+
+* Repairing markup broken directly by the requested replacement
+* Updating an anchor when the requested heading itself is renamed
+* Adjusting punctuation required for the changed sentence to remain grammatically valid
+* Preserving a table structure while editing a named table cell
+
+The following are not supporting changes:
+
+* Updating another occurrence for consistency
+* Updating a cross-reference because the wording changed
+* Reordering definitions
+* Improving surrounding prose
+* Correcting a nearby mistake
+* Applying the same correction elsewhere
+* Aligning the rest of the document with the change
+
+A supporting change outside the named file is never automatically authorized.
+
+### 4.5. No Consistency Exception
+
+Consistency is not permission.
+
+The agent must not expand scope because of the following reasons:
+
+* The same term appears elsewhere
+* Another document now uses older wording
+* A cross-reference could be improved
+* The repository becomes stylistically inconsistent
+* Another section should logically change too
+* The change appears incomplete without cleanup
+
+Report the possible inconsistency. Do not modify it.
+
+### 4.6. No Incidental Work
+
+Do not make changes "while you are here," including the following cases:
+
+* Fixing a neighboring function or definition
+* Renaming unrelated variables
+* Adding unrelated comments
+* Reformatting untouched content
+* Sorting unrelated imports
+* Updating a README
+* Adjusting unrelated presentation
+* Adding unrelated validation
+* Adding logging
+* Adding tests not requested
+* Changing dependencies
+* Cleaning warnings
+* Removing dead code
+* Modernizing syntax
+* Optimizing performance
+
+Not requested means not allowed.
+
+### 4.7. Multiple Named Changes
+
+A single authorized message may name several changes.
+
+Example:
+
+```text
+Mutabor:
+
+1. Fix the definition of Requirement in Prescriptive_Content_Information_Types.md.
+2. Update the corresponding definition in Glossary.md.
+3. Update the cross-reference in Requirements_Management.md.
+```
+
+This authorizes only those three named changes.
+
+It does not authorize searching for and updating every other occurrence.
+
+### 4.8. Ambiguity
+
+Use the narrowest interpretation directly supported by the request.
+
+Do not choose a broader interpretation merely because it appears more complete.
+
+Ask one focused question only when no safe narrow interpretation exists.
+
+After a clarifying question, the reply must contain *Mutabor* again before any mutation may occur.
+
+### 4.9. Scope Preflight
+
+Before changing a file, verify the following conditions:
+
+* The file is explicitly named or unambiguously identified.
+* The exact target inside the file is explicitly named or unambiguously identified.
+* The requested change is a directive, not a question or hypothetical.
+* No additional file is included.
+* No additional target is included.
+* No cross-reference, cleanup, consistency, or related update is included.
+* Every changed line belongs directly to the named change.
+* The diff contains no unrelated formatting or line-ending changes.
+
+If any answer is no or uncertain, do not make the change.
+
+## 5. File and Repository Boundaries
+
+Obey the rules listed below:
+
+* Do not rename or move files unless explicitly requested.
+* Do not create new files unless explicitly requested or unavoidable within the named task.
+* Preserve existing encoding, line endings, indentation, naming, and local style.
+* Do not reformat unaffected lines.
+* Do not perform repository-wide replacements for a local change.
+* Do not update versions, changelogs, history files, or release notes automatically.
+* Do not modify public interfaces unless explicitly requested.
+* Do not change behavior outside the named case.
+
+### 5.1. Generated Files
+
+Generated files are files normally recreated from another source rather than edited directly.
+
+They include one or more of the following categories:
+
+* Files in build-output folders
+* Files marked `DO NOT EDIT`, `Generated by`, or equivalent
+* Compiled binaries and object files
+* Generated documentation output
+* Generated code produced by schemas, compilers, converters, or build tools
+
+Do not edit generated files unless the current message explicitly names that generated file or output and contains valid *Mutabor* authorization.
+
+When the true source is identifiable, report it instead of editing the generated copy unless the user explicitly directed the generated file edit.
+
+### 5.2. Dependencies and Third-Party Code
+
+The following categories of files and folders are not ordinary project source files:
+
+* Package or dependency folders
+* Third-party source folders
+* Vendored libraries
+* Binary dependencies
+
+Do not edit them unless the user explicitly requests that exact change and includes valid *Mutabor* authorization.
+
+### 5.3. Lock Files
+
+Despite being produced or updated by tools, dependency lock files are managed project files.
+
+Modify a lock file only when at least one of the following conditions is met:
+
+* The user explicitly requests the lock-file change
+* An explicitly authorized dependency change necessarily updates it
+
+Do not update a lock file incidentally.
+
+## 6. Inspection, tools, and caches
+
+### 6.1. Inspection Operations
+
+Inspection operations are allowed without *Mutabor*.
+
+Inspection operations include the following actions:
+
+* Listing files
+* Reading files
+* Searching text
+* Inspecting repository status and history
+* Viewing diffs
+* Parsing or analyzing files without changing project content
+* Running diagnostic or inspection tools
+
+An inspection tool remains allowed without *Mutabor* when it creates only its normal disposable cache or internal working data.
+
+For the purposes of these rules, a standard disposable cache created by an inspection tool is not treated as a project mutation when it is stored outside working and source folders.
+
+No separate authorization is required for such cache creation.
+
+### 6.2. Cache and Temporary-Output Restrictions
+
+Inspection tools used without *Mutabor* must not leave caches, scratch files, generated output, or other tool artifacts in any of the following locations:
+
+* Source folders
+* Documentation folders
+* Configuration folders
+* folders containing managed project files
+* Other working folders
+
+The following locations are allowed:
+
+* The tool's normal external cache location
+* An operating-system temporary folder
+* The project's designated `tmp/` folder
+
+Without *Mutabor*, an inspection tool must not perform any of the following actions:
+
+* Modify project source or documentation
+* Overwrite an existing project file
+* Create generated output intended to remain in the project
+* Place cache folders or temporary files beside inspected files
+* Create tool junk in working folders
+* Change repository, database, configuration, or external-service state
+
+When a tool allows its cache or temporary-output location to be configured, direct the cache or output to one of the following locations:
+
+* Its normal external cache location
+* An operating-system temporary folder
+* `tmp/`
+
+When a tool unavoidably creates cache files in a working folder, use another inspection method or report the limitation.
+
+Do not contaminate working folders with caches or temporary tool output.
+
+### 6.3. Potentially Mutating Operations
+
+Except for the inspection-cache allowance in Sections 6.1 and 6.2, treat an operation as mutating when it may perform any of the following actions:
+
+* Write or stage project files
+* Create persistent project output
+* Generate code or documentation in managed folders
+* Install packages
+* Update project metadata
+* Change permissions
+* Modify a database
+* Change repository state
+* Modify a remote service
+
+Do not run such an operation without valid *Mutabor* authorization.
+
+### 6.4. Bulk Editing
+
+Do not use a repository-wide replacement for a named local change.
+
+A bulk-editing tool is permitted only when both of the following conditions are met:
+
+* The user explicitly requests bulk editing
+* Every target is explicitly included in the authorized scope
+
+A search result does not expand scope.
+
+Finding related occurrences does not authorize changing them.
+
+## 7. Testing and Verification
+
+### 7.1. Existing Checks
+
+Running an existing test or narrowly targeted verification is part of the task only when at least one of the following conditions is met:
+
+* The user explicitly requests it
+* An applicable project rule requires it
+* The requested change cannot be responsibly verified without it
+
+Verification does not authorize further editing.
+
+### 7.2. Test Changes
+
+Do not add, rewrite, broaden, or delete tests unless the current authorized message explicitly requests that test change.
+
+If an authorized change causes an existing test to fail, perform all the following actions:
+
+1. Report the failing test.
+2. Report whether the failure appears related to the authorized change.
+3. Do not modify the test automatically.
+4. Do not modify the implementation automatically.
+5. Wait for a new message containing *Mutabor* and an explicit corrective instruction.
+
+A failing test does not authorize a fix.
+
+## 8. Scripts and Temporary Files
+
+### 8.1. Script Locations
+
+The locations for project-owned scripts are defined below.
+
+| Script Type                   | folder |
+| ----------------------------- | --------- |
+| Reusable project tool         | `tools/`  |
+| One-off or task-specific tool | `tmp/`    |
+
+Do not place one-off tools in source, documentation, test, prototype, or reusable tooling folders.
+
+### 8.2. Temporary Files
+
+Temporary artifacts intentionally created by the agent must be created under:
+
+```text
+tmp/
+```
+
+Temporary artifacts include the following categories:
+
+* Intermediate documents
+* Generated previews
+* Debug dumps
+* Temporary exports
+* Scratch files
+* One-off tools
+* Partial conversions
+* Temporary working copies
+
+This requirement does not apply to standard disposable caches stored in either of the following locations:
+
+* A tool's normal external cache location
+* An operating-system temporary folder
+
+Do not create temporary files next to the target file.
+
+After completing the task, perform all the following actions:
+
+1. Move the required result to its final location.
+2. Delete remaining agent-created temporary artifacts.
+3. Remove tool artifacts accidentally created in working folders.
+4. Do not commit `tmp/`, caches, or tool-generated junk.
+
+### 8.3. Documentation Folder Cleanliness
+
+Documentation locations include the following categories:
+
+* Dedicated documentation folders
+* Documentation source folders
+* User-guide folders
+* Technical-specification folders
+* API documentation folders
+* Other folders whose primary purpose is documentation
+
+A documentation file in the repository root does not make the entire repository root a documentation folder.
+
+Do not place any of the following artifacts in documentation folders:
+
+* Executable scripts or tools
+* Editor automation
+* Language or tool caches
+* Compiled artifacts
+* Temporary conversion output
+* Unrelated build artifacts
+
+Documentation folders may contain documentation sources and explicitly requested generated documentation only.
+
+### 8.4. Automation Script Path Reliability
+
+Every project-owned automation script or command wrapper must work correctly regardless of the caller's current working folder.
+
+The script must distinguish between the following path categories:
+
+* **Project-owned resources**: scripts, templates, configuration files, and predefined target files distributed with the project
+* **User-provided paths**: input and output paths passed as command-line arguments
+
+Project-owned resources must be resolved relative to one of the following bases:
+
+1. The automation script's own location
+2. A project root explicitly identified by project configuration or a defined root marker
+
+A project root may be used only when it is identified by one of the following explicit methods:
+
+* A project configuration entry
+* A dedicated root marker
+* A repository root explicitly defined as the project's resource base
+
+Do not guess the project root from arbitrary nearby files.
+
+If the project root is ambiguous, perform one of the following actions:
+
+* Resolve resources relative to the script's own location when possible
+* Otherwise report the ambiguity
+
+Project-owned resources must never be resolved relative to the caller's current working folder.
+
+User-provided paths must be passed unchanged unless the script's documented interface explicitly defines another interpretation.
+
+A relative user-provided path normally remains relative to the caller's current working folder.
+
+The automation script must not change the current working folder merely to make project-owned relative paths work.
+
+Launchers and wrappers must contain only the logic required to perform the following functions:
+
+* Locate project-owned resources
+* Forward arguments
+* Invoke the main implementation
+* Propagate its result
+
+### 8.4. Automation Script Path Reliability
+
+Every project-owned automation script or command wrapper must work correctly regardless of the caller's current working folder.
+
+When an agent writes a script, the project root is the folder currently opened in the IDE.
+
+The agent must determine the fixed relationship between the script's location and the project root when writing the script. The runtime script must not search for, infer, detect, or guess the project root.
+
+The script must distinguish between the following path categories:
+
+* **Caller-provided paths**: input paths, output paths, and other path arguments passed by the caller
+* **Project components**: scripts, templates, configuration files, and other resources stored inside the project
+* **External components**: interpreters, converters, executables, libraries, configuration files, and other resources stored outside the project
+
+The script must convert every path to an absolute path before using it or passing it to another component.
+
+The script must apply all the following path-resolution rules:
+
+* An absolute caller-provided path must be used unchanged
+* A relative caller-provided path must be resolved against the caller's current working folder
+* A path to a project component must be assembled from the script's own absolute location or from the known project root derived from that location
+* A path to an external component must be specified as an absolute path
+* Every path used by the script must be absolute
+* Every path passed to another component must be absolute
+
+The script must capture the caller's current working folder before performing any operation that could change it.
+
+The script must know which arguments represent paths. It must not interpret options, flags, identifiers, numbers, or other non-path arguments as paths.
+
+The script must not perform any of the following actions:
+
+* Resolve a relative caller-provided path against the script's location
+* Resolve a project component against the caller's current working folder
+* Search for the project root
+* Infer the project root from repository markers or nearby files
+* Continue using a relative path after resolving it
+* Change the current working folder merely to make relative paths work
+* Depend on the caller's current working folder for locating project components
+* Depend on the operating system's executable search path for locating external components
+
+Every path must be handled in a form that preserves all the following properties:
+
+* Spaces
+* Non-Latin characters
+* Empty arguments
+* Argument boundaries
+* Special characters supported by the operating system
+
+Launchers and wrappers must contain only the logic required to perform the following functions:
+
+* Capture the caller's current working folder
+* Determine the script's own absolute location
+* Derive the known project root from the script's location when required
+* Convert caller-provided paths to absolute paths
+* Assemble absolute paths to project components
+* Use configured absolute paths to external components
+* Forward non-path arguments without reinterpretation
+* Invoke the main implementation
+* Propagate the invoked process's exit status
+
+### 8.5. Windows Command Scripts
+
+Every project-owned Windows command script must use `%~dp0` to determine its own location.
+
+The script must start with:
+
+```bat
+@echo off
+setlocal EnableExtensions DisableDelayedExpansion
+
+set "CALLER_DIR=%CD%"
+set "SCRIPT_DIR=%~dp0"
+```
+
+Delayed environment-variable expansion must remain disabled unless it is strictly necessary. Delayed expansion may corrupt paths containing `!`.
+
+When the script requires the project root, it must derive the project root from the script's location through the fixed relationship known when the script was written.
+
+For example, when the script is stored one folder below the project root:
+
+```bat
+for %%I in ("%SCRIPT_DIR%..") do set "PROJECT_ROOT=%%~fI"
+```
+
+The relative relationship in this expression must match the actual project structure. The script must not search for another project root.
+
+An absolute caller-provided path must be used unchanged.
+
+A relative caller-provided path must be resolved against the caller's current working folder.
+
+Because the script has not changed its current working folder, the following construction converts either an absolute or relative caller-provided path to an absolute path:
+
+```bat
+for %%I in ("%~1") do set "INPUT_PATH=%%~fI"
+```
+
+Known path arguments must be resolved separately:
+
+```bat
+for %%I in ("%~1") do set "INPUT_PATH=%%~fI"
+for %%I in ("%~2") do set "OUTPUT_PATH=%%~fI"
+```
+
+A project component must be addressed through an absolute path assembled from `%~dp0` or the derived project root.
+
+A component in the same folder as the command script must be resolved as follows:
+
+```bat
+for %%I in ("%SCRIPT_DIR%script.py") do set "SCRIPT_PATH=%%~fI"
+```
+
+A component elsewhere in the project must be resolved as follows:
+
+```bat
+for %%I in ("%PROJECT_ROOT%\tools\script.py") do set "SCRIPT_PATH=%%~fI"
+```
+
+A project-owned configuration file must be resolved in the same way:
+
+```bat
+for %%I in ("%PROJECT_ROOT%\config\settings.json") do set "CONFIG_PATH=%%~fI"
+```
+
+An external component must be specified through an absolute path:
+
+```bat
+set "PYTHON_EXE=C:\Program Files\Python311\python.exe"
+```
+
+An absolute external-component path may also come from configuration, but the script must verify that the configured value is absolute before using it.
+
+The script must pass only absolute paths to the main implementation:
+
+```bat
+"%PYTHON_EXE%" "%SCRIPT_PATH%" "%INPUT_PATH%" "%OUTPUT_PATH%"
+exit /b %ERRORLEVEL%
+```
+
+Non-path arguments must be forwarded without converting them to paths:
+
+```bat
+set "MODE=%~3"
+
+"%PYTHON_EXE%" "%SCRIPT_PATH%" "%INPUT_PATH%" "%OUTPUT_PATH%" "%MODE%"
+exit /b %ERRORLEVEL%
+```
+
+The following approach is prohibited because it passes a relative caller-provided path without resolving it:
+
+```bat
+"%PYTHON_EXE%" "%SCRIPT_DIR%script.py" "%~1"
+```
+
+The following approach is prohibited because it resolves a caller-provided path against the script's location:
+
+```bat
+"%PYTHON_EXE%" "%SCRIPT_DIR%script.py" "%SCRIPT_DIR%%~1"
+```
+
+The following approach is prohibited because it locates a project component relative to the caller's current working folder:
+
+```bat
+python script.py
+```
+
+The following approach is prohibited because it changes the working folder instead of assembling absolute paths:
+
+```bat
+cd /d "%~dp0"
+python script.py
+```
+
+The following approach is prohibited because it relies on the operating system's executable search path:
+
+```bat
+python "%SCRIPT_PATH%"
+```
+
+Every path expression must be quoted.
+
+A batch script must not split, reconstruct, or normalize arguments in a way that corrupts spaces, non-Latin characters, or supported special characters.
+
+When a batch script cannot preserve the required paths and arguments reliably, the agent must use a PowerShell or Python launcher instead.
+
+### 8.6. Linux and macOS Shell Scripts
+
+Every project-owned Bash script must capture the caller's current working folder and determine its own absolute location.
+
+The script must start with:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+CALLER_DIR="$PWD"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)"
+```
+
+When the script requires the project root, it must derive the project root from the script's location through the fixed relationship known when the script was written.
+
+For example, when the script is stored one folder below the project root:
+
+```bash
+PROJECT_ROOT="$(cd -- "$SCRIPT_DIR/.." >/dev/null 2>&1 && pwd -P)"
+```
+
+The relative relationship in this expression must match the actual project structure. The script must not search for another project root.
+
+An absolute caller-provided path must be used unchanged.
+
+A relative caller-provided path must be resolved against `CALLER_DIR`.
+
+The script must use an absolute-path function for caller-provided paths:
+
+```bash
+absolute_from_caller() {
+    local path="$1"
+
+    case "$path" in
+        /*)
+            printf '%s\n' "$path"
+            ;;
+        *)
+            printf '%s/%s\n' "$CALLER_DIR" "$path"
+            ;;
+    esac
+}
+```
+
+Known caller-provided path arguments must be resolved separately:
+
+```bash
+INPUT_PATH="$(absolute_from_caller "$1")"
+OUTPUT_PATH="$(absolute_from_caller "$2")"
+```
+
+A project component must be addressed through an absolute path assembled from `SCRIPT_DIR` or `PROJECT_ROOT`.
+
+A component in the same folder as the shell script must be resolved as follows:
+
+```bash
+SCRIPT_PATH="$SCRIPT_DIR/script.py"
+```
+
+A component elsewhere in the project must be resolved as follows:
+
+```bash
+SCRIPT_PATH="$PROJECT_ROOT/tools/script.py"
+```
+
+A project-owned configuration file must be resolved in the same way:
+
+```bash
+CONFIG_PATH="$PROJECT_ROOT/config/settings.json"
+```
+
+An external component must be specified through an absolute path:
+
+```bash
+PYTHON_EXE="/opt/python/bin/python3"
+```
+
+An absolute external-component path may also come from configuration, but the script must verify that the configured value begins with `/` before using it.
+
+The script must pass only absolute paths to the main implementation:
+
+```bash
+"$PYTHON_EXE" "$SCRIPT_PATH" "$INPUT_PATH" "$OUTPUT_PATH"
+```
+
+After processing known path arguments, the script may forward the remaining non-path arguments without reinterpretation:
+
+```bash
+INPUT_PATH="$(absolute_from_caller "$1")"
+OUTPUT_PATH="$(absolute_from_caller "$2")"
+shift 2
+
+"$PYTHON_EXE" "$SCRIPT_PATH" "$INPUT_PATH" "$OUTPUT_PATH" "$@"
+```
+
+The following approach is prohibited because it passes a relative caller-provided path without resolving it:
+
+```bash
+"$PYTHON_EXE" "$SCRIPT_DIR/script.py" "$1"
+```
+
+The following approach is prohibited because it resolves a caller-provided path against the script's location:
+
+```bash
+INPUT_PATH="$SCRIPT_DIR/$1"
+```
+
+The following approach is prohibited because it locates a project component relative to the caller's current working folder:
+
+```bash
+python script.py
+```
+
+The following approach is prohibited because it changes the working folder instead of assembling absolute paths:
+
+```bash
+cd "$(dirname "$0")"
+python script.py
+```
+
+The following approach is prohibited because it relies on the operating system's executable search path:
+
+```bash
+python3 "$SCRIPT_PATH"
+```
+
+Every variable containing a path must be quoted when used.
+
+Arguments must be forwarded through `"$@"`.
+
+The following forms are prohibited because they do not reliably preserve argument boundaries:
+
+```bash
+$*
+```
+
+```bash
+$@
+```
+
+```bash
+"$*"
+```
+
+The script must preserve paths containing spaces, non-Latin characters, and supported special characters without splitting, rewriting, or corrupting them.
+
+## 9. Git Rules
+
+### 9.1. Default Branch Behavior
+
+When the current authorized instruction does not name a branch, use the project's declared development branch.
+
+The default development branch is the following:
+
+```text
+dev
+```
+
+A project may declare another development branch through one of the following sources:
+
+* Project-specific rules
+* Repository configuration
+* The current authorized user message
+
+Do not infer an alternative branch name merely because it resembles `dev`.
+
+If no development branch can be determined and the instruction depends on branch selection, ask one focused question.
+
+The reply must contain *Mutabor* again.
+
+### 9.2. Protected Branches
+
+The following categories of branches are protected by default:
+
+* `main`
+* `master`
+* Branches declared protected in repository configuration
+* Branches declared protected by project-specific rules
+* Explicitly identified production, release, deployment, staging, or trunk branches
+
+Without an explicit valid *Mutabor* instruction targeting a protected branch, the agent must not perform any of the following actions:
+
+* Edit files on that branch
+* Commit to that branch
+* Push to that branch
+* Merge into that branch
+* Rebase into that branch
+* Cherry-pick into that branch
+* Force-push that branch
+
+Protected-branch status is not a veto against a valid explicit *Mutabor* instruction.
+
+Example:
+
+```text
+Mutabor: Push the current commit to main.
+```
+
+This instruction overrides the default protection of `main`.
+
+Example:
+
+```text
+Mutabor: Fix the named definition.
+```
+
+If the current branch is `main`, the agent must perform the named edit on `main`. It must not reject the instruction solely because of the branch.
+
+### 9.3. Branch Creation and Selection
+
+A valid *Mutabor* instruction may authorize creating, deleting, renaming, or switching branches.
+
+Example:
+
+```text
+Mutabor: Create branch dev from main and switch to dev.
+```
+
+This instruction authorizes only the following actions:
+
+* Creating `dev` from `main`
+* Switching to `dev`
+
+This instruction does not authorize any of the following actions:
+
+* Modifying files
+* Committing
+* Pushing
+* Merging
+* Deleting another branch
+
+Those actions require explicit inclusion in the same authorized message or new authorization.
+
+### 9.4. Commits and Pushes
+
+Editing authorization does not automatically authorize committing or pushing.
+
+The current message must explicitly request each Git action.
+
+Example:
+
+```text
+Mutabor: Fix the definition in Prescriptive_Content_Information_Types.md.
+```
+
+The instruction authorizes the following action:
+
+* The named file edit
+
+The instruction does not authorize any of the following actions:
+
+* Staging
+* Committing
+* Pushing
+
+Example:
+
+```text
+Mutabor: Commit the current changes with message "Fix Requirement definition" and push the current branch.
+```
+
+The instruction authorizes the following actions:
+
+* Staging the current changes
+* Creating the named commit
+* Pushing the current branch
+
+A current authorized message may commit or push changes produced under an earlier authorized edit.
+
+This does not authorize additional file modifications.
+
+### 9.5. Git Scope
+
+A Git instruction must be executed exactly as stated.
+
+Do not automatically perform any of the following actions:
+
+* Amend
+* Squash
+* Rebase
+* Tag
+* Force-push
+* Merge
+* Change the commit message
+* Include unrelated files
+* Clean the working tree
+
+Each additional Git action must be explicitly requested.
+
+## 10. Validation and Reporting
+
+After an authorized change, report all the following information:
+
+* Files changed
+* Exact targets changed
+* Exact behavior or text changed
+* Checks or tests run
+* Checks or tests not run
+* Failures encountered
+* Related issues noticed but not changed
+* Known limitations directly related to the requested work
+
+Do not make any of the following claims:
+
+* A test passed when it was not run
+* A file was changed when it was not changed
+* The result is complete when part of the request remains unfinished
+* An external service was updated without verification
+
+Do not hide, minimize, or silently repair a failure.
+
+## 11. Error Recovery
+
+If an authorized mutation produces an unexpected result, perform all the following actions:
+
+1. Stop further mutations.
+2. Report what was changed.
+3. Report the observed failure or unexpected result.
+4. Do not attempt an automatic rollback.
+5. Do not make additional corrective changes.
+6. Do not create a fixup or rollback commit.
+7. Explain the narrowest available recovery action.
+8. Wait for a new user message containing valid *Mutabor* authorization and explicitly authorizing that recovery action.
+
+The agent must not perform any of the following actions:
+
+* Assume that the user wants the change fixed
+* Assume that the user wants the change reverted
+* Hide or minimize the failure
+* Broaden the original task to repair the failure
+* Reuse the original authorization for recovery
+
+## 12. Final Decision Rule
+
+Before a mutation, ask the following question:
+
+> Does the current message contain valid *Mutabor* authorization and an explicit mutation instruction?
+
+* **No:** Perform no project mutation
+* **Yes:** Execute the explicit instruction
+
+Then ask the following question:
+
+> Does the proposed action contain anything not explicitly requested?
+
+* **Yes:** Remove the unrequested part
+* **No:** Execute the action
+
+No workspace rule, branch-protection rule, best practice, or agent preference may convert a valid explicit *Mutabor* instruction into a refusal.
+
+The final rule is:
+
+> *Mutabor* present and valid: execute exactly what was requested.
+
+> *Mutabor* absent or invalid: execute no project mutation.

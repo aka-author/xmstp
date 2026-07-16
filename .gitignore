@@ -1,4 +1,5 @@
 # Local tooling (agent/editor helpers; not part of the standard)
+.cursor
 /tools/
 /tooling/
 

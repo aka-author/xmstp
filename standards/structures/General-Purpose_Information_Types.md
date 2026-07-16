@@ -8,6 +8,10 @@ Standard ID: GPIT.
 
 Superior standard ID: Generic Requirements for a Technical Document (GRTD).
 
+| ID          | Directive                                                                    |
+|-------------|------------------------------------------------------------------------------|
+| D.GPIT.0000 | The agent must read Generic_Requirements_for_a_Technical_Document.md (GRTD). |
+
 
 ### Purpose
 
