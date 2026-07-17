@@ -10,7 +10,7 @@ Superior standard ID: Generic Requirements for a Technical Document (GRTD).
 
 | ID          | Directive                                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------|
-| D.GPIT.0000 | The agent must read [Generic Requirements for a Technical Document](Generic_Requirements_for_a_Technical_Document.md). |
+| D.GPIT.0000 | The agent must read [Generic Requirements for a Technical Document](../narratives/Generic_Requirements_for_a_Technical_Document.md) first. |
 
 
 ### Purpose

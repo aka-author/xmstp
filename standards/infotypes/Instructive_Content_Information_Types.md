@@ -8,9 +8,9 @@ Standard ID: ICIT.
 
 Superior standard ID: General-Purpose Information Types (GPIT).
 
-| ID          | Directive                                                                                     |
-|-------------|-----------------------------------------------------------------------------------------------|
-| D.ICIT.0000 | The agent must read [General-Purpose Information Types](General-Purpose_Information_Types.md) |
+| ID          | Directive                                                                                            |
+|-------------|------------------------------------------------------------------------------------------------------|
+| D.ICIT.0000 | The agent must read [General-Purpose Information Types](General-Purpose_Information_Types.md) first. |
 
 
 ### Purpose
