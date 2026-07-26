@@ -734,227 +734,53 @@ Documentation folders may contain documentation sources and explicitly requested
 
 Every project-owned automation script or command wrapper must work correctly regardless of the caller's current working folder.
 
-The script must distinguish between the following path categories:
+When an agent writes a script, the project root is the folder currently opened in the IDE. The agent must know the fixed relationship between the script's location and that root when writing the script. The runtime script must not search for, infer, detect, or guess the project root.
 
-* **Project-owned resources**: scripts, templates, configuration files, and predefined target files distributed with the project
-* **User-provided paths**: input and output paths passed as command-line arguments
+Distinguish path categories as follows:
 
-Project-owned resources must be resolved relative to one of the following bases:
+* **Caller-provided paths**: arguments from the caller; a relative path is relative to the caller's current working folder
+* **Project components**: files inside the project; locate them from the script's own location or from the known project root derived from that location
+* **External components**: interpreters and tools outside the project; use an absolute path, not the OS executable search path
 
-1. The automation script's own location
-2. A project root explicitly identified by project configuration or a defined root marker
+Do not change the current working folder merely to make project-owned relative paths work.
 
-A project root may be used only when it is identified by one of the following explicit methods:
-
-* A project configuration entry
-* A dedicated root marker
-* A repository root explicitly defined as the project's resource base
-
-Do not guess the project root from arbitrary nearby files.
-
-If the project root is ambiguous, perform one of the following actions:
-
-* Resolve resources relative to the script's own location when possible
-* Otherwise report the ambiguity
-
-Project-owned resources must never be resolved relative to the caller's current working folder.
-
-User-provided paths must be passed unchanged unless the script's documented interface explicitly defines another interpretation.
-
-A relative user-provided path normally remains relative to the caller's current working folder.
-
-The automation script must not change the current working folder merely to make project-owned relative paths work.
-
-Launchers and wrappers must contain only the logic required to perform the following functions:
-
-* Locate project-owned resources
-* Forward arguments
-* Invoke the main implementation
-* Propagate its result
-
-### 8.4. Automation Script Path Reliability
-
-Every project-owned automation script or command wrapper must work correctly regardless of the caller's current working folder.
-
-When an agent writes a script, the project root is the folder currently opened in the IDE.
-
-The agent must determine the fixed relationship between the script's location and the project root when writing the script. The runtime script must not search for, infer, detect, or guess the project root.
-
-The script must distinguish between the following path categories:
-
-* **Caller-provided paths**: input paths, output paths, and other path arguments passed by the caller
-* **Project components**: scripts, templates, configuration files, and other resources stored inside the project
-* **External components**: interpreters, converters, executables, libraries, configuration files, and other resources stored outside the project
-
-The script must convert every path to an absolute path before using it or passing it to another component.
-
-The script must apply all the following path-resolution rules:
-
-* An absolute caller-provided path must be used unchanged
-* A relative caller-provided path must be resolved against the caller's current working folder
-* A path to a project component must be assembled from the script's own absolute location or from the known project root derived from that location
-* A path to an external component must be specified as an absolute path
-* Every path used by the script must be absolute
-* Every path passed to another component must be absolute
-
-The script must capture the caller's current working folder before performing any operation that could change it.
-
-The script must know which arguments represent paths. It must not interpret options, flags, identifiers, numbers, or other non-path arguments as paths.
-
-The script must not perform any of the following actions:
-
-* Resolve a relative caller-provided path against the script's location
-* Resolve a project component against the caller's current working folder
-* Search for the project root
-* Infer the project root from repository markers or nearby files
-* Continue using a relative path after resolving it
-* Change the current working folder merely to make relative paths work
-* Depend on the caller's current working folder for locating project components
-* Depend on the operating system's executable search path for locating external components
-
-Every path must be handled in a form that preserves all the following properties:
-
-* Spaces
-* Non-Latin characters
-* Empty arguments
-* Argument boundaries
-* Special characters supported by the operating system
-
-Launchers and wrappers must contain only the logic required to perform the following functions:
-
-* Capture the caller's current working folder
-* Determine the script's own absolute location
-* Derive the known project root from the script's location when required
-* Convert caller-provided paths to absolute paths
-* Assemble absolute paths to project components
-* Use configured absolute paths to external components
-* Forward non-path arguments without reinterpretation
-* Invoke the main implementation
-* Propagate the invoked process's exit status
+Launchers and wrappers must stay minimal: call the implementation with the needed paths and arguments, then propagate the exit status. Do not add existence checks, usage banners, or other guard code unless the user explicitly asked for them.
 
 ### 8.5. Windows Command Scripts
 
-Every project-owned Windows command script must use `%~dp0` to determine its own location.
+Keep `.bat` launchers short. Prefer the simplest form that works.
 
-The script must start with:
+Use `%~dp0` for files next to the bat. Use an absolute path for Python or another external tool. Quote paths.
+
+Example:
 
 ```bat
 @echo off
-setlocal EnableExtensions DisableDelayedExpansion
-
-set "CALLER_DIR=%CD%"
-set "SCRIPT_DIR=%~dp0"
+C:\Python312\python.exe "%~dp0script.py" "%~dp0data.csv"
 ```
 
-Delayed environment-variable expansion must remain disabled unless it is strictly necessary. Delayed expansion may corrupt paths containing `!`.
+When the bat receives a caller path argument, pass `"%~1"` (and likewise `"%~2"`) unless a fuller form is required. Prefer letting the Python (or other) implementation resolve a relative caller path against the caller's current working folder.
 
-When the script requires the project root, it must derive the project root from the script's location through the fixed relationship known when the script was written.
+Do not use `for %%I in (...) do set ...=%%~fI` to normalize paths.
 
-For example, when the script is stored one folder below the project root:
+Do not add `if not exist` checks or similar guard blocks unless the user explicitly asked for them.
 
-```bat
-for %%I in ("%SCRIPT_DIR%..") do set "PROJECT_ROOT=%%~fI"
-```
-
-The relative relationship in this expression must match the actual project structure. The script must not search for another project root.
-
-An absolute caller-provided path must be used unchanged.
-
-A relative caller-provided path must be resolved against the caller's current working folder.
-
-Because the script has not changed its current working folder, the following construction converts either an absolute or relative caller-provided path to an absolute path:
-
-```bat
-for %%I in ("%~1") do set "INPUT_PATH=%%~fI"
-```
-
-Known path arguments must be resolved separately:
-
-```bat
-for %%I in ("%~1") do set "INPUT_PATH=%%~fI"
-for %%I in ("%~2") do set "OUTPUT_PATH=%%~fI"
-```
-
-A project component must be addressed through an absolute path assembled from `%~dp0` or the derived project root.
-
-A component in the same folder as the command script must be resolved as follows:
-
-```bat
-for %%I in ("%SCRIPT_DIR%script.py") do set "SCRIPT_PATH=%%~fI"
-```
-
-A component elsewhere in the project must be resolved as follows:
-
-```bat
-for %%I in ("%PROJECT_ROOT%\tools\script.py") do set "SCRIPT_PATH=%%~fI"
-```
-
-A project-owned configuration file must be resolved in the same way:
-
-```bat
-for %%I in ("%PROJECT_ROOT%\config\settings.json") do set "CONFIG_PATH=%%~fI"
-```
-
-An external component must be specified through an absolute path:
-
-```bat
-set "PYTHON_EXE=C:\Program Files\Python311\python.exe"
-```
-
-An absolute external-component path may also come from configuration, but the script must verify that the configured value is absolute before using it.
-
-The script must pass only absolute paths to the main implementation:
-
-```bat
-"%PYTHON_EXE%" "%SCRIPT_PATH%" "%INPUT_PATH%" "%OUTPUT_PATH%"
-exit /b %ERRORLEVEL%
-```
-
-Non-path arguments must be forwarded without converting them to paths:
-
-```bat
-set "MODE=%~3"
-
-"%PYTHON_EXE%" "%SCRIPT_PATH%" "%INPUT_PATH%" "%OUTPUT_PATH%" "%MODE%"
-exit /b %ERRORLEVEL%
-```
-
-The following approach is prohibited because it passes a relative caller-provided path without resolving it:
-
-```bat
-"%PYTHON_EXE%" "%SCRIPT_DIR%script.py" "%~1"
-```
-
-The following approach is prohibited because it resolves a caller-provided path against the script's location:
-
-```bat
-"%PYTHON_EXE%" "%SCRIPT_DIR%script.py" "%SCRIPT_DIR%%~1"
-```
-
-The following approach is prohibited because it locates a project component relative to the caller's current working folder:
+Do not use these approaches:
 
 ```bat
 python script.py
 ```
-
-The following approach is prohibited because it changes the working folder instead of assembling absolute paths:
 
 ```bat
 cd /d "%~dp0"
 python script.py
 ```
 
-The following approach is prohibited because it relies on the operating system's executable search path:
-
 ```bat
-python "%SCRIPT_PATH%"
+python "%~dp0script.py"
 ```
 
-Every path expression must be quoted.
-
-A batch script must not split, reconstruct, or normalize arguments in a way that corrupts spaces, non-Latin characters, or supported special characters.
-
-When a batch script cannot preserve the required paths and arguments reliably, the agent must use a PowerShell or Python launcher instead.
+When a batch script cannot preserve paths and arguments reliably, use a PowerShell or Python launcher instead.
 
 ### 8.6. Linux and macOS Shell Scripts
 

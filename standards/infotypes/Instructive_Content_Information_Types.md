@@ -1,4 +1,4 @@
-# Instructive Content Information Types
+# Extensible Manual of Style for Technical Publications. Instructive Content Information Types
 
 ## About This Document
 
