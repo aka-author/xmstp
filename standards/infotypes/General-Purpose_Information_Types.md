@@ -51,7 +51,8 @@ The purpose of a **Definition** is to introduce a term for a concept within runn
 
 | ID          | Requirement                                        |
 |-------------|----------------------------------------------------|
-| R.GPIT.0100 | A **Definition** must always be a single sentence. |
+| R.GPIT.0100 | A **Definition** must always be a single sentence.                                      |
+| R.GPIT.0105 | A **Definition** must be self-contained. Cross-references are prohibited in definitions. |
 
 
 ### Genus-Differentia Definitions

@@ -189,13 +189,13 @@ The purpose of an **Actor-system interaction task** snippet is to explain to rea
 | **Outcome**        | **Continuous prose block**            | Recommended | Once       |
 | **Postrequisites** | **Continuous prose block**            | No          | Once       |
 
-| ID          | Requirement                                                                                         |
-|-------------|-----------------------------------------------------------------------------------------------------|
-| R.ICIT.0410 | The **Context** must explain the purpose of the task and when it should be performed.               |
-| R.ICIT.0420 | The **Prerequisites** must list the conditions that must be met before the task can be performed.   |
-| R.ICIT.0430 | The **Steps** must provide a **Actor-system interaction sequence** that constitutes the task.       |
-| R.ICIT.0440 | The **Outcome** must describe the resulting state after the task is completed in the positive case. |
-| R.ICIT.0450 | The **Postrequisites** must describe what may or should be done once the task is complete.          |
+| ID          | Requirement                                                                                        |
+|-------------|----------------------------------------------------------------------------------------------------|
+| R.ICIT.0410 | The **Context** must explain the purpose of the task and when it should be performed.              |
+| R.ICIT.0420 | The **Prerequisites** must list the conditions that must be met before the task can be performed.  |
+| R.ICIT.0430 | The **Steps** must provide a **Actor-system interaction sequence** that constitutes the task.      |
+| R.ICIT.0440 | The **Outcome** must describe the resulting state after the task is completed in the positive case.|
+| R.ICIT.0450 | The **Postrequisites** must describe what may or should be done once the task is complete.         |
 
 | ID          | Directive                                                                |
 |-------------|--------------------------------------------------------------------------|
