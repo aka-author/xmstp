@@ -30,9 +30,9 @@ The purpose of a **Prescription** is to establish a norm governing the behavior,
 
 #### Bounded Quantification
 
-| ID          | Directive                                                                         |
-|-------------|-----------------------------------------------------------------------------------|
-| D.PCIT.0110 | The quantifiers *all*, *any*, etc. are deprecated for unbounded sets of subjects. |
+| ID          | Directive                                                                                  |
+|-------------|--------------------------------------------------------------------------------------------|
+| D.PCIT.0110 | The quantifiers *all*, *any*, *every*, etc. are deprecated for unbounded sets of subjects. |
 
 | ID          | Example                           |
 |-------------|-----------------------------------|
