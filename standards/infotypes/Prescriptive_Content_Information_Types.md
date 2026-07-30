@@ -18,19 +18,72 @@ This document is a standard for information types applicable to prescriptive tec
 
 The aim of this standard is to help authors structure recurring types of content consistently and correctly. The standard does not prescribe which information types must appear in a given document. Instead, it defines the rules that apply whenever an author chooses to use a particular information type.
 
-
 ## Prescriptions
 
 ### Prescription
 
-**Prescription** is a subtype of **Continuous prose span**.
+#### Purpose of a Prescription
 
-The purpose of a **Prescription** is to establish a normative statement concerning its subject.
+A **Prescription** is a subtype of **Continuous prose span**.
 
-| ID          | Directive                                                                                     |
-|-------------|-----------------------------------------------------------------------------------------------|
-| D.PCIT.0100 | The quantifiers *all*, *any*, etc., referring to an unbounded set of subjects are deprecated. |
+The purpose of a **Prescription** is to establish a norm governing the behavior, properties, or qualities of its subject.
 
+#### Bounded Quantification
+
+| ID          | Directive                                                                         |
+|-------------|-----------------------------------------------------------------------------------|
+| D.PCIT.0110 | The quantifiers *all*, *any*, etc. are deprecated for unbounded sets of subjects. |
+
+| ID          | Example                           |
+|-------------|-----------------------------------|
+| E.PCIT.0120 | Replacing an unbounded quantifier |
+
+The following prescription contains a deprecated quantifier.
+
+```markdown
+| ID      | Requirement                                            |
+|---------|--------------------------------------------------------|
+| TR.1234 | The system must support all contemporary web browsers. |
+```
+
+The quantifier *all* refers to an unbounded and continuously changing set of web browsers. Analysts and developers cannot determine conclusively which browsers belong to that set, which creates a risk that they may unexpectedly encounter a contemporary browser they were not aware of and did not account for.
+
+The prescription should identify a bounded set of supported browsers and versions.
+
+```markdown
+| ID      | Requirement                                                  |
+|---------|--------------------------------------------------------------|
+| TR.1234 | The system must support the web browsers listed in Table 1.  |
+
+**Table 1 — Supported Web Browsers**
+
+| Web Browser     | Supported Versions |
+|-----------------|--------------------|
+| Google Chrome   | 120–122            |
+| Mozilla Firefox | 121–123            |
+| Microsoft Edge  | 120–122            |
+| Opera           | 105–107            |
+```
+
+#### Separation of Independent Statements
+
+| ID          | Requirement                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------|
+| R.PCIT.0130 | A **Prescription** is forbidden from combining statements that can be expressed separately. |
+
+| ID          | Example                           |
+|-------------|-----------------------------------|
+| E.PCIT.0140 | Separating independent statements |
+
+The following **Prescription** combines statements that can be expressed separately:
+
+*Beer must be cold, and snacks must be salty.*
+
+This **Prescription** establishes two independent norms concerning different subjects. Each norm can be understood, implemented, and verified separately. The prescription should therefore be decomposed as follows:
+
+*Beer must be cold.*
+
+*Snacks must be salty.*
 
 ### Positive Prescription
 

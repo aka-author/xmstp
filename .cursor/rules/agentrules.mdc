@@ -8,6 +8,10 @@ These rules apply to the entire workspace and every nested project, repository, 
 
 This file is the primary source of workspace rules. Project-specific rules may supplement it only where this document explicitly permits an override.
 
+## Be Brief
+
+If a user asks a question, your answer must not be longer than three sentences unless the user explicitly requests a comprehensive answer.
+
 ## 1. XMSTP Documentation Rules
 
 ### 1.1. Applicable Standard
