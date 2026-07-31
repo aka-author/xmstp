@@ -318,6 +318,27 @@ The first sentence might confuse the readers. The reason is, it presents a well-
 
 *The firewall blocks unauthorized access, but it introduces latency in high-traffic environments. Therefore, organizations must evaluate whether the security benefit justifies the performance cost before deploying it in production.*
 
+### Preference for the Singular Over the Plural
+
+| ID          | Requirement                                                                                |
+|-------------|--------------------------------------------------------------------------------------------|
+| R.GRTD.0385 | When describing correspondence of subjects, use singular unless it is actually impossible. |
+
+| ID          | Example                                                   |
+|-------------|-----------------------------------------------------------|
+| E.GRTD.0387 | Disclosing cardinality by preferring singular over plural |
+
+The following sentence describes a correspondence between users and accounts without disclosing its cardinality.
+
+*Users have accounts in the system.*
+
+Depending on the actual cardinality, the sentence should be rewritten in one of the following ways.
+
+| Cardinality  | Correct Phrasing                                                                              |
+|--------------|-----------------------------------------------------------------------------------------------|
+| One-to-one   | *Each user has one account in the system.*                                                    |
+| One-to-many  | *Each user has one or more accounts in the system.*                                           |
+| Many-to-many | *Each user has one or more accounts in the system and may share an account with other users.* |
 
 ## Paragraphs
 
