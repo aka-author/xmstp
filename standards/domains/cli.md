@@ -10,7 +10,7 @@ Requirements and directives explicitly defined for a specific operating system o
 
 ### Argument
 
-| ID          | Directive                                                                |
+| ID          | Directive                                                              |
 |-------------|------------------------------------------------------------------------|
 | D.DCLI.0110 | Use the noun *argument* for any token passed to a program in CLI mode. |
 | D.DCLI.0120 | Avoid using the following terms instead of *argument*.                 |
@@ -33,10 +33,10 @@ The following synonyms of the noun *argument* are deprecated in the CLI context:
 
 ### Key
 
-| ID          | Directive                                                                              |
-|-------------|-----------------------------------------------------------------------------------------|
-| D.DCLI.0210 | Use the noun *key* for an argument passed using syntax like `[-|/]<key name> [key value]`. |
-| D.DCLI.0220 | Avoid using the following terms instead of *key*.                                       |
+| ID          | Directive                                                                                     |
+|-------------|-----------------------------------------------------------------------------------------------|
+| D.DCLI.0210 | Use the noun *key* for an argument passed using syntax like `<--|-|/><key name> [key value]`. |
+| D.DCLI.0220 | Avoid using the following terms instead of *key*.                                             |
 
 The following synonyms of the noun *key* are deprecated in the CLI context:
 
@@ -78,10 +78,10 @@ The following synonyms of the noun *program* are deprecated in the CLI context:
 
 ### Run
 
-| ID          | Directive                                                     |
-|-------------|-------------------------------------------------------------|
-| D.DCLI.0410 | Use the verb *run* for launching a program in CLI mode.    |
-| D.DCLI.0420 | Avoid using the following verbs instead of *run*.           |
+| ID          | Directive                                               |
+|-------------|---------------------------------------------------------|
+| D.DCLI.0410 | Use the verb *run* for launching a program in CLI mode. |
+| D.DCLI.0420 | Avoid using the following verbs instead of *run*.       |
 
 The following synonyms of the verb *run* are deprecated in the CLI context:
 

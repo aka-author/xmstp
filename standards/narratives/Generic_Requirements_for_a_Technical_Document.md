@@ -8,10 +8,13 @@ Standard ID: GRTD.
 
 Superior standard ID: None. 
 
-| ID          | Directive                                                                                                              |
-|-------------|------------------------------------------------------------------------------------------------------------------------|
-| D.GPIT.0000 | The agent must read [Basic Terms and Definitions](../basics/Basic_terms_and_definitions.md) first. |
+## Prerequisite Standards
 
+| ID            | Directive                                                                 |
+|---------------|---------------------------------------------------------------------------|
+| D.GPIT.0000   | The agent must first read the following standards:                        |
+| D.GPIT.0000-A | [Basic Terms and Definitions](../basics/Basic_terms_and_definitions.md)   |
+| D.GPIT.0000-B | [Structure and Extending Standards](../basics/Structure_and_Extending.md) |
 
 ### Purpose
 
@@ -20,68 +23,6 @@ This document is a standard for a generic technical document outline.
 This standard is the root node of a hierarchy of interconnected standards. Each standard within this hierarchy specifies requirements for a certain aspect of technical writing such as narrative structure, document logic, terminology usage, and so on. Each standard at further levels may redefine the requirements that are specified here. 
 
 The aim of this standard is to help authors follow the most important rules applicable to technical text and avoid the most baneful errors that can be made in technical writing. The standard does not force authors to keep any predefined document structures, style conventions, or terminology. Instead, it introduces a generic frame that should be detailed in standards at the next hierarchy levels.
-
-### Structure
-
-The standard uses four information types to present its content.
-
-| Information Type | Purpose                                                                       |
-|------------------|-------------------------------------------------------------------------------|
-| Requirement      | States a rule that technical content must comply with                         |
-| Directive        | Gives practical guidance on how to comply with the preceding requirement      |
-| Extension Point  | Marks a point where the standard may or should be extended at a further level |
-| Example          | Provides a learn-by-example illustration of a requirement or directive        |
-
-Each entry of any information type is introduced by a header table with the following columns.
-
-| Column        | Description                                                                     |
-|---------------|---------------------------------------------------------------------------------|
-| ID            | A unique identifier of the entry                                                |
-| Second column | The content of the entry: a requirement, directive, extension point, or example |
-
-An entry may be followed by details. The details are optional and extend from the header table to the next header table or to the end of the section, whichever comes first.
-
-
-### Extending the Standard
-
-Each requirement, directive, and example in this standard has a unique identifier. A standard at a further level of the hierarchy may extend this standard by treating any of these entries in one of the following ways.
-
-| Treatment    | Description                                                         |
-|--------------|---------------------------------------------------------------------|
-| Redefinition | A replacement entry with the same identifier overrides the original |
-| Cancellation | The entry is explicitly declared void and no longer applies         |
-
-Extension points work differently. An extension point cannot be redefined or cancelled. Instead, a standard at a further level introduces additional content and links it to the extension point by referring to its identifier.
-
-The identifier of each entry follows the scheme `{type}.{standard ID}.{number}`. 
-
-The type prefix indicates the entry kind as shown below.
-
-| Prefix | Entry Kind      |
-|--------|-----------------|
-| `R`    | Requirement     |
-| `D`    | Directive       |
-| `X`    | Extension Point |
-| `E`    | Example         |
-
-The number is arbitrary, but the recommended practice is to use four-digit numbers with leading zeroes and a step of 10, so that entries can be inserted between existing ones without renumbering. Identifiers are shared across all entry kinds within the same standard.
-
-Cancellation of an entry appears as follows. 
-
-| ID          | Requirement |
-|-------------|-------------|
-| R.GRTD.4320 | Cancelled   |
-
-The following techniques are available for extending the standard via extension points.
-
-If an entire standard extends a superior standard, the extension point should be referenced in its "Identification" section.
-
-If a certain entry extends a superior standard, the extension point should be referenced in the entry table as shown below.
-
-| ID          | Ext. Pt.    | Requirement         |
-|-------------|-------------|---------------------|
-| R.ABCD.0210 | R.GRTD.4320 | A rabbit must drum. |
-
 
 ## Words and Phrases
 
@@ -100,31 +41,30 @@ If a certain entry extends a superior standard, the extension point should be re
 
 | ID          | Requirement                                                            |
 |-------------|------------------------------------------------------------------------|
-| R.GRTD.0120 | Words and phrases must be as precise as possible in a certain context. |
+| R.GRTD.0210 | Words and phrases must be as precise as possible in a certain context. |
 
 | ID          | Directive                                                 |
 |-------------|-----------------------------------------------------------|
-| D.GRTD.0130 | Choose words that are neither too narrow nor too generic. |
+| D.GRTD.0220 | Choose words that are neither too narrow nor too generic. |
 
 Redundantly generic words and phrases should be avoided. At the same time, words and phrases should not describe only the most common cases while ignoring less common but realistic ones.
 
 | ID          | Example                            |
 |-------------|------------------------------------|
-| E.GRTD.0140 | Adjusting the generality of a term |
+| E.GRTD.0230 | Adjusting the generality of a term |
 
 Imagine a system that manages an automated parking facility. Users usually arrive by car, but some of them may ride scooters or motorbikes. In this case, the word *car* would be too narrow, *vehicle* would be precise enough, and the phrase *transportation unit* would be too generic.
-
 
 ### Choosing the Right Level of Formality
 
 | ID          | Requirement                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------------------|
-| R.GRTD.0150 | If a term is defined for an action, then the action must be expressed as a light verb construction. |
-| R.GRTD.0160 | A light verb construction must not be used for self-evident actions that have no defined term.      |
+| R.GRTD.0310 | If a term is defined for an action, then the action must be expressed as a light verb construction. |
+| R.GRTD.0320 | A light verb construction must not be used for self-evident actions that have no defined term.      |
 
 | ID          | Example                                   |
 |-------------|-------------------------------------------|
-| E.GRTD.0170 | Adjusting the level of phrasing formality |
+| E.GRTD.0330 | Adjusting the level of phrasing formality |
 
 For example, the following definition is provided in the document on a hotel management system:
 
@@ -143,17 +83,16 @@ The sentence above sounds unnecessarily formal. The following sentence sounds be
 
 The plain verb is preferable here because *room cleaning* is not a defined term in the document.
 
-
 ### Using Self-Evident Words Consistently
 
 | ID          | Requirement                                                                         |
 |-------------|-------------------------------------------------------------------------------------|
-| R.GRTD.0180 | A single word or set of synonyms must be chosen for a repeatedly mentioned concept. |
-| R.GRTD.0190 | Different synonyms must be chosen for different repeatedly mentioned concepts.      |
+| R.GRTD.0410 | A single word or set of synonyms must be chosen for a repeatedly mentioned concept. |
+| R.GRTD.0420 | Different synonyms must be chosen for different repeatedly mentioned concepts.      |
 
 | ID          | Example                                            |
 |-------------|----------------------------------------------------|
-| E.GRTD.0200 | Fixing the consistency of self-evident words usage |
+| E.GRTD.0430 | Fixing the consistency of self-evident words usage |
 
 The following paragraph violates the requirements listed above.
 
@@ -175,21 +114,20 @@ If the program has not run automatically, run it manually from the menu. After t
 
 | ID          | Extension Point                                                                  |
 |-------------|----------------------------------------------------------------------------------|
-| X.GRTD.0210 | The vocabulary of self-evident words should be restricted for a certain project. |
-
+| X.GRTD.0440 | The vocabulary of self-evident words should be restricted for a certain project. |
 
 ### Using Terms Consistently
 
 | ID          | Requirement                                                                               |
 |-------------|-------------------------------------------------------------------------------------------|
-| R.GRTD.0220 | A term must never be shortened unless a shortened form or an abbreviation is declared.    |
-| R.GRTD.0230 | A word derived from a term must not be treated as a term unless it is explicitly defined. |
-| R.GRTD.0240 | Only a term must refer to a concept if it is defined; using synonyms is forbidden.        |
-| R.GRTD.0250 | Homonyms of defined terms must not be used with different meanings.                       |
+| R.GRTD.0510 | A term must never be shortened unless a shortened form or an abbreviation is declared.    |
+| R.GRTD.0520 | A word derived from a term must not be treated as a term unless it is explicitly defined. |
+| R.GRTD.0530 | Only a term must refer to a concept if it is defined; using synonyms is forbidden.        |
+| R.GRTD.0540 | Homonyms of defined terms must not be used with different meanings.                       |
 
 | ID          | Example                               |
 |-------------|---------------------------------------|
-| E.GRTD.0260 | Fixing the consistency of terms usage |
+| E.GRTD.0550 | Fixing the consistency of terms usage |
 
 In the following paragraph, each sentence starting from the second one violates a corresponding requirement from the list above.
 
@@ -216,11 +154,11 @@ Final cleaning is the preparation of a room after a guest departs. Once the gues
 
 | ID          | Requirement                                                                                    |
 |-------------|------------------------------------------------------------------------------------------------|
-| R.GRTD.0270 | A single word or phrase must be chosen to express the same meaning related to a specific term. |
+| R.GRTD.0610 | A single word or phrase must be chosen to express the same meaning related to a specific term. |
 
 | ID          | Example                                           |
 |-------------|---------------------------------------------------|
-| E.GRTD.0280 | Fixing the consistency of term-related vocabulary |
+| E.GRTD.0620 | Fixing the consistency of term-related vocabulary |
 
 In the following paragraph the verbs *open*, *display*, and *show* denote the same situation: the user makes the transaction browser (whatever it is) visible. Such inconsistency may mislead readers, making them think that the paragraph describes three different actions.
 
@@ -236,8 +174,7 @@ Open the transaction browser from the main menu. You can then open the transacti
 
 | ID          | Extension Point                                                        |
 |-------------|------------------------------------------------------------------------|
-| X.GRTD.0290 | Term-related words and phrases should be defined in a certain project. |
-
+| X.GRTD.0630 | Term-related words and phrases should be defined in a certain project. |
 
 ## Sentences
 
@@ -245,11 +182,11 @@ Open the transaction browser from the main menu. You can then open the transacti
 
 | ID          | Requirement                                                                  |
 |-------------|------------------------------------------------------------------------------|
-| R.GRTD.0300 | A noun phrase must make the relationships between its constituents explicit. |
+| R.GRTD.0710 | A noun phrase must make the relationships between its constituents explicit. |
 
 | ID          | Example                                            |
 |-------------|----------------------------------------------------|
-| E.GRTD.0310 | Fixing the syntactic clarity lack in a noun phrase |
+| E.GRTD.0720 | Fixing the syntactic clarity lack in a noun phrase |
 
 Consider the following sentence:
 
@@ -259,11 +196,11 @@ The noun phrase *arnocle software testing* is ambiguous because readers might he
 
 | ID          | Requirement                                                         |
 |-------------|---------------------------------------------------------------------|
-| R.GRTD.0320 | Relations between actions mentioned in a sentence must be explicit. |
+| R.GRTD.0730 | Relations between actions mentioned in a sentence must be explicit. |
 
 | ID          | Example                                                 |
 |-------------|---------------------------------------------------------|
-| E.GRTD.0330 | Fixing the syntactic clarity lack in a verb conjunction |
+| E.GRTD.0740 | Fixing the syntactic clarity lack in a verb conjunction |
 
 The phrase below does not disclose the relationship between clicking the button and turning video recording on.
 
@@ -277,22 +214,21 @@ The sentence should be rewritten so that the relationship between these two acti
 | Sequence                 | *Click Record and then turn on video recording.*        |
 | Simultaneity             | *Click Record and turn on video recording in parallel.* |
 
-
 ### Presenting Ideas Separately
 
 | ID          | Requirement                                              |
 |-------------|----------------------------------------------------------|
-| R.GRTD.0340 | Each sentence must present a single self-contained idea. |
+| R.GRTD.0810 | Each sentence must present a single self-contained idea. |
 
 | ID          | Directive                                                       |
 |-------------|-----------------------------------------------------------------|
-| D.GRTD.0350 | Split sentences that present more than one self-contained idea. |
+| D.GRTD.0820 | Split sentences that present more than one self-contained idea. |
 
 Sentences that present more than one self-contained idea are deprecated. A sentence that provides more than one self-contained idea should be split into separate sentences. 
 
 | ID          | Example                                                      |
 |-------------|--------------------------------------------------------------|
-| E.GRTD.0360 | Splitting an overcomplicated sentence into simpler sentences |
+| E.GRTD.0830 | Splitting an overcomplicated sentence into simpler sentences |
 
 For example, the following sentence encloses three self-contained ideas: 
 
@@ -304,11 +240,11 @@ This sentence should be split into three sentences, each delivering a self-conta
 
 | ID          | Requirement                                                                                  |
 |-------------|----------------------------------------------------------------------------------------------|
-| R.GRTD.0370 | Two ideas whose conflict matters for the further narrative must be treated as a single idea. |
+| R.GRTD.0840 | Two ideas whose conflict matters for the further narrative must be treated as a single idea. |
 
 | ID          | Example                                    |
 |-------------|--------------------------------------------|
-| E.GRTD.0380 | Representing a conflict as a holistic idea |
+| E.GRTD.0850 | Representing a conflict as a holistic idea |
 
 Consider the following statement:
 
@@ -322,11 +258,11 @@ The first sentence might confuse the readers. The reason is, it presents a well-
 
 | ID          | Requirement                                                                                |
 |-------------|--------------------------------------------------------------------------------------------|
-| R.GRTD.0385 | When describing correspondence of subjects, use singular unless it is actually impossible. |
+| R.GRTD.0910 | When describing correspondence of subjects, use singular unless it is actually impossible. |
 
 | ID          | Example                                                   |
 |-------------|-----------------------------------------------------------|
-| E.GRTD.0387 | Disclosing cardinality by preferring singular over plural |
+| E.GRTD.0920 | Disclosing cardinality by preferring singular over plural |
 
 The following sentence describes a correspondence between users and accounts without disclosing its cardinality.
 
@@ -346,26 +282,25 @@ Depending on the actual cardinality, the sentence should be rewritten in one of 
 
 | ID          | Requirement                                  |
 |-------------|----------------------------------------------|
-| R.GRTD.0390 | A paragraph must contain up to 10 sentences. |
+| R.GRTD.1010 | A paragraph must contain up to 10 sentences. |
 
 | ID          | Extension Point                                                   |
 |-------------|-------------------------------------------------------------------|
-| X.GRTD.0400 | The limit of 10 sentences may be redefined for a certain project. |
-
+| X.GRTD.1020 | The limit of 10 sentences may be redefined for a certain project. |
 
 ### Restricting Pronoun References Locally
 
 | ID          | Requirement                                                                              |
 |-------------|------------------------------------------------------------------------------------------|
-| R.GRTD.0410 | Pronouns must refer only to subjects explicitly mentioned earlier in the same paragraph. |
+| R.GRTD.1110 | Pronouns must refer only to subjects explicitly mentioned earlier in the same paragraph. |
 
 | ID          | Directive                                                                                  |
 |-------------|--------------------------------------------------------------------------------------------|
-| D.GRTD.0420 | Replace pronouns that refer to subjects outside the current paragraph with explicit nouns. |
+| D.GRTD.1120 | Replace pronouns that refer to subjects outside the current paragraph with explicit nouns. |
 
 | ID          | Example                 |
 |-------------|-------------------------|
-| E.GRTD.0430 | Fixing misused pronouns |
+| E.GRTD.1130 | Fixing misused pronouns |
 
 Consider the example below. The pronoun *they* in the second paragraph refers to *users* or *registered users* who are mentioned only in the first paragraph. Notice that such a usage of the pronoun yields an ambiguity.
 
@@ -388,14 +323,14 @@ Email notifications about ticket updates are also available.
 
 | ID          | Requirement                                                                             |
 |-------------|-----------------------------------------------------------------------------------------|
-| R.GRTD.0440 | The first sentence in the paragraph must introduce or mention the idea to be discussed. |
-| R.GRTD.0450 | The last sentence in the paragraph must deliver a meaningful conclusion or direction.   |
-| R.GRTD.0460 | The intermediate sentences in the paragraph must be organized as a train of thoughts.   |
-| R.GRTD.0470 | Ideas obvious to or already introduced to the target audience must be omitted.          |
+| R.GRTD.1210 | The first sentence in the paragraph must introduce or mention the idea to be discussed. |
+| R.GRTD.1220 | The last sentence in the paragraph must deliver a meaningful conclusion or direction.   |
+| R.GRTD.1230 | The intermediate sentences in the paragraph must be organized as a train of thoughts.   |
+| R.GRTD.1240 | Ideas obvious to or already introduced to the target audience must be omitted.          |
 
 | ID          | Example                                         |
 |-------------|-------------------------------------------------|
-| E.GRTD.0480 | Building a train of thoughts within a paragraph |
+| E.GRTD.1250 | Building a train of thoughts within a paragraph |
 
 The paragraph below keeps readers baffled until they reach the last sentence, look back, and, finally, restore the logic in their minds themselves.
 
@@ -419,19 +354,18 @@ The table below breaks down the connections among the sentences in the revised p
 | 4   | Development | Public-facing services | Their heightened exposure to availability degradation  |
 | 5   | Conclusion  | The conflict           | Its organizational impact in public-facing deployments |
 
-
 ### Maintaining Continuous Prose Consistency
 
 | ID          | Requirement                                                                                     |
 |-------------|-------------------------------------------------------------------------------------------------|
-| R.GRTD.0490 | A paragraph or a critical note must come first after the title in continuous prose.             |
-| R.GRTD.0500 | A figure must be explicitly introduced in a preceding paragraph of the same continuous prose.   |
-| R.GRTD.0510 | A table must be explicitly introduced in a preceding paragraph of the same continuous prose.    |
-| R.GRTD.0520 | An example must be explicitly introduced in a preceding paragraph of the same continuous prose. |
+| R.GRTD.1310 | A paragraph or a critical note must come first after the title in continuous prose.             |
+| R.GRTD.1320 | A figure must be explicitly introduced in a preceding paragraph of the same continuous prose.   |
+| R.GRTD.1330 | A table must be explicitly introduced in a preceding paragraph of the same continuous prose.    |
+| R.GRTD.1340 | An example must be explicitly introduced in a preceding paragraph of the same continuous prose. |
 
 | ID          | Example                               |
 |-------------|---------------------------------------|
-| E.GRTD.0530 | Fixing an improper table introduction |
+| E.GRTD.1350 | Fixing an improper table introduction |
 
 The example below displays continuous prose where the requirements are violated:
 
@@ -473,16 +407,16 @@ The table below lists file formats supported by the application.
 
 | ID          | Requirement                                                  |
 |-------------|--------------------------------------------------------------|
-| R.GRTD.0540 | A concept must be introduced to mention the same phenomenon. |
-| R.GRTD.0550 | Repeating the same descriptive phrase must be avoided.       |
+| R.GRTD.1410 | A concept must be introduced to mention the same phenomenon. |
+| R.GRTD.1420 | Repeating the same descriptive phrase must be avoided.       |
 
 | ID          | Directive                                                       |
 |-------------|-----------------------------------------------------------------|
-| D.GRTD.0560 | Define a term instead of repeating the same descriptive phrase. |
+| D.GRTD.1430 | Define a term instead of repeating the same descriptive phrase. |
 
 | ID          | Example                          |
 |-------------|----------------------------------|
-| E.GRTD.0570 | Conceptualizing repetitive ideas |
+| E.GRTD.1440 | Conceptualizing repetitive ideas |
 
 An example of improper usage of descriptive phrases.
 
@@ -509,12 +443,12 @@ An *anonymous user* is a user that does not have an account in the system.
 
 | ID          | Requirement                                                                                       |
 |-------------|---------------------------------------------------------------------------------------------------|
-| R.GRTD.0580 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
-| R.GRTD.0590 | Defining concepts cyclically is prohibited.                                                       |
+| R.GRTD.1510 | Each concept that is not obvious to readers must be explicitly introduced before being mentioned. |
+| R.GRTD.1520 | Defining concepts cyclically is prohibited.                                                       |
 
 | ID          | Example                                      |
 |-------------|----------------------------------------------|
-| E.GRTD.0600 | Defining and using terms in the proper order |
+| E.GRTD.1530 | Defining and using terms in the proper order |
 
 An example of wrong concept usage: the concepts are not defined. 
 
@@ -555,21 +489,21 @@ not permitted to write comments to articles.
 
 | ID          | Requirement                                                                         |
 |-------------|-------------------------------------------------------------------------------------|
-| R.GRTD.0610 | An enumeration must be introduced in the paragraph directly above it.               |
-| R.GRTD.0620 | The paragraph directly above the enumeration must end with the introduction phrase. |
-| R.GRTD.0630 | The introduction phrase must contain a common term for the enumeration items.       |
-| R.GRTD.0640 | The introduction phrase must never expose the number of enumeration items.          |
-| R.GRTD.0650 | The introduction phrase must never end with a preposition or a verb.                |
+| R.GRTD.1610 | An enumeration must be introduced in the paragraph directly above it.               |
+| R.GRTD.1620 | The paragraph directly above the enumeration must end with the introduction phrase. |
+| R.GRTD.1630 | The introduction phrase must contain a common term for the enumeration items.       |
+| R.GRTD.1640 | The introduction phrase must never expose the number of enumeration items.          |
+| R.GRTD.1650 | The introduction phrase must never end with a preposition or a verb.                |
 
 | ID          | Directive                                               |
 |-------------|---------------------------------------------------------|
-| D.GRTD.0660 | Choose a precise common term for the enumeration items. |
+| D.GRTD.1660 | Choose a precise common term for the enumeration items. |
 
 Highly abstract common terms such as *object*, *subject*, or *thing* are not recommended as common terms, unless we enumerate specific objects in software design, subjects of particular scientific research, or things in someone's suitcase. Abstract nouns are acceptable as common terms when they are terms rather than words of common vocabulary.
 
 | ID          | Directive                                                           |
 |-------------|---------------------------------------------------------------------|
-| D.GRTD.0670 | Use one of the standard sentence patterns for introduction phrases. |
+| D.GRTD.1670 | Use one of the standard sentence patterns for introduction phrases. |
 
 Introduction phrases, when properly written, usually employ one of the following sentence patterns:
 
@@ -579,7 +513,7 @@ Introduction phrases, when properly written, usually employ one of the following
 
 | ID          | Example                                                        |
 |-------------|----------------------------------------------------------------|
-| E.GRTD.0680 | Fixing poorly written introduction phrases before enumerations |
+| E.GRTD.1680 | Fixing poorly written introduction phrases before enumerations |
 
 Examples of poorly written introduction phrases are given below:
 
@@ -595,11 +529,11 @@ The same introduction phrases with the errors fixed are given below:
 
 | ID          | Requirement                                                                                   |
 |-------------|-----------------------------------------------------------------------------------------------|
-| R.GRTD.0690 | For partial enumerations, the selection criteria must be declared in the introduction phrase. |
+| R.GRTD.1690 | For partial enumerations, the selection criteria must be declared in the introduction phrase. |
 
 | ID          | Directive                                                               |
 |-------------|-------------------------------------------------------------------------|
-| D.GRTD.0700 | Identify a selection criterion and state it in the introduction phrase. |
+| D.GRTD.1700 | Identify a selection criterion and state it in the introduction phrase. |
 
 The selection criteria declare which subset of items is included in the enumeration and why the remaining items are omitted. The following are typical examples of selection criteria.
 
@@ -613,7 +547,7 @@ The selection criteria declare which subset of items is included in the enumerat
 
 | ID          | Example                                                            |
 |-------------|--------------------------------------------------------------------|
-| E.GRTD.0710 | Fixing misleading introduction phrases before partial enumerations |
+| E.GRTD.1710 | Fixing misleading introduction phrases before partial enumerations |
 
 The following introduction phrase misinforms the readers. 
 
@@ -633,11 +567,11 @@ The introduction phrase may be rewritten as follows:
 
 | ID          | Requirement                                                                                           |
 |-------------|-------------------------------------------------------------------------------------------------------|
-| R.GRTD.0720 | For enumerated conditions, the relationships among them must be disclosed in the introduction phrase. |
+| R.GRTD.1720 | For enumerated conditions, the relationships among them must be disclosed in the introduction phrase. |
 
 | ID          | Example                                                         |
 |-------------|-----------------------------------------------------------------|
-| E.GRTD.0730 | Fixing a vague introduction phrase before enumerated conditions |
+| E.GRTD.1730 | Fixing a vague introduction phrase before enumerated conditions |
 
 The following enumeration is poorly introduced:
 
@@ -655,12 +589,12 @@ Depending on the actual logic, the introduction phrase should be rewritten in on
 
 | ID          | Requirement                                                                                        |
 |-------------|----------------------------------------------------------------------------------------------------|
-| R.GRTD.0740 | For enumerated options, the introduction phrase must explain in which combinations they come.      |
-| R.GRTD.0750 | Detailed explanations referred to in the introduction phrase must follow the enumeration directly. |
+| R.GRTD.1740 | For enumerated options, the introduction phrase must explain in which combinations they come.      |
+| R.GRTD.1750 | Detailed explanations referred to in the introduction phrase must follow the enumeration directly. |
 
 | ID          | Directive                                                                |
 |-------------|--------------------------------------------------------------------------|
-| D.GRTD.0760 | Identify the role of the enumerated options and their combination rules. |
+| D.GRTD.1760 | Identify the role of the enumerated options and their combination rules. |
 
 Typically, the options play one of the following roles:
 
@@ -670,7 +604,7 @@ Typically, the options play one of the following roles:
 
 | ID          | Example                                                           |
 |-------------|-------------------------------------------------------------------|
-| E.GRTD.0770 | Fixing a vague introduction phrase before enumerated consequences |
+| E.GRTD.1770 | Fixing a vague introduction phrase before enumerated consequences |
 
 The next introduction phrase leaves readers uncertain:
 
@@ -688,17 +622,16 @@ Depending on the relationship among the possible effects, the introduction phras
 
 In the case of a conditioned subset, an explanation should come directly after the enumeration.
 
-
 #### Presenting Items in a Plain Enumeration
 
 | ID          | Requirement                                                                                      |
 |-------------|--------------------------------------------------------------------------------------------------|
-| R.GRTD.0780 | An unordered list must be used to represent an enumeration if the items are ordered arbitrarily. |
-| R.GRTD.0790 | An ordered list must be used to represent an enumeration if the items have an inherent order.    |
+| R.GRTD.1780 | An unordered list must be used to represent an enumeration if the items are ordered arbitrarily. |
+| R.GRTD.1790 | An ordered list must be used to represent an enumeration if the items have an inherent order.    |
 
 | ID          | Directive                                                  |
 |-------------|------------------------------------------------------------|
-| D.GRTD.0800 | Use an ordered list when the items have an inherent order. |
+| D.GRTD.1800 | Use an ordered list when the items have an inherent order. |
 
 In particular, an ordered list is relevant in the following cases:
 
@@ -709,26 +642,26 @@ In particular, an ordered list is relevant in the following cases:
 
 | ID          | Requirement                                 |
 |-------------|---------------------------------------------|
-| R.GRTD.0810 | An enumeration must be formally exhaustive. |
+| R.GRTD.1810 | An enumeration must be formally exhaustive. |
 
 | ID          | Directive                                    |
 |-------------|----------------------------------------------|
-| D.GRTD.0820 | Never imply the existence of unlisted items. |
+| D.GRTD.1820 | Never imply the existence of unlisted items. |
 
 Formally exhaustive means that the enumeration must not imply the existence of unlisted items. Items such as *etc.*, *and so on*, *and others*, and *other* are therefore forbidden. If the author cannot or does not intend to enumerate all items literally, this must be reflected in the introduction phrase.
 
 | ID          | Extension Point                                                                  |
 |-------------|----------------------------------------------------------------------------------|
-| X.GRTD.0830 | More cases when ordered lists are relevant may be defined for a certain project. |
+| X.GRTD.1830 | More cases when ordered lists are relevant may be defined for a certain project. |
 
 | ID          | Requirement                                                                       |
 |-------------|-----------------------------------------------------------------------------------|
-| R.GRTD.0840 | The enumeration items must be comparable and describable by the same common term. |
-| R.GRTD.0850 | The grammatical structure of the items in the same enumeration must be uniform.   |
+| R.GRTD.1840 | The enumeration items must be comparable and describable by the same common term. |
+| R.GRTD.1850 | The grammatical structure of the items in the same enumeration must be uniform.   |
 
 | ID          | Directive                                                           |
 |-------------|---------------------------------------------------------------------|
-| D.GRTD.0860 | Choose one grammatical form and apply it consistently to all items. |
+| D.GRTD.1860 | Choose one grammatical form and apply it consistently to all items. |
 
 The most popular grammatical forms of enumeration items are as follows:
 
@@ -738,7 +671,7 @@ The most popular grammatical forms of enumeration items are as follows:
 
 | ID          | Example                                       |
 |-------------|-----------------------------------------------|
-| E.GRTD.0870 | Making enumerated items grammatically uniform |
+| E.GRTD.1870 | Making enumerated items grammatically uniform |
 
 The enumeration shown below violates the requirement of grammatical uniformity.
 
@@ -764,7 +697,7 @@ The system supports the following authentication methods:
 
 | ID          | Example                                    |
 |-------------|--------------------------------------------|
-| E.GRTD.0880 | Fixing a mixture of nouns and verbal nouns |
+| E.GRTD.1880 | Fixing a mixture of nouns and verbal nouns |
 
 One of the most common errors made in enumerations is mixing nouns with verbal nouns. An example is shown below.
 
@@ -790,15 +723,15 @@ The system supports the following operations:
 
 | ID          | Requirement                                                                              |
 |-------------|------------------------------------------------------------------------------------------|
-| R.GRTD.0890 | The enumeration items must never share the same beginning, unless they are unchangeable. |
+| R.GRTD.1890 | The enumeration items must never share the same beginning, unless they are unchangeable. |
 
 | ID          | Directive                                                     |
 |-------------|---------------------------------------------------------------|
-| D.GRTD.0900 | Factor the shared beginning out into the introduction phrase. |
+| D.GRTD.1900 | Factor the shared beginning out into the introduction phrase. |
 
 | ID          | Example                                              |
 |-------------|------------------------------------------------------|
-| E.GRTD.0910 | Optimizing enumeration items with the same beginning |
+| E.GRTD.1910 | Optimizing enumeration items with the same beginning |
 
 The items of the following enumeration share the same beginning, which violates the requirement.
 
@@ -828,7 +761,7 @@ Items are considered unchangeable when their wording is fixed by convention or d
 
 | ID          | Example                                              |
 |-------------|------------------------------------------------------|
-| E.GRTD.0920 | Using enumerations with the same beginning correctly |
+| E.GRTD.1920 | Using enumerations with the same beginning correctly |
 
 The items of the enumeration below require no corrections.
 
@@ -841,18 +774,17 @@ The most influential figures named Roger in the computer industry include the fo
 - Roger Rivest
 ```
 
-
 #### Describing Items in a Parallel Enumeration
 
 | ID          | Requirement                                                                               |
 |-------------|-------------------------------------------------------------------------------------------|
-| R.GRTD.0930 | A table must be used to represent an enumeration where the items have the same structure. |
-| R.GRTD.0940 | A numbering column must be included in the table if the items have an inherent order.     |
-| R.GRTD.0950 | An introduction phrase before a parallel enumeration must end with a full stop.           |
+| R.GRTD.2010 | A table must be used to represent an enumeration where the items have the same structure. |
+| R.GRTD.2020 | A numbering column must be included in the table if the items have an inherent order.     |
+| R.GRTD.2030 | An introduction phrase before a parallel enumeration must end with a full stop.           |
 
 | ID          | Example                                                     |
 |-------------|-------------------------------------------------------------|
-| E.GRTD.0960 | Transforming a cumbersome parallel enumeration into a table |
+| E.GRTD.2040 | Transforming a cumbersome parallel enumeration into a table |
 
 Consider the following enumeration.
 
@@ -880,11 +812,11 @@ The system consists of the following modules.
 
 | ID          | Requirement                                                                                   |
 |-------------|-----------------------------------------------------------------------------------------------|
-| R.GRTD.0970 | The grammatical structure and/or format of the data must be uniform within each table column. |
+| R.GRTD.2050 | The grammatical structure and/or format of the data must be uniform within each table column. |
 
 | ID          | Example                                                                         |
 |-------------|---------------------------------------------------------------------------------|
-| E.GRTD.0980 | Applying the same format to values within each column in a parallel enumeration |
+| E.GRTD.2060 | Applying the same format to values within each column in a parallel enumeration |
 
 The parallel enumeration shown below violates the requirement of uniformity.
 
@@ -914,11 +846,11 @@ The system consists of the following modules.
 
 | ID          | Requirement                                                                              |
 |-------------|------------------------------------------------------------------------------------------|
-| R.GRTD.0990 | The format used for the same data type must be uniform across all parallel enumerations. |
+| R.GRTD.2070 | The format used for the same data type must be uniform across all parallel enumerations. |
 
 | ID          | Directive                                                                              |
 |-------------|----------------------------------------------------------------------------------------|
-| D.GRTD.1000 | Choose a single format for each data type and apply it consistently across all tables. |
+| D.GRTD.2080 | Choose a single format for each data type and apply it consistently across all tables. |
 
 The requirement applies to the following data types in particular.
 
@@ -932,16 +864,15 @@ The requirement applies to the following data types in particular.
 
 Inconsistent formatting forces readers to interpret the same kind of data differently in different places, which increases cognitive load and the risk of misreading.
 
-
 #### Avoiding Redundant Enumerations
 
 | ID          | Requirement                                                                        |
 |-------------|------------------------------------------------------------------------------------|
-| R.GRTD.1010 | Items mentioned to deliver an idea rather than to be presented must remain inline. |
+| R.GRTD.2110 | Items mentioned to deliver an idea rather than to be presented must remain inline. |
 
 | ID          | Directive                                                            |
 |-------------|----------------------------------------------------------------------|
-| D.GRTD.1020 | Do not convert illustrative or representative items to enumerations. |
+| D.GRTD.2120 | Do not convert illustrative or representative items to enumerations. |
 
 Authors sometimes mention a few items not to enumerate them exhaustively, but to give readers an orientation. This happens in the following typical cases:
 
@@ -952,12 +883,11 @@ In these cases, converting the items to a list implies completeness and misleads
 
 | ID          | Example                              |
 |-------------|--------------------------------------|
-| E.GRTD.1030 | Using comma-separated items properly |
+| E.GRTD.2130 | Using comma-separated items properly |
 
 The comma-separated items in the following sentence are not an enumeration:
 
 *A modern operating system manages many resources: processes, memory, file systems, and so on.*
-
 
 ### Cascading Narratives
 
@@ -965,11 +895,11 @@ The comma-separated items in the following sentence are not an enumeration:
 
 | ID          | Requirement                                                                                      |
 |-------------|--------------------------------------------------------------------------------------------------|
-| R.GRTD.1040 | The subjects that the narrative covers must first be enumerated and then explained or discussed. |
+| R.GRTD.2140 | The subjects that the narrative covers must first be enumerated and then explained or discussed. |
 
 | ID          | Example                                                             |
 |-------------|---------------------------------------------------------------------|
-| E.GRTD.1050 | Enumerating subjects before describing them in dedicated paragraphs |
+| E.GRTD.2150 | Enumerating subjects before describing them in dedicated paragraphs |
 
 The following example demonstrates how concepts can be discussed before being introduced. The structuring shown below is not reader-friendly, because it forces readers to dive into details before capturing the whole picture.
 
@@ -997,23 +927,22 @@ The yellow light tells traffic participants to prepare. They should get ready to
 The green light allows traffic. Participants must start moving.
 ```
 
-
 #### Developing Narrative Across Sections
 
 | ID          | Requirement                                                                                      |
 |-------------|--------------------------------------------------------------------------------------------------|
-| R.GRTD.1060 | A section covering multiple subjects must open with an introductory subsection enumerating them. |
-| R.GRTD.1070 | Each subject enumerated in the introductory subsection must have its own subsection.             |
+| R.GRTD.2210 | A section covering multiple subjects must open with an introductory subsection enumerating them. |
+| R.GRTD.2220 | Each subject enumerated in the introductory subsection must have its own subsection.             |
 
 | ID          | Example                                                                                  |
 |-------------|------------------------------------------------------------------------------------------|
-| E.GRTD.1080 | Enumerate subjects in an introductory subsection before dedicating a subsection to each. |
+| E.GRTD.2230 | Enumerate subjects in an introductory subsection before dedicating a subsection to each. |
 
 The cascading technique is applicable to formal sections. First, an introductory section must provide a holistic view of the subject. Then each part is described in a dedicated section.
 
 | ID          | Example                                                                                       |
 |-------------|-----------------------------------------------------------------------------------------------|
-| E.GRTD.1090 | Introducing subjects in the introductory section before describing them in dedicated sections |
+| E.GRTD.2240 | Introducing subjects in the introductory section before describing them in dedicated sections |
 
 The following structure demonstrates how the cascading technique is applied at the section level. The introductory subsection gives the reader a complete picture before any details are discussed. This becomes especially important when the individual sections are long or complex.
 
@@ -1038,16 +967,15 @@ The traffic light gives the following signals:
     ...
 ```
 
-
 #### Ordering Subjects Uniformly
 
 | ID          | Requirement                                                                                  |
 |-------------|----------------------------------------------------------------------------------------------|
-| R.GRTD.1100 | Subject descriptions must follow the same order in which the subjects were first enumerated. |
+| R.GRTD.2310 | Subject descriptions must follow the same order in which the subjects were first enumerated. |
 
 | ID          | Example                                                  |
 |-------------|----------------------------------------------------------|
-| E.GRTD.1110 | Keeping the same order when discussing the same subjects |
+| E.GRTD.2320 | Keeping the same order when discussing the same subjects |
 
 The following example demonstrates inconsistently ordered list items, paragraphs, and subsections.
 
@@ -1109,18 +1037,17 @@ The green light allows traffic. Participants must start moving.
     ...
 ```
 
-
 ### Unifying Description Patterns
 
 #### Applying Sentence Patterns to Parallel Cases
 
 | ID          | Requirement                                                                              |
 |-------------|------------------------------------------------------------------------------------------|
-| R.GRTD.1120 | Parallel cases must be described with the same sentence pattern throughout the document. |
+| R.GRTD.2330 | Parallel cases must be described with the same sentence pattern throughout the document. |
 
 | ID          | Example                                                     |
 |-------------|-------------------------------------------------------------|
-| E.GRTD.1130 | Choosing a sentence pattern for a final step of a procedure |
+| E.GRTD.2340 | Choosing a sentence pattern for a final step of a procedure |
 
 The example below represents parallel situations described inconsistently.
 
@@ -1156,29 +1083,28 @@ To update an order record:
 
 | ID          | Extension Point                                                      |
 |-------------|----------------------------------------------------------------------|
-| X.GRTD.1140 | A set of sentence patterns should be defined for a specific project. |
-
+| X.GRTD.2350 | A set of sentence patterns should be defined for a specific project. |
 
 #### Applying Information Types to Parallel Subjects
 
 | ID          | Requirement                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------------------|
-| R.GRTD.1150 | The same information type must be used to describe parallel subjects from the same aspect.          |
-| R.GRTD.1160 | An information type must prescribe a template for describing a subject from the aspect.             |
-| R.GRTD.1170 | The template must define rubrics across which the subject must be described.                        |
-| R.GRTD.1180 | The template must prescribe the content of each rubric, including nested subjects and their aspect. |
-| R.GRTD.1190 | The template must prescribe sentence patterns to be applied in each rubric, if applicable.          |
-| R.GRTD.1200 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
+| R.GRTD.2360 | The same information type must be used to describe parallel subjects from the same aspect.          |
+| R.GRTD.2370 | An information type must prescribe a template for describing a subject from the aspect.             |
+| R.GRTD.2380 | The template must define rubrics across which the subject must be described.                        |
+| R.GRTD.2390 | The template must prescribe the content of each rubric, including nested subjects and their aspect. |
+| R.GRTD.2400 | The template must prescribe sentence patterns to be applied in each rubric, if applicable.          |
+| R.GRTD.2410 | The template must prescribe the order, mandatory status, and multiplicity of each rubric.           |
 
 | ID          | Directive                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------|
-| D.GRTD.1210 | Choose an information type and apply its template consistently to all parallel subjects.              |
+| D.GRTD.2420 | Choose an information type and apply its template consistently to all parallel subjects.              |
 
 Readers process information faster when they know what to expect. Once a reader encounters a subject described according to a certain structure, they learn it. Every subsequent subject of the same type described from the same aspect follows the same structure, so the reader knows where to find each piece of information without scanning the text. Inconsistent structures force readers to re-orient with every new subject, which slows comprehension and increases the risk of missing critical information.
 
 | ID          | Directive                                                           |
 |-------------|---------------------------------------------------------------------|
-| D.GRTD.1215 | Follow the conventions given below when applying information types. |
+| D.GRTD.2430 | Follow the conventions given below when applying information types. |
 
 A phrase *must contain only...* in the requirements for an information type forbids the snippet implementing this information type from containing anything not covered by this phrase.
 
@@ -1186,7 +1112,7 @@ A phrase *must appear only in...* in the requirements for an information type fo
 
 | ID          | Example                                                                      |
 |-------------|------------------------------------------------------------------------------|
-| E.GRTD.1220 | Choosing an information type for describing technical parameters of a device |
+| E.GRTD.2440 | Choosing an information type for describing technical parameters of a device |
 
 The following example displays two parallel subjects described inconsistently. The device is the subject, and technical parameters is the aspect in this case.
 
@@ -1241,7 +1167,7 @@ The parameter table includes the following columns:
 
 | ID          | Example                                            |
 |-------------|----------------------------------------------------|
-| E.GRTD.1230 | Choosing an information type for describing errors |
+| E.GRTD.2450 | Choosing an information type for describing errors |
 
 Consider one more example that displays three parallel subjects described inconsistently. The error is the subject, and its behavior and resolution is the aspect.
 
@@ -1304,8 +1230,7 @@ Error 503
 
 | ID          | Extension Point                                                      |
 |-------------|----------------------------------------------------------------------|
-| X.GRTD.1240 | A set of information types should be defined for a specific project. |
-
+| X.GRTD.2460 | A set of information types should be defined for a specific project. |
 
 ## Documents
 
@@ -1313,28 +1238,27 @@ Error 503
 
 | ID          | Requirement                                                  |
 |-------------|--------------------------------------------------------------|
-| R.GRTD.1250 | Each document must be written for a certain target audience. |
+| R.GRTD.2510 | Each document must be written for a certain target audience. |
 
 | ID          | Example                              |
 |-------------|--------------------------------------|
-| E.GRTD.1260 | Identifying document target audience |
+| E.GRTD.2520 | Identifying document target audience |
 
 | Document                                | Target Audience       |
 |-----------------------------------------|-----------------------|
 | Easy Reports. User Manual               | Accountants           |
 | Easy Reports. Requirement Specification | Architect, developers |
 
-
 ### Characterizing a Document
 
 | ID          | Requirement                                                                   |
 |-------------|-------------------------------------------------------------------------------|
-| R.GRTD.1270 | Each document must represent a certain subject in a certain genre.            |
-| R.GRTD.1280 | The title of the document must explicitly disclose its subject and its genre. |
+| R.GRTD.2610 | Each document must represent a certain subject in a certain genre.            |
+| R.GRTD.2620 | The title of the document must explicitly disclose its subject and its genre. |
 
 | ID          | Example                    |
 |-------------|----------------------------|
-| E.GRTD.1290 | Assembling document titles |
+| E.GRTD.2630 | Assembling document titles |
 
 | Subject      | Point of View | Genre                     | Document Title                          |
 |--------------|---------------|---------------------------|-----------------------------------------|
